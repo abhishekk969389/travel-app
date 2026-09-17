@@ -1,2 +1,78 @@
 @import "tailwindcss";
 
+:root {
+  --hero-dark: #12151a;
+  --hero-pink: #ff2e63;
+  --hero-orange: #ff8a00;
+  --hero-red: #e0124a;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-ken {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-slash-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-animate-up {
+  animation: hero-fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-animate-up-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.hero-animate-up-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.hero-animate-up-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.hero-animate-up-delay-4 {
+  animation-delay: 0.48s;
+}
+
+.hero-image-zoom {
+  animation: hero-ken 8s ease-out both;
+}
+
+.hero-slash {
+  animation: hero-slash-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.footer-curve-mask {
+  -webkit-mask-image: url("/footer-curve.svg");
+  mask-image: url("/footer-curve.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+}

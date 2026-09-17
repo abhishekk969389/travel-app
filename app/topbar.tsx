@@ -2,11 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa6';
+import travelData from "./data/travel-data.json";
+import type { TopbarData } from './types/travel';
+
+const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    FaFacebookF,
+    FaInstagram,
+    FaYoutube,
+    FaLinkedinIn,
+};
 
 export default function TopHeader() {
+    const data: TopbarData = travelData.topbar;
+
     return (
         <header className="bg-[#0f171e] text-white w-full overflow-hidden text-sm">
-            <div className="max-w-[1300px] mx-auto flex items-center justify-between pl-4 sm:pl-6 pr-0">
+            <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
                 {/* Left Side: Contact Details */}
                 <div className="flex items-center space-x-6 py-">
@@ -16,10 +27,10 @@ export default function TopHeader() {
                             <Phone className="w-4 h-4 fill-current transform -rotate-12" />
                         </div>
                         <a
-                            href="tel:+11234567890"
+                            href={data.contactInfo.phone.href}
                             className="font-medium hover:text-gray-300 transition-colors"
                         >
-                            +1 123 456 7890
+                            {data.contactInfo.phone.number}
                         </a>
                     </div>
 
@@ -29,10 +40,10 @@ export default function TopHeader() {
                     <div className="flex items-center space-x-2">
                         <Mail className="w-5 h-5 text-white" />
                         <a
-                            href="mailto:support@tripnexa.com"
+                            href={data.contactInfo.email.href}
                             className="font-medium hover:text-gray-300 transition-colors"
                         >
-                            support@tripnexa.com
+                            {data.contactInfo.email.address}
                         </a>
                     </div>
                 </div>
@@ -42,33 +53,25 @@ export default function TopHeader() {
 
                     {/* Links */}
                     <nav className="hidden md:flex items-center space-x-6 text-gray-200">
-                        <Link href="/awards" className="hover:text-white transition-colors">
-                            Awards & Recognition
-                        </Link>
-                        <Link href="/partners" className="hover:text-white transition-colors">
-                            Partners
-                        </Link>
-                        <Link href="/testimonials" className="hover:text-white transition-colors">
-                            Testimonials
-                        </Link>
+                        {data.navLinks.map((link) => (
+                            <Link key={link.name} href={link.href} className="hover:text-white transition-colors">
+                                {link.name}
+                            </Link>
+                        ))}
                     </nav>
 
                     <span className="hidden md:block text-gray-600">|</span>
 
                     {/* Social Icons */}
                     <div className="flex items-center space-x-4">
-                        <a href="#" className="hover:text-gray-400 transition-colors" aria-label="Facebook">
-                            <FaFacebookF className="w-4 h-4" />
-                        </a>
-                        <a href="#" className="hover:text-gray-400 transition-colors" aria-label="Instagram">
-                            <FaInstagram className="w-4 h-4" />
-                        </a>
-                        <a href="#" className="hover:text-gray-400 transition-colors" aria-label="YouTube">
-                            <FaYoutube className="w-4 h-4" />
-                        </a>
-                        <a href="#" className="hover:text-gray-400 transition-colors" aria-label="LinkedIn">
-                            <FaLinkedinIn className="w-4 h-4" />
-                        </a>
+                        {data.socialLinks.map((item) => {
+                            const IconComponent = socialIconMap[item.icon];
+                            return (
+                                <a key={item.platform} href={item.href} className="hover:text-gray-400 transition-colors" aria-label={item.platform}>
+                                    {IconComponent && <IconComponent className="w-4 h-4" />}
+                                </a>
+                            );
+                        })}
                     </div>
 
                     {/* Skewed Gradient CTA Button */}
@@ -86,8 +89,8 @@ export default function TopHeader() {
                         />
 
                         {/* Button Content */}
-                        <Link href="/plan" className="relative flex items-center space-x-2 text-white font-medium text-sm z-10">
-                            <span>Plan Your Next Journey</span>
+                        <Link href={data.cta.href} className="relative flex items-center space-x-2 text-white font-medium text-sm z-10">
+                            <span>{data.cta.text}</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </div>

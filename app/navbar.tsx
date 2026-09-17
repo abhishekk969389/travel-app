@@ -3,40 +3,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaChevronDown, FaPlane, FaArrowRight } from "react-icons/fa";
+import { FaChevronDown as FaChevronDownIcon, FaPlane as FaPlaneIcon, FaArrowRight as FaArrowRightIcon } from "react-icons/fa";
+import travelData from "./data/travel-data.json";
+import type { NavbarData } from "./types/travel";
 
 export default function Navbar() {
+  const data: NavbarData = travelData.navbar;
   const [activeTab, setActiveTab] = useState("Home");
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Destination", href: "/destination", hasDropdown: true },
-    { name: "Service", href: "/services", hasDropdown: true },
-    { name: "Blog", href: "/blog", hasDropdown: true },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact Us", href: "/contact" },
-  ];
-
   return (
-    <nav className="w-full bg-white border-b border-gray-100 px-6">
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between">
+    <nav className="w-full bg-white border-b border-gray-100">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Left Side: Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center -ml-[20px]">
           <Image
-            src="/logo.png"
-            alt="TripNexa - Travel Beyond Borders"
-            width={180}
-            height={50}
+            src={data.logo.src}
+            alt={data.logo.alt}
+            width={data.logo.width}
+            height={data.logo.height}
             priority
-            className="h-auto w-auto object-contain"
+            className="h-auto w-[250px] object-contain"
           />
         </Link>
 
         {/* Center: Navigation Links */}
         <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link) => {
+          {data.navLinks.map((link) => {
             const isActive = activeTab === link.name;
 
             return (
@@ -50,7 +43,7 @@ export default function Navbar() {
                 >
                   {link.name}
                   {link.hasDropdown && (
-                    <FaChevronDown className="w-2.5 h-2.5 text-gray-700 mt-0.5" />
+                    <FaChevronDownIcon className="w-2.5 h-2.5 text-gray-700 mt-0.5" />
                   )}
                 </Link>
 
@@ -66,12 +59,12 @@ export default function Navbar() {
         {/* Right Side: Enquire Now Button */}
         <div>
           <Link
-            href="/enquire"
+            href={data.cta.href}
             className="group flex items-center space-x-2.5 bg-gradient-to-r from-[#c40050] via-[#ff2e63] to-[#ff6b00] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:opacity-95 transition-all duration-300"
           >
-            <FaPlane className="w-5 h-5 transform -rotate-45" />
-            <span>Enquire Now</span>
-            <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+            <FaPlaneIcon className="w-5 h-5 transform -rotate-45" />
+            <span>{data.cta.text}</span>
+            <FaArrowRightIcon className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
 
