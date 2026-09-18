@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Kaushan_Script } from "next/font/google";
 import { FaArrowRight, FaRoute, FaMapMarkedAlt } from "react-icons/fa";
-import travelData from "../../data/travel-data.json";
-import type { AboutUsData } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelAboutUsData as AboutUsData } from "@/data/index";
 import { IoIosPeople } from "react-icons/io";
 
 const scriptFont = Kaushan_Script({
@@ -13,8 +13,16 @@ const scriptFont = Kaushan_Script({
   weight: "400",
 });
 
-export default function AboutSection() {
-  const data: AboutUsData = travelData.aboutUs;
+interface AboutSectionProps {
+  data?: AboutUsData;
+  showCta?: boolean;
+}
+
+export default function AboutSection({
+  data: propData,
+  showCta = true,
+}: AboutSectionProps = {}) {
+  const data: AboutUsData = propData || travelData.aboutUs;
 
   return (
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white overflow-hidden">
@@ -136,20 +144,25 @@ export default function AboutSection() {
           </div>
 
           {/* Bottom Actions & Founder Info */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 pt-5 border-t border-gray-100">
-
+          <div
+            className={`flex flex-col sm:flex-row items-center ${
+              showCta ? "justify-start items-start sm:items-center" : "justify-center"
+            } gap-4 sm:gap-5 pt-5 border-t border-gray-100`}
+          >
             {/* CTA Button */}
-            <Link
-              href={data.cta.href}
-              className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-[#ff2e63] via-[#ff4d4d] to-[#ff6b00] hover:opacity-95 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <span>{data.cta.text}</span>
-              <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            {showCta && data.cta && (
+              <Link
+                href={data.cta.href}
+                className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-[#ff2e63] via-[#ff4d4d] to-[#ff6b00] hover:opacity-95 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <span>{data.cta.text}</span>
+                <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            )}
 
             {/* Founder Signature & Avatar */}
-            <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#ff2e63] shadow-md">
+            <div className={`flex items-center gap-3 ${!showCta ? "justify-center mx-auto" : ""}`}>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-md shrink-0">
                 <Image
                   src={data.founder.avatar}
                   alt={data.founder.name}
@@ -166,7 +179,6 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
-
           </div>
 
         </div>

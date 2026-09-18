@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import travelData from "../../data/travel-data.json";
-import type { DestinationsData } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelDestinationsData as DestinationsData } from "@/data/index";
 
 export default function Destinations() {
     const data: DestinationsData = travelData.destinations;

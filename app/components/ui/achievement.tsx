@@ -11,8 +11,8 @@ import {
   FaMapPin,
   FaPlane
 } from "react-icons/fa";
-import travelData from "../../data/travel-data.json";
-import type { AchievementsData, AchievementItem } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelAchievementsData as AchievementsData, AchievementItem } from "@/data/index";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],

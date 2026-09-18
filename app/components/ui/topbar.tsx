@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa6';
-import travelData from "../../data/travel-data.json";
-import type { TopbarData } from '../../types/travel';
+import { site as travelData } from "@/data/index";
+import type { TravelTopbarData as TopbarData } from "@/data/index";
 
 const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     FaFacebookF,

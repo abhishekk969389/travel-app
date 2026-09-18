@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import travelData from "../../data/travel-data.json";
-import type { BannerData } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelBannerData as BannerData } from "@/data/index";
 
 export default function Banner() {
     const data: BannerData = travelData.banner;

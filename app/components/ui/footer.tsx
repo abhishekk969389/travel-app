@@ -17,8 +17,8 @@ import {
   FaPaperPlane,
   FaArrowUp,
 } from "react-icons/fa";
-import travelData from "../../data/travel-data.json";
-import type { FooterData, LinkItem } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelFooterData as FooterData, LinkItem } from "@/data/index";
 
 const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FaFacebookF,
@@ -80,7 +80,7 @@ export default function Footer() {
       {/* Mountain background */}
       <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/home-bg.jpg"
+          src={data.backgroundImage}
           alt=""
           fill
           sizes="100vw"

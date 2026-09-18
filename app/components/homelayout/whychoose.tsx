@@ -11,8 +11,8 @@ import {
     Headphones,
     Mountain
 } from "lucide-react";
-import travelData from "../../data/travel-data.json";
-import type { WhyChooseData, WhyChooseFeature } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelWhyChooseUsData as WhyChooseData, WhyChooseFeature } from "@/data/index";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],

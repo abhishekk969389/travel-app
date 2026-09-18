@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Kaushan_Script } from "next/font/google";
 import { FaRegClock, FaRegFolder, FaArrowRight, FaPlane } from "react-icons/fa";
-import travelData from "../../data/travel-data.json";
-import type { BlogData, BlogPostItem } from "../../types/travel";
+import { site as travelData } from "@/data/index";
+import type { TravelBlogData as BlogData, BlogPostItem } from "@/data/index";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],
