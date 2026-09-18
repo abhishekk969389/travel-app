@@ -4,15 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import travelData from "./data/travel-data.json";
-import type { BannerData } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { BannerData } from "../../types/travel";
 
 export default function Banner() {
     const data: BannerData = travelData.banner;
     const [activeSlide, setActiveSlide] = useState(0);
 
     return (
-        <section className="relative w-full h-[480px] sm:h-[520px] lg:h-[580px] overflow-hidden bg-[#070b12] px-6">
+        <section className="relative w-full h-[480px] sm:h-[520px] lg:h-[580px] overflow-hidden bg-[#070b12]">
             {/* Background Image (Full-bleed) */}
             <Image
                 src={data.backgroundImage || "/bannerimg.png"}

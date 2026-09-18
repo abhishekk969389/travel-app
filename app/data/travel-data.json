@@ -65,12 +65,12 @@
             },
             {
                 "name": "About Us",
-                "href": "/about"
+                "href": "/about",
+                "hasDropdown": true
             },
             {
                 "name": "Destination",
-                "href": "/destination",
-                "hasDropdown": true
+                "href": "/destination"
             },
             {
                 "name": "Service",
@@ -79,8 +79,7 @@
             },
             {
                 "name": "Blog",
-                "href": "/blog",
-                "hasDropdown": true
+                "href": "/blog"
             },
             {
                 "name": "FAQ",
@@ -107,6 +106,47 @@
         },
         "backgroundImage": "/bannerimg.png",
         "slidesCount": 3
+    },
+    "aboutUs": {
+        "subtitle": "Explore the world",
+        "titlePrefix": "Great Opportunity For",
+        "titleHighlight": "Adventure & Travels",
+        "description": "Discover breathtaking destinations, unforgettable experiences, and journeys that stay with you forever. We are here to make your travel dreams a reality with personalized trips and expert guidance.",
+        "badgeRibbon": {
+            "count": "25,000+",
+            "label": "Happy Travelers"
+        },
+        "experienceCard": {
+            "years": "25",
+            "label": "Years of Experience"
+        },
+        "images": {
+            "main": "/about1.jpg",
+            "secondary": "/about2.jpg"
+        },
+        "features": [
+            {
+                "id": "1",
+                "title": "Trusted Travel Guide",
+                "description": "Get expert guidance and local insights for a safe and memorable journey.",
+                "icon": "FaRoute"
+            },
+            {
+                "id": "2",
+                "title": "Personalized Trips",
+                "description": "Customized travel experiences designed around your interests and budget.",
+                "icon": "FaMapMarkedAlt"
+            }
+        ],
+        "cta": {
+            "text": "MORE ABOUT US",
+            "href": "/about"
+        },
+        "founder": {
+            "name": "Mehedii .H",
+            "role": "CEO & FOUNDER",
+            "avatar": "/founder.jpg"
+        }
     },
     "destinations": {
         "subtitle": "Explore The World",

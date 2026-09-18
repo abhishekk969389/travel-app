@@ -11,8 +11,8 @@ import {
     Headphones,
     Mountain
 } from "lucide-react";
-import travelData from "./data/travel-data.json";
-import type { WhyChooseData, WhyChooseFeature } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { WhyChooseData, WhyChooseFeature } from "../../types/travel";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],
@@ -47,8 +47,8 @@ export default function WhyChoose() {
     };
 
     return (
-        <section className="w-full max-w-[1320px] mx-auto mt-8 sm:mt-10 md:mt-12 lg:mt-14 px-4 sm:px-6 lg:px-8">
-            <div>
+        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
+            <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6">
 
                     {/* Main Left Hero Banner Box */}

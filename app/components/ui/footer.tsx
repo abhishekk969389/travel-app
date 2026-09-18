@@ -17,8 +17,8 @@ import {
   FaPaperPlane,
   FaArrowUp,
 } from "react-icons/fa";
-import travelData from "./data/travel-data.json";
-import type { FooterData, LinkItem } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { FooterData, LinkItem } from "../../types/travel";
 
 const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   FaFacebookF,
@@ -186,8 +186,8 @@ export default function Footer() {
                   <div
                     key={badge.label}
                     className={`flex items-center gap-2 ${!isLast
-                        ? "border-white/25 pr-2.5 sm:border-r"
-                        : "pl-0 sm:pl-2.5"
+                      ? "border-white/25 pr-2.5 sm:border-r"
+                      : "pl-0 sm:pl-2.5"
                       } ${idx > 0 && !isLast ? "px-2.5" : ""}`}
                   >
                     {IconComponent && <IconComponent className="h-[20px] w-[16px] shrink-0 text-white" />}

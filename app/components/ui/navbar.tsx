@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaChevronDown as FaChevronDownIcon, FaPlane as FaPlaneIcon, FaArrowRight as FaArrowRightIcon } from "react-icons/fa";
-import travelData from "./data/travel-data.json";
-import type { NavbarData } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { NavbarData } from "../../types/travel";
 
 export default function Navbar() {
   const data: NavbarData = travelData.navbar;
@@ -13,10 +13,10 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white border-b border-gray-100">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-5 flex items-center justify-between">
+
         {/* Left Side: Logo */}
-        <Link href="/" className="flex items-center -ml-[20px]">
+        <Link href="/" className="flex items-center">
           <Image
             src={data.logo.src}
             alt={data.logo.alt}
@@ -37,9 +37,8 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setActiveTab(link.name)}
-                  className={`flex items-center gap-1.5 font-semibold transition-colors duration-200 ${
-                    isActive ? "text-[#ff2e63]" : "text-[#1a2b49] hover:text-[#ff2e63]"
-                  }`}
+                  className={`flex items-center gap-1.5 font-semibold transition-colors duration-200 ${isActive ? "text-[#ff2e63]" : "text-[#1a2b49] hover:text-[#ff2e63]"
+                    }`}
                 >
                   {link.name}
                   {link.hasDropdown && (

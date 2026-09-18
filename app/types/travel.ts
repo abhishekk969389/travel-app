@@ -194,10 +194,44 @@ export interface BlogData {
     posts: BlogPostItem[];
 }
 
+export interface AboutUsFeature {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+}
+
+export interface AboutUsData {
+    subtitle: string;
+    titlePrefix: string;
+    titleHighlight: string;
+    description: string;
+    badgeRibbon: {
+        count: string;
+        label: string;
+    };
+    experienceCard: {
+        years: string;
+        label: string;
+    };
+    images: {
+        main: string;
+        secondary: string;
+    };
+    features: AboutUsFeature[];
+    cta: CtaButton;
+    founder: {
+        name: string;
+        role: string;
+        avatar: string;
+    };
+}
+
 export interface TravelAppData {
     topbar: TopbarData;
     navbar: NavbarData;
     banner: BannerData;
+    aboutUs: AboutUsData;
     destinations: DestinationsData;
     packages: PackagesData;
     whyChoose: WhyChooseData;

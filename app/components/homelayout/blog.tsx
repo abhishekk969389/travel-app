@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Kaushan_Script } from "next/font/google";
 import { FaRegClock, FaRegFolder, FaArrowRight, FaPlane } from "react-icons/fa";
-import travelData from "./data/travel-data.json";
-import type { BlogData, BlogPostItem } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { BlogData, BlogPostItem } from "../../types/travel";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],
@@ -16,7 +16,7 @@ export default function Blog() {
     const data: BlogData = travelData.blog;
 
     return (
-        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 overflow-hidden">
+        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 overflow-hidden">
             {/* Decorative Flight Trail & Airplane at Top Right */}
             <div className="absolute top-6 right-8 md:right-16 opacity-30 pointer-events-none hidden sm:block">
                 <div className="relative">
@@ -34,7 +34,7 @@ export default function Blog() {
                 </div>
             </div>
 
-            <div className="max-w-[1320px] mx-auto relative z-10">
+            <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-8">
                     <span

@@ -2,17 +2,17 @@
 
 import Image from "next/image";
 import { Kaushan_Script } from "next/font/google";
-import { 
-  FaTrophy, 
-  FaMapMarkedAlt, 
-  FaUsers, 
-  FaGlobe, 
-  FaAward, 
+import {
+  FaTrophy,
+  FaMapMarkedAlt,
+  FaUsers,
+  FaGlobe,
+  FaAward,
   FaMapPin,
-  FaPlane 
+  FaPlane
 } from "react-icons/fa";
-import travelData from "./data/travel-data.json";
-import type { AchievementsData, AchievementItem } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { AchievementsData, AchievementItem } from "../../types/travel";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],
@@ -32,9 +32,10 @@ export default function Achievement() {
   const data: AchievementsData = travelData.achievements;
 
   return (
-    <section className="w-full max-w-[1320px] mx-auto mt-8 sm:mt-10 px-4 sm:px-6">
-      <div className="relative overflow-hidden rounded-xl bg-[#08121e] shadow-2xl py-8 px-6 sm:px-10 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">
-        
+    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
+      <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-xl bg-[#08121e] shadow-2xl py-8 px-6 sm:px-10 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+
         {/* Background Image */}
         <Image
           src={data.image}
@@ -46,9 +47,9 @@ export default function Achievement() {
         />
 
         {/* Gradient Overlay */}
-        <div 
-          aria-hidden="true" 
-          className="absolute inset-0 bg-gradient-to-r from-[#040810]/85 via-[#050e1a]/60 to-[#040810]/75 pointer-events-none" 
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-[#040810]/85 via-[#050e1a]/60 to-[#040810]/75 pointer-events-none"
         />
 
         {/* Left Side: Title & Description */}
@@ -72,7 +73,7 @@ export default function Achievement() {
 
         {/* Middle & Right: 4 Stat Items + Flight Path Doodle */}
         <div className="relative z-10 flex-1 w-full flex flex-col lg:flex-row items-center justify-between gap-8">
-          
+
           {/* 4 Stat Columns with Reduced Height Centered Vertical Dividers */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-0 w-full">
             {data.items.map((item: AchievementItem, index: number) => {
@@ -143,6 +144,7 @@ export default function Achievement() {
         </div>
 
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }

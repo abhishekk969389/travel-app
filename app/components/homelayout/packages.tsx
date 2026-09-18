@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import travelData from "./data/travel-data.json";
-import type { PackagesData } from "./types/travel";
+import travelData from "../../data/travel-data.json";
+import type { PackagesData } from "../../types/travel";
 
 export default function Packages() {
     const data: PackagesData = travelData.packages;
@@ -82,7 +82,7 @@ export default function Packages() {
                 </div>
             </div>
 
-            <div className="relative z-10 max-w-[1320px] text-slate-400  mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* SECTION HEADER */}
                 <div className="text-center mb-8">
