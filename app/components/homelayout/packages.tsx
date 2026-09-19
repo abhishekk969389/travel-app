@@ -231,7 +231,7 @@ export default function Packages() {
                 <div className="text-center mt-6">
                     <Link
                         href={data.cta.href}
-                        className="inline-flex items-center gap-2.5 px-9 py-4 rounded-full bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-[#ff2e63]/30 hover:shadow-xl hover:shadow-[#ff2e63]/40 hover:scale-[1.03] transition-all duration-300"
+                        className="inline-flex items-center gap-2.5 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-[#ff2e63]/30 hover:shadow-xl hover:shadow-[#ff2e63]/40 hover:scale-[1.03] transition-all duration-300"
                     >
                         <span>{data.cta.text}</span>
                         <svg className="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

@@ -132,7 +132,7 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                                 </h3>
 
                                 {/* Award Description - Larger Font Size */}
-                                <p className="text-xs sm:text-sm text-gray-500 text-center leading-relaxed mt-auto">
+                                <p className="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mt-auto">
                                     {item.description}
                                 </p>
                             </div>

@@ -36,17 +36,17 @@ const trustBadgeIconMap: Record<string, React.ComponentType<{ className?: string
 
 function FooterLinkList({
   title,
-  items,
+  items = [],
 }: {
   title: string;
-  items: LinkItem[];
+  items?: LinkItem[];
 }) {
   return (
     <div>
       <h3 className="text-[1.05rem] font-bold text-white">{title}</h3>
       <span className="mt-2.5 mb-4 block h-[3px] w-11 rounded-full bg-[#ff5a5f]" />
       <ul className="space-y-3">
-        {items.map((item) => (
+        {(items || []).map((item) => (
           <li key={item.name}>
             <Link
               href={item.href}
@@ -135,14 +135,17 @@ export default function Footer() {
             <FooterLinkList title="Quick Links" items={data.quickLinks} />
           </div>
 
-          {/* Destinations */}
-          <div className="lg:col-span-2">
-            <FooterLinkList title="Popular Destinations" items={data.destinations} />
-          </div>
-
           {/* Our Services */}
           <div className="lg:col-span-2">
             <FooterLinkList title="Our Services" items={data.services} />
+          </div>
+
+          {/* Help & Support */}
+          <div className="lg:col-span-2">
+            <FooterLinkList
+              title={data["Help & Support"] ? "Help & Support" : "Popular Destinations"}
+              items={data["Help & Support"] || (data as any).destinations || []}
+            />
           </div>
 
           {/* Stay Updated — right of Our Services */}

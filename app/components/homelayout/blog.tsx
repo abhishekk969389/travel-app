@@ -2,21 +2,38 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Kaushan_Script } from "next/font/google";
 import { FaRegClock, FaRegFolder, FaArrowRight, FaPlane } from "react-icons/fa";
 import { site as travelData } from "@/data/index";
 import type { TravelBlogData as BlogData, BlogPostItem } from "@/data/index";
+import Pagination from "@/app/components/ui/pagination";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],
     weight: "400",
 });
 
-export default function Blog() {
+interface BlogProps {
+    isPage?: boolean;
+}
+
+export default function Blog({ isPage = false }: BlogProps = {}) {
     const data: BlogData = travelData.blog;
+    const pathname = usePathname();
+    const isBlogPage = isPage || pathname === "/blog";
+
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const itemsPerPage = 6;
+    const totalPages = Math.ceil(data.posts.length / itemsPerPage);
+
+    const displayedPosts = isBlogPage
+        ? data.posts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+        : data.posts.slice(0, 3);
 
     return (
-        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 overflow-hidden">
+        <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30">
             {/* Decorative Flight Trail & Airplane at Top Right */}
             <div className="absolute top-6 right-8 md:right-16 opacity-30 pointer-events-none hidden sm:block">
                 <div className="relative">
@@ -56,7 +73,7 @@ export default function Blog() {
 
                 {/* Blog Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    {data.posts.map((post: BlogPostItem) => (
+                    {displayedPosts.map((post: BlogPostItem) => (
                         <div
                             key={post.id}
                             className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between"
@@ -121,16 +138,28 @@ export default function Blog() {
                     ))}
                 </div>
 
-                {/* View All Blog Button */}
-                <div className="text-center mt-8">
-                    <Link
-                        href={data.cta.href}
-                        className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#ff2a5f] via-[#ff4850] to-[#ff843d] text-white px-16 py-4 rounded-xl font-bold shadow-lg shadow-pink-500/25 hover:shadow-xl hover:shadow-pink-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-sm sm:text-base"
-                    >
-                        <span>{data.cta.text}</span>
-                        <FaArrowRight className="text-sm" />
-                    </Link>
-                </div>
+                {/* Pagination (Only on Blog Page) */}
+                {isBlogPage && (
+                    <Pagination
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        onPageChange={(page) => setCurrentPage(page)}
+                        className="mt-10 sm:mt-12"
+                    />
+                )}
+
+                {/* View All Blog Button (Only on Homepage, Hidden on Blog Page) */}
+                {!isBlogPage && (
+                    <div className="text-center mt-6">
+                        <Link
+                            href={data.cta.href}
+                            className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#ff2a5f] via-[#ff4850] to-[#ff843d] text-white px-16 py-4 rounded-xl font-bold shadow-lg shadow-pink-500/25 hover:shadow-xl hover:shadow-pink-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-sm sm:text-base"
+                        >
+                            <span>{data.cta.text}</span>
+                            <FaArrowRight className="text-sm" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

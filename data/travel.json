@@ -85,6 +85,10 @@
                     "href": "/mission"
                   },
                   {
+                    "name": "Our Team",
+                    "href": "/team"
+                  },
+                  {
                     "name": "Award Recognition",
                     "href": "/award"
                   },
@@ -282,6 +286,379 @@
                 "href": "/destination/egypt"
               }
             ]
+          },
+          "TravelDestinationsPage": {
+            "header": {
+              "badge": "DISCOVER AMAZING PLACES",
+              "titlePrefix": "Top ",
+              "titleHighlight": "Destinations",
+              "description": "Explore handpicked destinations around the globe. From breathtaking landscapes to vibrant cultures, find your next unforgettable journey."
+            },
+            "tabs": [
+              {
+                "id": "domestic",
+                "label": "Domestic Destinations",
+                "icon": "FaMapMarkerAlt"
+              },
+              {
+                "id": "international",
+                "label": "International Destinations",
+                "icon": "FaGlobe"
+              }
+            ],
+            "domesticDestinations": [
+              {
+                "id": "delhi",
+                "name": "Delhi",
+                "subtitle": "History, Culture & Modern Vibes",
+                "image": "/about1.jpg",
+                "tags": [
+                  {
+                    "label": "Historical Sites",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "City Tours",
+                    "icon": "FaUserFriends"
+                  }
+                ],
+                "href": "/destination/delhi"
+              },
+              {
+                "id": "himachal",
+                "name": "Himachal Pradesh",
+                "subtitle": "Mountains, Adventure & Serenity",
+                "image": "/whychoose_fjord.jpg",
+                "tags": [
+                  {
+                    "label": "Mountains",
+                    "icon": "FaMountain"
+                  },
+                  {
+                    "label": "Adventure",
+                    "icon": "FaHiking"
+                  }
+                ],
+                "href": "/destination/himachal"
+              },
+              {
+                "id": "goa",
+                "name": "Goa",
+                "subtitle": "Sun, Sand & Vibrant Nightlife",
+                "image": "/blog2.jpg",
+                "tags": [
+                  {
+                    "label": "Beaches",
+                    "icon": "FaUmbrellaBeach"
+                  },
+                  {
+                    "label": "Nightlife",
+                    "icon": "FaGlassCheers"
+                  }
+                ],
+                "href": "/destination/goa"
+              },
+              {
+                "id": "kerala",
+                "name": "Kerala",
+                "subtitle": "Backwaters, Beaches & Nature",
+                "image": "/blog3.jpg",
+                "tags": [
+                  {
+                    "label": "Backwaters",
+                    "icon": "FaShip"
+                  },
+                  {
+                    "label": "Hill Stations",
+                    "icon": "FaMountain"
+                  }
+                ],
+                "href": "/destination/kerala"
+              },
+              {
+                "id": "lakshadweep",
+                "name": "Lakshadweep",
+                "subtitle": "Pristine Beaches & Crystal Waters",
+                "image": "/blog1.jpg",
+                "tags": [
+                  {
+                    "label": "Beaches",
+                    "icon": "FaUmbrellaBeach"
+                  },
+                  {
+                    "label": "Water Sports",
+                    "icon": "FaSwimmer"
+                  }
+                ],
+                "href": "/destination/lakshadweep"
+              },
+              {
+                "id": "kashmir",
+                "name": "Jammu & Kashmir",
+                "subtitle": "Heaven on Earth",
+                "image": "/santorini_mission.jpg",
+                "tags": [
+                  {
+                    "label": "Lakes",
+                    "icon": "FaWater"
+                  },
+                  {
+                    "label": "Snow Activities",
+                    "icon": "FaSnowflake"
+                  }
+                ],
+                "href": "/destination/kashmir"
+              },
+              {
+                "id": "uttar-pradesh",
+                "name": "Uttar Pradesh",
+                "subtitle": "Spirituality, Heritage & Culture",
+                "image": "/about2.jpg",
+                "tags": [
+                  {
+                    "label": "Spiritual",
+                    "icon": "FaPray"
+                  },
+                  {
+                    "label": "Heritage",
+                    "icon": "FaLandmark"
+                  }
+                ],
+                "href": "/destination/uttar-pradesh"
+              },
+              {
+                "id": "mumbai",
+                "name": "Mumbai",
+                "subtitle": "City of Dreams",
+                "image": "/whychoose_main.jpg",
+                "tags": [
+                  {
+                    "label": "City Tours",
+                    "icon": "FaCity"
+                  },
+                  {
+                    "label": "Shopping",
+                    "icon": "FaShoppingBag"
+                  }
+                ],
+                "href": "/destination/mumbai"
+              },
+              {
+                "id": "rajasthan",
+                "name": "Rajasthan",
+                "subtitle": "Royal Palaces & Golden Deserts",
+                "image": "/about1.jpg",
+                "tags": [
+                  {
+                    "label": "Palaces",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "Desert Safari",
+                    "icon": "FaCampground"
+                  }
+                ],
+                "href": "/destination/rajasthan"
+              },
+              {
+                "id": "andaman",
+                "name": "Andaman Islands",
+                "subtitle": "Turquoise Seas & Coral Reefs",
+                "image": "/whychoose_fjord.jpg",
+                "tags": [
+                  {
+                    "label": "Scuba Diving",
+                    "icon": "FaSwimmer"
+                  },
+                  {
+                    "label": "Beaches",
+                    "icon": "FaUmbrellaBeach"
+                  }
+                ],
+                "href": "/destination/andaman"
+              }
+            ],
+            "internationalDestinations": [
+              {
+                "id": "maldives",
+                "name": "Maldives",
+                "subtitle": "Tropical Paradise & Coral Reefs",
+                "image": "/blog1.jpg",
+                "tags": [
+                  {
+                    "label": "Luxury Resorts",
+                    "icon": "FaHotel"
+                  },
+                  {
+                    "label": "Water Sports",
+                    "icon": "FaSwimmer"
+                  }
+                ],
+                "href": "/destination/maldives"
+              },
+              {
+                "id": "bali",
+                "name": "Bali, Indonesia",
+                "subtitle": "Island of Gods & Serene Beaches",
+                "image": "/whychoose_packages.jpg",
+                "tags": [
+                  {
+                    "label": "Temples",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "Beaches",
+                    "icon": "FaUmbrellaBeach"
+                  }
+                ],
+                "href": "/destination/bali"
+              },
+              {
+                "id": "switzerland",
+                "name": "Switzerland",
+                "subtitle": "Alpine Wonders & Scenic Glaciers",
+                "image": "/whychoose_fjord.jpg",
+                "tags": [
+                  {
+                    "label": "Snow Alps",
+                    "icon": "FaSnowflake"
+                  },
+                  {
+                    "label": "Scenic Train",
+                    "icon": "FaTrain"
+                  }
+                ],
+                "href": "/destination/switzerland"
+              },
+              {
+                "id": "dubai",
+                "name": "Dubai, UAE",
+                "subtitle": "Futuristic Skyline & Desert Safari",
+                "image": "/whychoose_main.jpg",
+                "tags": [
+                  {
+                    "label": "Desert Safari",
+                    "icon": "FaCampground"
+                  },
+                  {
+                    "label": "Shopping",
+                    "icon": "FaShoppingBag"
+                  }
+                ],
+                "href": "/destination/dubai"
+              },
+              {
+                "id": "paris",
+                "name": "Paris, France",
+                "subtitle": "The City of Lights & Romance",
+                "image": "/about1.jpg",
+                "tags": [
+                  {
+                    "label": "Museums",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "City Tours",
+                    "icon": "FaCity"
+                  }
+                ],
+                "href": "/destination/paris"
+              },
+              {
+                "id": "greece",
+                "name": "Santorini, Greece",
+                "subtitle": "Sun-Drenched Islands & Sunsets",
+                "image": "/santorini_mission.jpg",
+                "tags": [
+                  {
+                    "label": "Beaches",
+                    "icon": "FaUmbrellaBeach"
+                  },
+                  {
+                    "label": "Heritage",
+                    "icon": "FaLandmark"
+                  }
+                ],
+                "href": "/destination/greece"
+              },
+              {
+                "id": "tokyo",
+                "name": "Tokyo, Japan",
+                "subtitle": "Neon Lights & Ancient Shrines",
+                "image": "/blog2.jpg",
+                "tags": [
+                  {
+                    "label": "Culture",
+                    "icon": "FaToriiGate"
+                  },
+                  {
+                    "label": "City Tours",
+                    "icon": "FaCity"
+                  }
+                ],
+                "href": "/destination/tokyo"
+              },
+              {
+                "id": "egypt",
+                "name": "Cairo, Egypt",
+                "subtitle": "Pyramids, History & Nile River",
+                "image": "/about2.jpg",
+                "tags": [
+                  {
+                    "label": "Pyramids",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "River Cruise",
+                    "icon": "FaShip"
+                  }
+                ],
+                "href": "/destination/egypt"
+              },
+              {
+                "id": "singapore",
+                "name": "Singapore",
+                "subtitle": "Modern Marvels & Gardens by the Bay",
+                "image": "/blog3.jpg",
+                "tags": [
+                  {
+                    "label": "City Tours",
+                    "icon": "FaCity"
+                  },
+                  {
+                    "label": "Gardens",
+                    "icon": "FaLandmark"
+                  }
+                ],
+                "href": "/destination/singapore"
+              },
+              {
+                "id": "london",
+                "name": "London, UK",
+                "subtitle": "Big Ben, Royal Heritage & Culture",
+                "image": "/whychoose_main.jpg",
+                "tags": [
+                  {
+                    "label": "Heritage",
+                    "icon": "FaLandmark"
+                  },
+                  {
+                    "label": "City Tours",
+                    "icon": "FaCity"
+                  }
+                ],
+                "href": "/destination/london"
+              }
+            ],
+            "pagination": {
+              "currentPage": 1,
+              "itemsPerPage": 8,
+              "totalPages": 2,
+              "pages": [
+                1,
+                2
+              ]
+            }
           }
         }
       },
@@ -436,6 +813,75 @@
                 "href": "/support"
               }
             ]
+          },
+          "TravelWhyChooseUsPage": {
+            "header": {
+              "subtitle": "WHY CHOOSE US",
+              "headingLine1": "More Than Just Trips",
+              "headingLine2Prefix": "We Create ",
+              "headingHighlight": "Better Experiences",
+              "description": "At Wanderly, we believe travel is not just about places, but about people, experiences, and memories. We go the extra mile to ensure every journey is smooth, safe, and truly unforgettable."
+            },
+            "floatingNote": {
+              "lines": [
+                "Travel",
+                "More",
+                "Worry Less"
+              ]
+            },
+            "hero": {
+              "image": "/whychooseus.jpg",
+              "imageAlt": "Traveller resting on a cliff above a turquoise mountain lake",
+              "overlayText": [
+                "Good",
+                "Places",
+                "Brighter",
+                "People"
+              ],
+              "badge": {
+                "title": "EXPLORE",
+                "subtitle": "DISCOVER",
+                "tagline": "BELONG"
+              }
+            },
+            "features": [
+              {
+                "id": "guides",
+                "icon": "users",
+                "title": "Expert Travel Guides",
+                "description": "Our experienced and certified guides ensure authentic, safe, and enriching travel experiences."
+              },
+              {
+                "id": "safety",
+                "icon": "shield",
+                "title": "Safe & Hassle-Free Travel",
+                "description": "Your safety is our priority. We ensure secure travel with proper planning and trusted partners."
+              },
+              {
+                "id": "packages",
+                "icon": "packages",
+                "title": "All-Inclusive Packages",
+                "description": "Flights, stays, meals, activities and more — everything in one simple package."
+              },
+              {
+                "id": "support",
+                "icon": "support",
+                "title": "24/7 Customer Support",
+                "description": "We're always here for you, wherever your journey takes you."
+              },
+              {
+                "id": "value",
+                "icon": "value",
+                "title": "Best Value for Money",
+                "description": "Get the best travel experiences at competitive prices, with no hidden costs."
+              },
+              {
+                "id": "responsible",
+                "icon": "responsible",
+                "title": "Responsible Tourism",
+                "description": "We promote sustainable travel and support local communities for a better tomorrow."
+              }
+            ]
           }
         }
       },
@@ -525,6 +971,83 @@
                 "title": "The best time to visit Japan & enjoy the cherry blossoms",
                 "image": "/blog3.jpg",
                 "href": "/blog/best-time-to-visit-japan"
+              },
+              {
+                "id": "4",
+                "day": "18",
+                "monthYear": "Oct 2024",
+                "dateBadgeGradient": "from-[#ff2a5f] to-[#ff5258]",
+                "readTime": "9 Min Read",
+                "category": "Island Escapes",
+                "title": "Top 10 Hidden Gem Beaches to Visit in Greece and Croatia",
+                "image": "/santorini_mission.jpg",
+                "href": "/blog/hidden-gem-beaches-greece-croatia"
+              },
+              {
+                "id": "5",
+                "day": "22",
+                "monthYear": "Oct 2024",
+                "dateBadgeGradient": "from-[#ff6b35] to-[#ff9245]",
+                "readTime": "5 Min Read",
+                "category": "Budget Travel",
+                "title": "How to Travel Across Europe on a Budget Without Sacrificing Comfort",
+                "image": "/whychoose_fjord.jpg",
+                "href": "/blog/travel-europe-on-a-budget"
+              },
+              {
+                "id": "6",
+                "day": "28",
+                "monthYear": "Oct 2024",
+                "dateBadgeGradient": "from-[#ff2a5f] to-[#ff5258]",
+                "readTime": "8 Min Read",
+                "category": "Mountain Treks",
+                "title": "Essential Packing Checklist for Your First Himalayan Trekking Journey",
+                "image": "/Travelphotos.jpg",
+                "href": "/blog/essential-himalayan-trekking-checklist"
+              },
+              {
+                "id": "7",
+                "day": "04",
+                "monthYear": "Nov 2024",
+                "dateBadgeGradient": "from-[#ff6b35] to-[#ff9245]",
+                "readTime": "6 Min Read",
+                "category": "Culinary Travel",
+                "title": "A Street Food Lover's Ultimate Culinary Expedition in Southeast Asia",
+                "image": "/about1.jpg",
+                "href": "/blog/southeast-asia-street-food-guide"
+              },
+              {
+                "id": "8",
+                "day": "11",
+                "monthYear": "Nov 2024",
+                "dateBadgeGradient": "from-[#ff2a5f] to-[#ff5258]",
+                "readTime": "10 Min Read",
+                "category": "Solo Travel",
+                "title": "Complete Solo Traveler's Survival and Safety Guide for First-Timers",
+                "image": "/about2.jpg",
+                "href": "/blog/solo-travel-safety-guide"
+              },
+              {
+                "id": "9",
+                "day": "17",
+                "monthYear": "Nov 2024",
+                "dateBadgeGradient": "from-[#ff6b35] to-[#ff9245]",
+                "readTime": "7 Min Read",
+                "category": "Eco Tourism",
+                "title": "Sustainable and Eco-Friendly Travel Habits to Adopt on Every Trip",
+                "image": "/whychooseus.jpg",
+                "href": "/blog/sustainable-eco-friendly-travel"
+              },
+              {
+                "id": "10",
+                "day": "24",
+                "monthYear": "Nov 2024",
+                "dateBadgeGradient": "from-[#ff2a5f] to-[#ff5258]",
+                "readTime": "12 Min Read",
+                "category": "Luxury Travel",
+                "title": "World's Most Spectacular Scenic Train Journeys You Must Experience",
+                "image": "/blog1.jpg",
+                "href": "/blog/spectacular-scenic-train-journeys"
               }
             ]
           }
@@ -583,16 +1106,16 @@
                 "href": "/packages"
               },
               {
-                "name": "Destinations",
-                "href": "/destination"
-              },
-              {
                 "name": "Our Services",
                 "href": "/services"
               },
               {
-                "name": "Travel Guide",
-                "href": "/guide"
+                "name": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "name": "Testimonials",
+                "href": "/testimonials"
               },
               {
                 "name": "Blog",
@@ -600,41 +1123,7 @@
               },
               {
                 "name": "Contact Us",
-                "href": "/contact"
-              }
-            ],
-            "destinations": [
-              {
-                "name": "India",
-                "href": "/destination/india"
-              },
-              {
-                "name": "Dubai",
-                "href": "/destination/dubai"
-              },
-              {
-                "name": "Thailand",
-                "href": "/destination/thailand"
-              },
-              {
-                "name": "Bali",
-                "href": "/destination/bali"
-              },
-              {
-                "name": "Switzerland",
-                "href": "/destination/switzerland"
-              },
-              {
-                "name": "Singapore",
-                "href": "/destination/singapore"
-              },
-              {
-                "name": "Maldives",
-                "href": "/destination/maldives"
-              },
-              {
-                "name": "Europe",
-                "href": "/destination/europe"
+                "href": "/contactus"
               }
             ],
             "services": [
@@ -671,6 +1160,40 @@
                 "href": "/services/visa-assistance"
               }
             ],
+            "Help & Support": [
+              {
+                "name": "Faq's",
+                "href": "/faq"
+              },
+              {
+                "name": "Our Team",
+                "href": "/team"
+              },
+              {
+                "name": "Partners",
+                "href": "/partners"
+              },
+                {
+                "name": "Enquiry Now",
+                "href": "/enquiry"
+              },
+              {
+                "name": "Privacy Policy",
+                "href": "/privacypolicy"
+              },
+              {
+                "name": "Terms & Conditions",
+                "href": "/termscondition"
+              },
+              {
+                "name": "Refund Policy",
+                "href": "/refundpolicy"
+              },
+              {
+                "name": "Payment Policy",
+                "href": "/paymentpolicy"
+              }
+            ],
             "newsletter": {
               "title": "Stay Updated",
               "description": "Subscribe to our newsletter and be the first to know about exclusive deals, travel tips and latest offers.",
@@ -697,11 +1220,11 @@
               "links": [
                 {
                   "name": "Privacy Policy",
-                  "href": "/privacy"
+                  "href": "/privacypolicy"
                 },
                 {
                   "name": "Terms & Conditions",
-                  "href": "/terms"
+                  "href": "/termscondition"
                 },
                 {
                   "name": "Sitemap",
@@ -743,7 +1266,7 @@
                 }
               ]
             },
-             "award": {
+            "award": {
               "title": "Award Recognition",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -785,7 +1308,21 @@
                 }
               ]
             },
-              "whychooseus": {
+            "partners": {
+              "title": "Our Partners",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Our Partners",
+                  "href": "/partners"
+                }
+              ]
+            },
+            "whychooseus": {
               "title": "Why Choose Us",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -813,7 +1350,49 @@
                 }
               ]
             },
-              "enquiry": {
+            "testimonials": {
+              "title": "Testimonials",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Testimonials",
+                  "href": "/testimonials"
+                }
+              ]
+            },
+            "team": {
+              "title": "Our Teams",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Our Teams",
+                  "href": "/team"
+                }
+              ]
+            },
+            "gallery": {
+              "title": "Our Gallery",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Our Gallery",
+                  "href": "/gallery"
+                }
+              ]
+            },
+            "enquiry": {
               "title": "Enquiry Now",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -827,7 +1406,7 @@
                 }
               ]
             },
-               "contactus": {
+            "contactus": {
               "title": "Contact Us",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -841,7 +1420,7 @@
                 }
               ]
             },
-               "faq": {
+            "faq": {
               "title": "Faqs",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -866,6 +1445,76 @@
                 {
                   "name": "Our Blog",
                   "href": "/blog"
+                }
+              ]
+            },
+               "paymentpolicy": {
+              "title": "Payment Policy",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Payment Policy",
+                  "href": "/paymentpolicy"
+                }
+              ]
+            },
+               "refundpolicy": {
+              "title": "Refund Policy",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Refund Policy",
+                  "href": "/refundpolicy"
+                }
+              ]
+            },
+               "termscondition": {
+              "title": "Terms & Conditions",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Terms & Conditions",
+                  "href": "/termscondition"
+                }
+              ]
+            },
+               "privacypolicy": {
+              "title": "Privacy Policy",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Privacy Policy",
+                  "href": "/privacypolicy"
+                }
+              ]
+            },
+            "enquiry": {
+              "title": "Travel Enquiry",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Enquiry",
+                  "href": "/enquiry"
                 }
               ]
             },
@@ -1074,6 +1723,1116 @@
                 "image": "/award/award1.png"
               }
             ]
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "TravelTeam1": {
+            "header": {
+              "badge": "OUR TEAM",
+              "headingPrefix": "Meet Our ",
+              "headingHighlight": "Travel Experts",
+              "description": "A passionate team of travel professionals dedicated to making your journey smoother, safer, and more memorable."
+            },
+            "members": [
+              {
+                "id": "team-1",
+                "name": "Michel Smith",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog1.jpg"
+              },
+              {
+                "id": "team-2",
+                "name": "Janny Willson",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog2.jpg"
+              },
+              {
+                "id": "team-3",
+                "name": "Jacob Jones",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog3.jpg"
+              },
+              {
+                "id": "team-4",
+                "name": "Maria Prova",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog1.jpg"
+              },
+              {
+                "id": "team-5",
+                "name": "Alif Mahmud",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog2.jpg"
+              },
+              {
+                "id": "team-6",
+                "name": "Rebeka Maliha",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog3.jpg"
+              },
+              {
+                "id": "team-7",
+                "name": "Karan Mehta",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog1.jpg"
+              },
+              {
+                "id": "team-8",
+                "name": "Neha Sharma",
+                "role": "Tourist Guide",
+                "image": "/team.jpg",
+                "bgImage": "/blog2.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "TravelGallery1": {
+            "header": {
+              "badge": "CAPTURED MEMORIES",
+              "headingPrefix": "Our Travel ",
+              "headingHighlight": "Gallery",
+              "description": "Take a look at beautiful moments from our travelers around the world. Inspiring journeys, stunning destinations, and unforgettable experiences."
+            },
+            "tabs": [
+              {
+                "id": "all",
+                "label": "All"
+              },
+              {
+                "id": "destinations",
+                "label": "Destinations"
+              },
+              {
+                "id": "packages",
+                "label": "Tour Packages"
+              },
+              {
+                "id": "travelers",
+                "label": "Our Travelers"
+              },
+              {
+                "id": "events",
+                "label": "Events"
+              },
+              {
+                "id": "videos",
+                "label": "Videos"
+              }
+            ],
+            "subHeader": {
+              "title": "Photo Gallery",
+              "viewAllText": "View All Photos",
+              "viewLessText": "Show Less",
+              "viewAllHref": "/gallery"
+            },
+            "morePhotosCard": {
+              "count": "+10",
+              "label": "More Photos",
+              "image": "/footer-bg.jpg"
+            },
+            "items": [
+              {
+                "id": "gal-1",
+                "title": "Santorini Sunset, Greece",
+                "category": "destinations",
+                "image": "/santorini_mission.jpg"
+              },
+              {
+                "id": "gal-2",
+                "title": "Fjord Exploration, Norway",
+                "category": "destinations",
+                "image": "/whychoose_fjord.jpg"
+              },
+              {
+                "id": "gal-3",
+                "title": "Maldives Overwater Villas",
+                "category": "packages",
+                "image": "/blog1.jpg"
+              },
+              {
+                "id": "gal-4",
+                "title": "Eiffel Tower Autumn, Paris",
+                "category": "destinations",
+                "image": "/about1.jpg"
+              },
+              {
+                "id": "gal-5",
+                "title": "Wildlife Safari, Kenya",
+                "category": "travelers",
+                "image": "/about2.jpg"
+              },
+              {
+                "id": "gal-6",
+                "title": "Gate of Heaven, Bali",
+                "category": "packages",
+                "image": "/whychoose_packages.jpg"
+              },
+              {
+                "id": "gal-7",
+                "title": "Alpine Lake Boating",
+                "category": "travelers",
+                "image": "/Travelphotos.jpg"
+              },
+              {
+                "id": "gal-8",
+                "title": "Tropical Paradise Beach",
+                "category": "destinations",
+                "image": "/blog2.jpg"
+              },
+              {
+                "id": "gal-9",
+                "title": "Marina Bay Skyline, Singapore",
+                "category": "events",
+                "image": "/blog3.jpg"
+              },
+              {
+                "id": "gal-10",
+                "title": "Heritage Lake Palace, Udaipur",
+                "category": "destinations",
+                "image": "/whychoose_main.jpg"
+              },
+              {
+                "id": "gal-11",
+                "title": "Amalfi Coastline, Italy",
+                "category": "packages",
+                "image": "/whychooseus.jpg"
+              },
+              {
+                "id": "gal-12",
+                "title": "Swiss Alps Trekking Adventure",
+                "category": "destinations",
+                "image": "/whychoose_safety.jpg"
+              },
+              {
+                "id": "gal-13",
+                "title": "Grand Canyon Wilderness Tour",
+                "category": "packages",
+                "image": "/whychoose_support.jpg"
+              },
+              {
+                "id": "gal-14",
+                "title": "Local Cultural & Heritage Walk",
+                "category": "travelers",
+                "image": "/whychoose_guide.jpg"
+              },
+              {
+                "id": "gal-15",
+                "title": "Mountain Expedition Group",
+                "category": "travelers",
+                "image": "/team.jpg"
+              },
+              {
+                "id": "gal-16",
+                "title": "Northern Lights Glamping",
+                "category": "destinations",
+                "image": "/footer-side.jpg"
+              },
+              {
+                "id": "gal-17",
+                "title": "Ancient Temple Festival",
+                "category": "events",
+                "image": "/achievement.jpg"
+              },
+              {
+                "id": "gal-18",
+                "title": "Mediterranean Luxury Cruise",
+                "category": "packages",
+                "image": "/subbanner.jpg"
+              },
+              {
+                "id": "gal-19",
+                "title": "Scenic Pine Forest Retreat",
+                "category": "destinations",
+                "image": "/home-bg.jpg"
+              },
+              {
+                "id": "gal-20",
+                "title": "Highland Summit Journey",
+                "category": "events",
+                "image": "/founder.jpg"
+              },
+              {
+                "id": "gal-21",
+                "title": "Desert Safari & Dunes Camp",
+                "category": "videos",
+                "image": "/bannerimg.png"
+              }
+            ]
+          },
+          "TravelVideoGallery1": {
+            "header": {
+              "indicatorColor": "#f59e0b",
+              "title": "Video Gallery",
+              "viewAllText": "View All Videos",
+              "viewLessText": "Show Less",
+              "viewAllHref": "/gallery"
+            },
+            "items": [
+              {
+                "id": "vid-1",
+                "title": "Maldives Travel Experience",
+                "subtitle": "Beaches & Resorts",
+                "duration": "02:45",
+                "thumbnail": "/blog1.jpg",
+                "videoUrl": "https://www.youtube.com/embed/P9Z6okLJDv0"
+              },
+              {
+                "id": "vid-2",
+                "title": "Switzerland in 4K",
+                "subtitle": "Mountains & Adventure",
+                "duration": "03:12",
+                "thumbnail": "/whychoose_fjord.jpg",
+                "videoUrl": "https://www.youtube.com/embed/fyOVKyaKJq4"
+              },
+              {
+                "id": "vid-3",
+                "title": "Bali Cultural Journey",
+                "subtitle": "Temples & Traditions",
+                "duration": "01:58",
+                "thumbnail": "/whychoose_packages.jpg",
+                "videoUrl": "https://www.youtube.com/embed/lzjruXO0Fvc"
+              },
+              {
+                "id": "vid-4",
+                "title": "Dubai City Tour",
+                "subtitle": "Modern City & Lifestyle",
+                "duration": "04:20",
+                "thumbnail": "/blog3.jpg",
+                "videoUrl": "https://www.youtube.com/embed/KCTQPISF0HI"
+              },
+              {
+                "id": "vid-5",
+                "title": "Thailand Highlights",
+                "subtitle": "Islands & Beaches",
+                "duration": "02:36",
+                "thumbnail": "/Travelphotos.jpg",
+                "videoUrl": "https://www.youtube.com/embed/PAHtXTDeTS8"
+              },
+              {
+                "id": "vid-6",
+                "title": "Kashmir – Paradise on Earth",
+                "subtitle": "Snow & Nature",
+                "duration": "03:05",
+                "thumbnail": "/whychoose_safety.jpg",
+                "videoUrl": "https://www.youtube.com/embed/ah-yrM6GKyM"
+              },
+              {
+                "id": "vid-7",
+                "title": "Santorini Sunset Dream",
+                "subtitle": "Greek Islands & Romance",
+                "duration": "03:40",
+                "thumbnail": "/santorini_mission.jpg",
+                "videoUrl": "https://www.youtube.com/embed/fTn-XfauCPI"
+              },
+              {
+                "id": "vid-8",
+                "title": "Paris City of Lights",
+                "subtitle": "Art, History & Romance",
+                "duration": "04:15",
+                "thumbnail": "/about1.jpg",
+                "videoUrl": "https://www.youtube.com/embed/tHztN9inrOw"
+              },
+              {
+                "id": "vid-9",
+                "title": "African Wildlife Safari",
+                "subtitle": "Savannah & Wild Expeditions",
+                "duration": "02:50",
+                "thumbnail": "/about2.jpg",
+                "videoUrl": "https://www.youtube.com/embed/P8frC_cLLD4"
+              },
+              {
+                "id": "vid-10",
+                "title": "Amalfi Coast Scenic Drive",
+                "subtitle": "Italian Coast & Cliffs",
+                "duration": "03:25",
+                "thumbnail": "/whychoose_main.jpg",
+                "videoUrl": "https://www.youtube.com/embed/H4tyzzP33Cw"
+              },
+              {
+                "id": "vid-11",
+                "title": "Norwegian Fjords Voyage",
+                "subtitle": "Glaciers & Deep Waters",
+                "duration": "05:10",
+                "thumbnail": "/subbanner.jpg",
+                "videoUrl": "https://www.youtube.com/embed/Bxo2JkiqG_o"
+              },
+              {
+                "id": "vid-12",
+                "title": "Tokyo Neon & Heritage",
+                "subtitle": "Culture & Future City",
+                "duration": "03:55",
+                "thumbnail": "/whychoose_guide.jpg",
+                "videoUrl": "https://www.youtube.com/embed/GfgTi_ngQww"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonials": {
+        "variants": {
+          "TravelTestimonials1": {
+            "header": {
+              "badge": "TRAVELERS FEEDBACK",
+              "headingPrefix": "What Our ",
+              "headingHighlight": "Travelers Say",
+              "description": "Real stories from real travelers. Discover how TripNexa has helped explore the world and create unforgettable memories."
+            },
+            "pagination": {
+              "itemsPerPage": 6
+            },
+            "items": [
+              {
+                "id": "test-1",
+                "image": "/santorini_mission.jpg",
+                "rating": 5,
+                "quote": "Our trip to Greece with TripNexa was a dream come true! Everything was perfectly planned, from flights to hotels and sightseeing. It was a hassle-free and truly memorable experience.",
+                "author": {
+                  "name": "Neha Sharma",
+                  "location": "New Delhi, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-2",
+                "image": "/whychoose_fjord.jpg",
+                "rating": 5,
+                "quote": "TripNexa made our honeymoon in Switzerland so special. The itinerary, hotel stays, and local guides were excellent. We just enjoyed every moment!",
+                "author": {
+                  "name": "Amit Verma",
+                  "location": "Mumbai, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-3",
+                "image": "/about1.jpg",
+                "rating": 5,
+                "quote": "From booking to return, the entire France trip was smooth and well organized. The team was always available for support. Highly recommended for Europe travel!",
+                "author": {
+                  "name": "Pooja Mehta",
+                  "location": "Bengaluru, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-4",
+                "image": "/blog1.jpg",
+                "rating": 5,
+                "quote": "Our Maldives vacation with TripNexa was absolutely amazing. The resorts, transfers, and everything was taken care of. It was the perfect mix of relaxation and luxury.",
+                "author": {
+                  "name": "Rohan Kapoor",
+                  "location": "Pune, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-5",
+                "image": "/whychoose_packages.jpg",
+                "rating": 5,
+                "quote": "Bali has always been on my bucket list, and TripNexa made it happen beautifully. The local tours, culture, and beaches were incredible. I can't wait to travel again with you!",
+                "author": {
+                  "name": "Anjali Singh",
+                  "location": "Lucknow, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-6",
+                "image": "/blog3.jpg",
+                "rating": 5,
+                "quote": "Our family trip to Dubai was a fantastic experience. Great hotels, well-planned sightseeing, and excellent customer support throughout. TripNexa is now our first choice for travel!",
+                "author": {
+                  "name": "Vikram Joshi",
+                  "location": "Ahmedabad, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-7",
+                "image": "/whychoose_safety.jpg",
+                "rating": 5,
+                "quote": "Exploring the Swiss Alps with my family was unforgettable. Every detail was handled with precision and care. Outstanding customer service!",
+                "author": {
+                  "name": "Kavita Nair",
+                  "location": "Kochi, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-8",
+                "image": "/Travelphotos.jpg",
+                "rating": 5,
+                "quote": "Thailand was full of thrills and beauty! The island-hopping tours recommended by TripNexa were the highlight of our vacation. Highly praised!",
+                "author": {
+                  "name": "Rahul Deshmukh",
+                  "location": "Nagpur, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-9",
+                "image": "/footer-side.jpg",
+                "rating": 5,
+                "quote": "The Northern Lights glamping expedition was out of this world. Professional guides, cozy stays, and mesmerizing aurora skies. Five stars!",
+                "author": {
+                  "name": "Sneha Roy",
+                  "location": "Kolkata, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-10",
+                "image": "/whychoose_main.jpg",
+                "rating": 5,
+                "quote": "The Italian Amalfi coast was breathtaking! Seamless transfers, boutique hotels, and authentic food recommendations made this vacation magical.",
+                "author": {
+                  "name": "Manish Gupta",
+                  "location": "Jaipur, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-11",
+                "image": "/subbanner.jpg",
+                "rating": 5,
+                "quote": "Our Mediterranean luxury cruise experience exceeded all expectations. Superb hospitality and smooth boarding process thanks to TripNexa.",
+                "author": {
+                  "name": "Priyanka Patel",
+                  "location": "Surat, India",
+                  "avatar": "/team.jpg"
+                }
+              },
+              {
+                "id": "test-12",
+                "image": "/founder.jpg",
+                "rating": 5,
+                "quote": "From planning our itinerary to 24/7 on-tour assistance, the TripNexa team proved to be reliable, transparent, and genuinely dedicated to travelers.",
+                "author": {
+                  "name": "Deepak Choudhary",
+                  "location": "Chandigarh, India",
+                  "avatar": "/team.jpg"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "FAQ": {
+        "variants": {
+          "TravelFAQ1": {
+            "header": {
+              "badge": "FREQUENTLY ASKED QUESTIONS",
+              "headingPrefix": "Got Questions? ",
+              "headingHighlight": "We've Got Answers",
+              "description": "Find quick answers to the most common questions about traveling with TripNexa. If you need more help, our team is always here for you."
+            },
+            "items": [
+              {
+                "id": "faq-1",
+                "number": "01",
+                "question": "What is TripNexa?",
+                "answer": "TripNexa is a trusted travel company offering handpicked domestic and international tour packages, customized travel experiences, visa assistance, hotel bookings, and more. Our goal is to make travel simple, safe, and unforgettable for every traveler."
+              },
+              {
+                "id": "faq-2",
+                "number": "02",
+                "question": "How do I book a tour package with TripNexa?",
+                "answer": "You can easily book a tour package by browsing our packages page, selecting your preferred destination, and submitting an inquiry or calling our travel experts directly. We will guide you through the instant booking process."
+              },
+              {
+                "id": "faq-3",
+                "number": "03",
+                "question": "What payment methods do you accept?",
+                "answer": "We accept all major credit/debit cards, UPI payments, net banking, direct bank transfers, and flexible EMI payment options for your convenience."
+              },
+              {
+                "id": "faq-4",
+                "number": "04",
+                "question": "Can I customize a tour package?",
+                "answer": "Yes, absolutely! All our packages can be fully customized to suit your budget, travel dates, preferred hotels, and specific itinerary requirements."
+              },
+              {
+                "id": "faq-5",
+                "number": "05",
+                "question": "Do you provide visa assistance?",
+                "answer": "Yes, we provide end-to-end visa assistance for international travel including document verification, appointment scheduling, and application guidance."
+              },
+              {
+                "id": "faq-6",
+                "number": "06",
+                "question": "What is your cancellation and refund policy?",
+                "answer": "We offer flexible cancellation policies depending on the hotel and flight partner terms. Detailed terms are provided during booking, and refunds are processed promptly."
+              },
+              {
+                "id": "faq-7",
+                "number": "07",
+                "question": "Are your packages suitable for family travel?",
+                "answer": "Yes! We specialize in family-friendly tour packages that include kid-friendly activities, comfortable stays, and private transportation."
+              },
+              {
+                "id": "faq-8",
+                "number": "08",
+                "question": "Do you offer group or corporate travel packages?",
+                "answer": "Yes, we offer tailored group discounts, MICE corporate tours, team-building trips, and customized itineraries for large groups."
+              },
+              {
+                "id": "faq-9",
+                "number": "09",
+                "question": "What kind of support do you provide during the trip?",
+                "answer": "We provide 24/7 dedicated travel support. Our local guides and customer service team are available around the clock to assist you with any needs."
+              },
+              {
+                "id": "faq-10",
+                "number": "10",
+                "question": "Is travel insurance included in the packages?",
+                "answer": "Basic travel insurance assistance is offered with all international packages, and comprehensive travel insurance can be added to any trip upon request."
+              }
+            ]
+          }
+        }
+      },
+      "Partners": {
+        "variants": {
+          "TravelPartners1": {
+            "header": {
+              "badge": "OUR TRAVEL PARTNERS",
+              "headingPrefix": "Stronger ",
+              "headingHighlight": "Together",
+              "description": "We collaborate with trusted global partners to bring you better travel experiences, exclusive deals and seamless services across the world."
+            },
+            "items": [
+              {
+                "id": "partner-1",
+                "name": "Emirates",
+                "image": "/partners/emirates.jpg"
+              },
+              {
+                "id": "partner-2",
+                "name": "Qatar Airways",
+                "image": "/partners/qatar.jpg"
+              },
+              {
+                "id": "partner-3",
+                "name": "Singapore Airlines",
+                "image": "/partners/singapur.jpg"
+              },
+              {
+                "id": "partner-4",
+                "name": "IndiGo",
+                "image": "/partners/indogo.jpg"
+              },
+              {
+                "id": "partner-5",
+                "name": "Air India",
+                "image": "/partners/india.jpg"
+              },
+              {
+                "id": "partner-6",
+                "name": "Vistara",
+                "image": "/partners/vistara.jpg"
+              },
+              {
+                "id": "partner-7",
+                "name": "Thai Airways",
+                "image": "/partners/thai.jpg"
+              },
+              {
+                "id": "partner-8",
+                "name": "Turkish Airlines",
+                "image": "/partners/turkish.jpg"
+              },
+              {
+                "id": "partner-9",
+                "name": "Akasa Air",
+                "image": "/partners/akasa.jpg"
+              },
+              {
+                "id": "partner-10",
+                "name": "British Airways",
+                "image": "/partners/british.jpg"
+              },
+              {
+                "id": "partner-11",
+                "name": "Malaysia Airlines",
+                "image": "/partners/malasia.jpg"
+              },
+              {
+                "id": "partner-12",
+                "name": "SpiceJet",
+                "image": "/partners/spicejet.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "ContactUs": {
+        "variants": {
+          "TravelContactUs1": {
+            "header": {
+              "badge": "GET IN TOUCH",
+              "headingPrefix": "We'd Love to ",
+              "headingHighlight": "Hear From You",
+              "description": "Have a question, need a quote, or ready to plan your next adventure? Our team is here to help you make your travel dreams a reality."
+            },
+            "cards": [
+              {
+                "id": "office",
+                "title": "Our Office",
+                "icon": "FaMapMarkerAlt",
+                "iconBg": "bg-[#ffe8ed]",
+                "iconColor": "text-[#ff2e63]",
+                "lines": [
+                  "123 Travel Street,",
+                  "New York, NY 10013,",
+                  "USA"
+                ]
+              },
+              {
+                "id": "call",
+                "title": "Call Us",
+                "icon": "FaPhoneAlt",
+                "iconBg": "bg-[#e6f4ff]",
+                "iconColor": "text-[#0284c7]",
+                "lines": [
+                  "+1 234 567 890",
+                  "+1 234 567 891"
+                ],
+                "note": "Mon - Sat, 9AM - 6PM"
+              },
+              {
+                "id": "email",
+                "title": "Email Us",
+                "icon": "FaEnvelope",
+                "iconBg": "bg-[#fef3c7]",
+                "iconColor": "text-[#1e293b]",
+                "lines": [
+                  "support@tripnexa.com",
+                  "info@tripnexa.com"
+                ],
+                "note": "We reply within 24 hours"
+              },
+              {
+                "id": "chat",
+                "title": "Live Chat",
+                "icon": "FaHeadset",
+                "iconBg": "bg-[#e6f9f0]",
+                "iconColor": "text-[#059669]",
+                "lines": [
+                  "Chat with our travel experts for instant assistance."
+                ],
+                "action": {
+                  "text": "Chat Now",
+                  "href": "https://wa.me/1234567890"
+                }
+              }
+            ]
+          },
+          "TravelContactMessage1": {
+            "backgroundImage": "/contact.jpg",
+            "header": {
+              "badge": "SEND US A MESSAGE",
+              "headingPrefix": "Plan Your ",
+              "headingHighlight": "Next Trip",
+              "description": "Fill out the form and our travel experts will get back to you shortly with the best options for your journey."
+            },
+            "form": {
+              "namePlaceholder": "Your Name*",
+              "emailPlaceholder": "Your Email*",
+              "phonePlaceholder": "Phone Number*",
+              "inquiryPlaceholder": "Select Inquiry Type*",
+              "inquiryOptions": [
+                "Holiday Tour Package",
+                "Flight Booking",
+                "Hotel Reservation",
+                "Visa Assistance",
+                "Custom Itinerary"
+              ],
+              "destinationPlaceholder": "Preferred Destination (Optional)",
+              "messagePlaceholder": "Your Message*",
+              "submitButtonText": "Send Message",
+              "privacyText": "Your information is safe with us.",
+              "successMessage": "Thank you! Your message has been sent successfully. Our team will contact you shortly."
+            },
+            "storySection": {
+              "taglines": ["Discover", "Explore", "Belong"],
+              "watchStoryText": "WATCH OUR STORY",
+              "videoUrl": "https://www.youtube.com/embed/H4tyzzP33Cw?autoplay=1&rel=0",
+              "videoTitle": "Indonesia 4K - Scenic Relaxation Film With Calming Music"
+            },
+            "features": [
+              {
+                "id": "feature-1",
+                "icon": "FaPlane",
+                "title": "New Destinations"
+              },
+              {
+                "id": "feature-2",
+                "icon": "FaUsers",
+                "title": "Expert Guidance"
+              },
+              {
+                "id": "feature-3",
+                "icon": "FaShieldAlt",
+                "title": "Safe & Secure Travel"
+              }
+            ],
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
+            "locationCard": {
+              "badge": "FIND US",
+              "title": "Our Location",
+              "description": "Visit our office or find us on the map. We're always happy to welcome you!",
+              "buttonText": "Get Directions",
+              "buttonHref": "https://maps.google.com/?q=123+Travel+Street+New+York+NY+10013",
+              "officePin": {
+                "name": "TripNexa",
+                "address": "123 Travel Street, New York, NY 10013, USA"
+              }
+            }
+          },
+          "TravelContactLocation1": {
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
+            "locationCard": {
+              "badge": "FIND US",
+              "title": "Our Location",
+              "description": "Visit our office or find us on the map. We're always happy to welcome you!",
+              "buttonText": "Get Directions",
+              "buttonHref": "https://maps.google.com/?q=123+Travel+Street+New+York+NY+10013",
+              "officePin": {
+                "name": "TripNexa",
+                "address": "123 Travel Street, New York, NY 10013, USA"
+              }
+            }
+          }
+        }
+      },
+      "PrivacyPolicy": {
+        "variants": {
+          "TravelPrivacyPolicy1": {
+            "header": {
+              "badge": "OUR COMMITMENT",
+              "headingPrefix": "Privacy ",
+              "headingHighlight": "Policy",
+              "description": "At TripNexa, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services."
+            },
+            "contactEmail": "support@tripnexa.com",
+            "items": [
+              {
+                "number": "01",
+                "title": "Information We Collect",
+                "description": "We may collect personal information such as your name, email address, phone number, travel preferences, and other details when you fill out a form, make an enquiry, book a tour, or subscribe to our newsletter. We also collect non-personal information like browser type, device information, IP address, and pages visited to improve your browsing experience."
+              },
+              {
+                "number": "02",
+                "title": "How We Use Your Information",
+                "description": "Your information is used to provide and improve our services, respond to your enquiries, process bookings, send important updates, personalize your travel experience, and communicate with you about special offers, promotions, and travel-related information."
+              },
+              {
+                "number": "03",
+                "title": "Information Sharing",
+                "description": "We do not sell or rent your personal information. We may share your information with trusted partners such as hotels, airlines, and tour operators only for the purpose of fulfilling your travel requests. We may also share information when required by law or to protect our rights and the safety of our users."
+              },
+              {
+                "number": "04",
+                "title": "Data Security",
+                "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or misuse. However, no online transmission is 100% secure, and we cannot guarantee absolute security."
+              },
+              {
+                "number": "05",
+                "title": "Cookies",
+                "description": "Our website uses cookies to enhance your browsing experience, remember your preferences, and analyze website traffic. You can choose to disable cookies through your browser settings, but some features of our website may not function properly."
+              },
+              {
+                "number": "06",
+                "title": "Your Rights",
+                "description": "You have the right to access, update, or delete your personal information. If you wish to make any changes or have concerns about how your data is handled, please contact us."
+              },
+              {
+                "number": "07",
+                "title": "Changes to This Policy",
+                "description": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically."
+              },
+              {
+                "number": "08",
+                "title": "Contact Us",
+                "description": "If you have any questions or concerns about this Privacy Policy, please contact us at support@tripnexa.com."
+              }
+            ]
+          }
+        }
+      },
+      "PaymentPolicy": {
+        "variants": {
+          "TravelPaymentPolicy1": {
+            "header": {
+              "badge": "OUR COMMITMENT",
+              "headingPrefix": "Payment ",
+              "headingHighlight": "Policy",
+              "description": "At TripNexa, we are committed to providing transparent and secure payment processing. This Payment Policy outlines accepted payment methods, billing terms, and transaction safeguards."
+            },
+            "contactEmail": "support@tripnexa.com",
+            "items": [
+              {
+                "number": "01",
+                "title": "Information We Collect",
+                "description": "We may collect personal information such as your name, email address, phone number, travel preferences, and other details when you fill out a form, make an enquiry, book a tour, or subscribe to our newsletter. We also collect non-personal information like browser type, device information, IP address, and pages visited to improve your browsing experience."
+              },
+              {
+                "number": "02",
+                "title": "How We Use Your Information",
+                "description": "Your information is used to provide and improve our services, respond to your enquiries, process bookings, send important updates, personalize your travel experience, and communicate with you about special offers, promotions, and travel-related information."
+              },
+              {
+                "number": "03",
+                "title": "Information Sharing",
+                "description": "We do not sell or rent your personal information. We may share your information with trusted partners such as hotels, airlines, and tour operators only for the purpose of fulfilling your travel requests. We may also share information when required by law or to protect our rights and the safety of our users."
+              },
+              {
+                "number": "04",
+                "title": "Data Security",
+                "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or misuse. However, no online transmission is 100% secure, and we cannot guarantee absolute security."
+              },
+              {
+                "number": "05",
+                "title": "Cookies",
+                "description": "Our website uses cookies to enhance your browsing experience, remember your preferences, and analyze website traffic. You can choose to disable cookies through your browser settings, but some features of our website may not function properly."
+              },
+              {
+                "number": "06",
+                "title": "Your Rights",
+                "description": "You have the right to access, update, or delete your personal information. If you wish to make any changes or have concerns about how your data is handled, please contact us."
+              },
+              {
+                "number": "07",
+                "title": "Changes to This Policy",
+                "description": "We may update this Payment Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically."
+              },
+              {
+                "number": "08",
+                "title": "Contact Us",
+                "description": "If you have any questions or concerns about this Payment Policy, please contact us at support@tripnexa.com."
+              }
+            ]
+          }
+        }
+      },
+      "RefundPolicy": {
+        "variants": {
+          "TravelRefundPolicy1": {
+            "header": {
+              "badge": "OUR COMMITMENT",
+              "headingPrefix": "Refund ",
+              "headingHighlight": "Policy",
+              "description": "At TripNexa, we aim for complete customer satisfaction. This Refund Policy details cancellation guidelines, refund eligibility, processing timelines, and exceptions."
+            },
+            "contactEmail": "support@tripnexa.com",
+            "items": [
+              {
+                "number": "01",
+                "title": "Information We Collect",
+                "description": "We may collect personal information such as your name, email address, phone number, travel preferences, and other details when you fill out a form, make an enquiry, book a tour, or subscribe to our newsletter. We also collect non-personal information like browser type, device information, IP address, and pages visited to improve your browsing experience."
+              },
+              {
+                "number": "02",
+                "title": "How We Use Your Information",
+                "description": "Your information is used to provide and improve our services, respond to your enquiries, process bookings, send important updates, personalize your travel experience, and communicate with you about special offers, promotions, and travel-related information."
+              },
+              {
+                "number": "03",
+                "title": "Information Sharing",
+                "description": "We do not sell or rent your personal information. We may share your information with trusted partners such as hotels, airlines, and tour operators only for the purpose of fulfilling your travel requests. We may also share information when required by law or to protect our rights and the safety of our users."
+              },
+              {
+                "number": "04",
+                "title": "Data Security",
+                "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or misuse. However, no online transmission is 100% secure, and we cannot guarantee absolute security."
+              },
+              {
+                "number": "05",
+                "title": "Cookies",
+                "description": "Our website uses cookies to enhance your browsing experience, remember your preferences, and analyze website traffic. You can choose to disable cookies through your browser settings, but some features of our website may not function properly."
+              },
+              {
+                "number": "06",
+                "title": "Your Rights",
+                "description": "You have the right to access, update, or delete your personal information. If you wish to make any changes or have concerns about how your data is handled, please contact us."
+              },
+              {
+                "number": "07",
+                "title": "Changes to This Policy",
+                "description": "We may update this Refund Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically."
+              },
+              {
+                "number": "08",
+                "title": "Contact Us",
+                "description": "If you have any questions or concerns about this Refund Policy, please contact us at support@tripnexa.com."
+              }
+            ]
+          }
+        }
+      },
+      "TermsCondition": {
+        "variants": {
+          "TravelTermsCondition1": {
+            "header": {
+              "badge": "OUR COMMITMENT",
+              "headingPrefix": "Terms & ",
+              "headingHighlight": "Conditions",
+              "description": "At TripNexa, we value your trust and are committed to delivering exceptional travel experiences. These Terms and Conditions govern your use of our platform and travel services."
+            },
+            "contactEmail": "support@tripnexa.com",
+            "items": [
+              {
+                "number": "01",
+                "title": "Information We Collect",
+                "description": "We may collect personal information such as your name, email address, phone number, travel preferences, and other details when you fill out a form, make an enquiry, book a tour, or subscribe to our newsletter. We also collect non-personal information like browser type, device information, IP address, and pages visited to improve your browsing experience."
+              },
+              {
+                "number": "02",
+                "title": "How We Use Your Information",
+                "description": "Your information is used to provide and improve our services, respond to your enquiries, process bookings, send important updates, personalize your travel experience, and communicate with you about special offers, promotions, and travel-related information."
+              },
+              {
+                "number": "03",
+                "title": "Information Sharing",
+                "description": "We do not sell or rent your personal information. We may share your information with trusted partners such as hotels, airlines, and tour operators only for the purpose of fulfilling your travel requests. We may also share information when required by law or to protect our rights and the safety of our users."
+              },
+              {
+                "number": "04",
+                "title": "Data Security",
+                "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or misuse. However, no online transmission is 100% secure, and we cannot guarantee absolute security."
+              },
+              {
+                "number": "05",
+                "title": "Cookies",
+                "description": "Our website uses cookies to enhance your browsing experience, remember your preferences, and analyze website traffic. You can choose to disable cookies through your browser settings, but some features of our website may not function properly."
+              },
+              {
+                "number": "06",
+                "title": "Your Rights",
+                "description": "You have the right to access, update, or delete your personal information. If you wish to make any changes or have concerns about how your data is handled, please contact us."
+              },
+              {
+                "number": "07",
+                "title": "Changes to This Policy",
+                "description": "We may update this Terms & Conditions agreement from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically."
+              },
+              {
+                "number": "08",
+                "title": "Contact Us",
+                "description": "If you have any questions or concerns about these Terms & Conditions, please contact us at support@tripnexa.com."
+              }
+            ]
+          }
+        }
+      },
+      "Enquiry": {
+        "variants": {
+          "TravelEnquiry1": {
+            "header": {
+              "badge": "PLAN YOUR NEXT JOURNEY",
+              "headingLine1": "Travel Enquiry",
+              "headingLine2Prefix": "We're Here to ",
+              "headingLine2Highlight": "Help",
+              "description": "Share your travel plans with us and our experts will get back to you with the best options, personalized just for you."
+            },
+            "features": [
+              {
+                "id": "feat-1",
+                "icon": "FaHeadset",
+                "title": "Expert Advice",
+                "description": "Get guidance from travel specialists"
+              },
+              {
+                "id": "feat-2",
+                "icon": "FaCog",
+                "title": "Customized Packages",
+                "description": "Tailored to your needs and budget"
+              },
+              {
+                "id": "feat-3",
+                "icon": "FaTag",
+                "title": "Best Offers",
+                "description": "Exclusive deals and discounts"
+              },
+              {
+                "id": "feat-4",
+                "icon": "FaClock",
+                "title": "Quick Response",
+                "description": "We reply within 24 hours"
+              }
+            ],
+            "form": {
+              "headerTitle": "Enquiry",
+              "headerHighlight": "Now",
+              "headerSubtitle": "Fill in the details and let's plan your perfect trip together.",
+              "nameLabel": "Full Name *",
+              "namePlaceholder": "Enter your full name",
+              "nameIcon": "FaUser",
+              "emailLabel": "Email Address *",
+              "emailPlaceholder": "Enter your email address",
+              "emailIcon": "FaEnvelope",
+              "phoneLabel": "Phone Number *",
+              "phonePlaceholder": "Enter your phone number",
+              "phoneIcon": "FaPhoneAlt",
+              "travelTypeLabel": "Travel Type *",
+              "travelTypePlaceholder": "Select travel type",
+              "travelTypeIcon": "FaSuitcase",
+              "travelTypeOptions": [
+                "Solo Travel",
+                "Family Vacation",
+                "Honeymoon Tour",
+                "Adventure Tour",
+                "Group Tour",
+                "Corporate Travel",
+                "Luxury Tour"
+              ],
+              "destinationLabel": "Preferred Destination *",
+              "destinationPlaceholder": "Where do you want to go?",
+              "destinationIcon": "FaMapMarkerAlt",
+              "travelDateLabel": "Travel Date *",
+              "travelDatePlaceholder": "Select travel date",
+              "travelDateIcon": "FaCalendarAlt",
+              "travelersLabel": "Number of Travelers *",
+              "travelersPlaceholder": "Select number",
+              "travelersIcon": "FaUsers",
+              "travelersOptions": [
+                "1 Person",
+                "2 People",
+                "3 - 5 People",
+                "6 - 10 People",
+                "10+ People (Group)"
+              ],
+              "budgetLabel": "Budget (Optional)",
+              "budgetPlaceholder": "Select budget range",
+              "budgetIcon": "FaDollarSign",
+              "budgetOptions": [
+                "Under $1,000",
+                "$1,000 - $3,000",
+                "$3,000 - $5,000",
+                "$5,000 - $10,000",
+                "$10,000+"
+              ],
+              "messageLabel": "Your Message (Optional)",
+              "messagePlaceholder": "Tell us more about your travel plans, special requirements, etc.",
+              "messageIcon": "FaCommentAlt",
+              "consentText": "I agree to be contacted by TripNexa for travel-related information and offers.",
+              "submitButtonText": "Submit Enquiry",
+              "securityNote": "Your information is safe with us. We respect your privacy",
+              "securityIcon": "FaLock",
+              "successMessage": "Thank you! Your enquiry has been submitted successfully. Our travel expert will contact you shortly."
+            }
           }
         }
       }
