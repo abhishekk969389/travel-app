@@ -685,7 +685,7 @@
                   "Hotel",
                   "Sightseeing"
                 ],
-                "href": "/packages/bali"
+                "href": "/tourpackagedetails?id=pkg-1"
               },
               {
                 "id": "pkg-2",
@@ -702,7 +702,7 @@
                   "Hotel",
                   "Sightseeing"
                 ],
-                "href": "/packages/paris"
+                "href": "/tourpackagedetails?id=pkg-2"
               },
               {
                 "id": "pkg-3",
@@ -719,7 +719,7 @@
                   "Hotel",
                   "Sightseeing"
                 ],
-                "href": "/packages/dubai"
+                "href": "/tourpackagedetails?id=pkg-3"
               },
               {
                 "id": "pkg-4",
@@ -736,7 +736,7 @@
                   "Hotel",
                   "Sightseeing"
                 ],
-                "href": "/packages/maldives"
+                "href": "/tourpackagedetails?id=pkg-4"
               }
             ],
             "cta": {
@@ -1103,7 +1103,7 @@
               },
               {
                 "name": "Tour Packages",
-                "href": "/packages"
+                "href": "/tourpackage"
               },
               {
                 "name": "Our Services",
@@ -1173,7 +1173,7 @@
                 "name": "Partners",
                 "href": "/partners"
               },
-                {
+              {
                 "name": "Enquiry Now",
                 "href": "/enquiry"
               },
@@ -1393,7 +1393,7 @@
               ]
             },
             "enquiry": {
-              "title": "Enquiry Now",
+              "title": "Travel Enquiry",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
                 {
@@ -1401,7 +1401,7 @@
                   "href": "/"
                 },
                 {
-                  "name": "Enquiry Now",
+                  "name": "Enquiry",
                   "href": "/enquiry"
                 }
               ]
@@ -1448,7 +1448,7 @@
                 }
               ]
             },
-               "paymentpolicy": {
+            "paymentpolicy": {
               "title": "Payment Policy",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -1462,7 +1462,7 @@
                 }
               ]
             },
-               "refundpolicy": {
+            "refundpolicy": {
               "title": "Refund Policy",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -1476,7 +1476,7 @@
                 }
               ]
             },
-               "termscondition": {
+            "termscondition": {
               "title": "Terms & Conditions",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -1490,7 +1490,7 @@
                 }
               ]
             },
-               "privacypolicy": {
+            "privacypolicy": {
               "title": "Privacy Policy",
               "backgroundImage": "/subbanner.jpg",
               "breadcrumbs": [
@@ -1501,20 +1501,6 @@
                 {
                   "name": "Privacy Policy",
                   "href": "/privacypolicy"
-                }
-              ]
-            },
-            "enquiry": {
-              "title": "Travel Enquiry",
-              "backgroundImage": "/subbanner.jpg",
-              "breadcrumbs": [
-                {
-                  "name": "Home",
-                  "href": "/"
-                },
-                {
-                  "name": "Enquiry",
-                  "href": "/enquiry"
                 }
               ]
             },
@@ -1529,6 +1515,88 @@
                 {
                   "name": "Contact Us",
                   "href": "/contact"
+                }
+              ]
+            },
+            "sitemap": {
+              "title": "Sitemap",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Sitemap",
+                  "href": "/sitemap"
+                }
+              ]
+            },
+            "tourpackage": {
+              "title": "Tour Packages",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Tour Packages",
+                  "href": "/tourpackage"
+                }
+              ]
+            },
+            "teamdetails": {
+              "title": "Team Detail",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Our Team",
+                  "href": "/team"
+                },
+                {
+                  "name": "Team Detail",
+                  "href": "/teamdetails"
+                }
+              ]
+            },
+            "tourpackagedetails": {
+              "title": "Tour Detail",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Tour Packages",
+                  "href": "/tourpackage"
+                },
+                {
+                  "name": "Tour Detail",
+                  "href": "/tourpackagedetails"
+                }
+              ]
+            },
+            "blogdetails": {
+              "title": "Blog Detail",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Our Blogs",
+                  "href": "/blog"
+                },
+                {
+                  "name": "Blog Detail",
+                  "href": "/blogdetails"
                 }
               ]
             }
@@ -1738,59 +1806,544 @@
             "members": [
               {
                 "id": "team-1",
-                "name": "Michel Smith",
+                "name": "Janny Willson",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog1.jpg"
+                "bgImage": "/blog1.jpg",
+                "slug": "janny-willson",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "Janny@tripnexa.com",
+                  "specialization": "Adventure, Extreme Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "buttonText": "Plan Your Trip with Janny",
+                  "aboutTitlePrefix": "About",
+                  "aboutName": "Janny",
+                  "aboutBio1": "Janny Willson is a passionate and deep experienced travel guide who loves introducing travelers and creating authentic travel experiences with total care. With over 5 years of rich experience in the travel industry, Janny has guided tours across India, Europe, and other exotic destinations. Her deep knowledge, friendly nature, and attention to detail make every trip easy, safe, smooth, and memorable.",
+                  "aboutBio2": "For Janny, tour is not just visiting places, but about experiencing new cultures, meeting local people, and creating stories that last a lifetime.",
+                  "aboutQuote": "I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together!",
+                  "aboutQuoteAuthor": "- Janny Willson",
+                  "destinationsTitlePrefix": "Destinations",
+                  "destinationsTitleHighlight": "Expertise",
+                  "destinations": [
+                    {
+                      "name": "Europe",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelTitlePrefix": "Why Travel with",
+                  "whyTravelName": "Janny?",
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Registered Guide",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Strong Destination Knowledge",
+                      "icon": "FaCompass"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelCardTitle": "Good People Great Journeys",
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "momentsTitlePrefix": "Moments from",
+                  "momentsTitleName": "Janny's Journeys",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-2",
                 "name": "Janny Willson",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog2.jpg"
+                "bgImage": "/blog2.jpg",
+                "slug": "janny-willson",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "janny-willson@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Janny, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-3",
                 "name": "Jacob Jones",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog3.jpg"
+                "bgImage": "/blog3.jpg",
+                "slug": "jacob-jones",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "jacob-jones@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Jacob, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-4",
                 "name": "Maria Prova",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog1.jpg"
+                "bgImage": "/blog1.jpg",
+                "slug": "maria-prova",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "maria-prova@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Maria, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-5",
                 "name": "Alif Mahmud",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog2.jpg"
+                "bgImage": "/blog2.jpg",
+                "slug": "alif-mahmud",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "alif-mahmud@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Alif, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-6",
                 "name": "Rebeka Maliha",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog3.jpg"
+                "bgImage": "/blog3.jpg",
+                "slug": "rebeka-maliha",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "rebeka-maliha@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Rebeka, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-7",
                 "name": "Karan Mehta",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog1.jpg"
+                "bgImage": "/blog1.jpg",
+                "slug": "karan-mehta",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "karan-mehta@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Karan, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               },
               {
                 "id": "team-8",
                 "name": "Neha Sharma",
                 "role": "Tourist Guide",
                 "image": "/team.jpg",
-                "bgImage": "/blog2.jpg"
+                "bgImage": "/blog2.jpg",
+                "slug": "neha-sharma",
+                "details": {
+                  "quote": "Exploring the world one journey at a time.",
+                  "location": "Delhi, India",
+                  "email": "neha-sharma@tripnexa.com",
+                  "specialization": "Adventure & Luxury Tours",
+                  "stats": {
+                    "yearsOfExperience": "5+",
+                    "toursCompleted": "200+"
+                  },
+                  "aboutText": "Hi, I am Neha, a passionate travel guide who loves discovering new places and sharing them with the world. I believe travel brings people closer, creates understanding, and makes the world a kinder place. Let's explore it together! I have deep knowledge, friendly nature, and attention to detail to make every trip safe, smooth and memorable.",
+                  "destinations": [
+                    {
+                      "name": "Swiss",
+                      "image": "/blog1.jpg"
+                    },
+                    {
+                      "name": "Himachal",
+                      "image": "/whychoose_fjord.jpg"
+                    },
+                    {
+                      "name": "Kerala",
+                      "image": "/about2.jpg"
+                    },
+                    {
+                      "name": "Bali",
+                      "image": "/blog2.jpg"
+                    },
+                    {
+                      "name": "Dubai",
+                      "image": "/about1.jpg"
+                    }
+                  ],
+                  "whyTravelFeatures": [
+                    {
+                      "title": "Friendly & Approachable",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "title": "Well-Planned & Safe Trips",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "title": "Deep Destination Knowledge",
+                      "icon": "FaMapMarkedAlt"
+                    },
+                    {
+                      "title": "Passionate Creating Memories",
+                      "icon": "FaHeart"
+                    }
+                  ],
+                  "whyTravelImage": "/whychoose_fjord.jpg",
+                  "moments": [
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg",
+                    "/about1.jpg"
+                  ]
+                }
               }
             ]
           }
@@ -2466,7 +3019,11 @@
               "successMessage": "Thank you! Your message has been sent successfully. Our team will contact you shortly."
             },
             "storySection": {
-              "taglines": ["Discover", "Explore", "Belong"],
+              "taglines": [
+                "Discover",
+                "Explore",
+                "Belong"
+              ],
               "watchStoryText": "WATCH OUR STORY",
               "videoUrl": "https://www.youtube.com/embed/H4tyzzP33Cw?autoplay=1&rel=0",
               "videoTitle": "Indonesia 4K - Scenic Relaxation Film With Calming Music"
@@ -2833,6 +3390,1114 @@
               "securityIcon": "FaLock",
               "successMessage": "Thank you! Your enquiry has been submitted successfully. Our travel expert will contact you shortly."
             }
+          }
+        }
+      },
+      "Sitemap": {
+        "variants": {
+          "TravelSitemap1": {
+            "header": {
+              "badge": "OUR SITEMAP",
+              "headingPrefix": "All Pages at",
+              "headingHighlight": "a Glance",
+              "description": "Navigate through all the website and find the information you need."
+            },
+            "categories": [
+              {
+                "id": "sitemap-general",
+                "title": "General",
+                "icon": "FaHome",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Home",
+                    "href": "/"
+                  },
+                  {
+                    "title": "About Us",
+                    "href": "/about"
+                  },
+                  {
+                    "title": "Mission & Vision",
+                    "href": "/mission"
+                  },
+                  {
+                    "title": "Awards & Recognition",
+                    "href": "/awards"
+                  },
+                  {
+                    "title": "Why Choose Us",
+                    "href": "/why-choose-us"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-services",
+                "title": "Our Services",
+                "icon": "FaCog",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "Our Services",
+                    "href": "/services"
+                  },
+                  {
+                    "title": "Service Detail",
+                    "href": "/services"
+                  },
+                  {
+                    "title": "Visa Assistance",
+                    "href": "/services"
+                  },
+                  {
+                    "title": "Travel Insurance",
+                    "href": "/services"
+                  },
+                  {
+                    "title": "Flight Booking",
+                    "href": "/services"
+                  },
+                  {
+                    "title": "Hotel Booking",
+                    "href": "/services"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-packages",
+                "title": "Tour Packages",
+                "icon": "FaSuitcase",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Tour Packages",
+                    "href": "/packages"
+                  },
+                  {
+                    "title": "Family Tour",
+                    "href": "/packages"
+                  },
+                  {
+                    "title": "Honeymoon Tour",
+                    "href": "/packages"
+                  },
+                  {
+                    "title": "Group Tour",
+                    "href": "/packages"
+                  },
+                  {
+                    "title": "Adventure Tour",
+                    "href": "/packages"
+                  },
+                  {
+                    "title": "Luxury Tour",
+                    "href": "/packages"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-destinations",
+                "title": "Destinations",
+                "icon": "FaMapMarkerAlt",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "Destinations",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Domestic Destinations",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Delhi",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Kerala",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Goa",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Himachal Pradesh",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "International Destinations",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Dubai",
+                    "href": "/destinations"
+                  },
+                  {
+                    "title": "Switzerland",
+                    "href": "/destinations"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-team",
+                "title": "Our Team",
+                "icon": "FaUsers",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Our Team",
+                    "href": "/team"
+                  },
+                  {
+                    "title": "Team Detail",
+                    "href": "/team"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-blog",
+                "title": "Blog",
+                "icon": "FaRegNewspaper",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Blog Detail",
+                    "href": "/blog"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-gallery",
+                "title": "Gallery",
+                "icon": "FaImage",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Our Gallery",
+                    "href": "/gallery"
+                  },
+                  {
+                    "title": "Photo Gallery",
+                    "href": "/gallery"
+                  },
+                  {
+                    "title": "Video Gallery",
+                    "href": "/gallery"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-testimonials",
+                "title": "Testimonials",
+                "icon": "FaCommentDots",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "Testimonials",
+                    "href": "/testimonials"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-partners",
+                "title": "Our Partners",
+                "icon": "FaHandshake",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Our Partners",
+                    "href": "/partners"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-support",
+                "title": "Help & Support",
+                "icon": "FaQuestion",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "FAQ",
+                    "href": "/faq"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-quick-links",
+                "title": "Quick Links",
+                "icon": "FaEnvelope",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Enquiry Now",
+                    "href": "/enquiry"
+                  },
+                  {
+                    "title": "Contact Us",
+                    "href": "/contact"
+                  },
+                  {
+                    "title": "Sitemap",
+                    "href": "/sitemap"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-policies",
+                "title": "Policies",
+                "icon": "FaLock",
+                "theme": "yellow",
+                "links": [
+                  {
+                    "title": "Privacy Policy",
+                    "href": "/privacy-policy"
+                  },
+                  {
+                    "title": "Terms & Conditions",
+                    "href": "/termscondition"
+                  }
+                ]
+              },
+              {
+                "id": "sitemap-career",
+                "title": "Career",
+                "icon": "FaUserTie",
+                "theme": "teal",
+                "links": [
+                  {
+                    "title": "Career",
+                    "href": "/team"
+                  },
+                  {
+                    "title": "Career Detail",
+                    "href": "/team"
+                  }
+                ]
+              }
+            ],
+            "promoCard": {
+              "tag1": "Plan",
+              "tag2": "Explore",
+              "tag3": "Discover"
+            }
+          }
+        }
+      },
+      "TourPackagesPage": {
+        "variants": {
+          "TravelTourPackagesPage1": {
+            "header": {
+              "badge": "EXPLORE THE WORLD",
+              "headingPrefix": "Popular ",
+              "headingHighlight": "Tour Packages",
+              "description": "Handpicked travel packages for your next unforgettable journey. Explore top destinations, amazing experiences, and great value deals."
+            },
+            "filterSidebar": {
+              "title": "Filter Packages",
+              "resetText": "Reset All",
+              "applyText": "Apply Filters",
+              "groups": [
+                {
+                  "id": "tourType",
+                  "title": "Tour Type",
+                  "options": [
+                    "Family Tour",
+                    "Honeymoon Tour",
+                    "Group Tour",
+                    "Couple Tour",
+                    "Adventure Tour",
+                    "Luxury Tour",
+                    "Budget Tour",
+                    "Pilgrimage Tour",
+                    "Wildlife Tour",
+                    "Weekend Getaway"
+                  ]
+                },
+                {
+                  "id": "destination",
+                  "title": "Destination",
+                  "options": [
+                    "Domestic",
+                    "International"
+                  ]
+                },
+                {
+                  "id": "duration",
+                  "title": "Duration",
+                  "options": [
+                    "1 - 3 Days",
+                    "4 - 7 Days",
+                    "8 - 14 Days",
+                    "15+ Days"
+                  ]
+                },
+                {
+                  "id": "facilities",
+                  "title": "Popular Facilities",
+                  "options": [
+                    "Flights",
+                    "Hotel",
+                    "Sightseeing",
+                    "Meals",
+                    "Transport",
+                    "Travel Guide"
+                  ]
+                }
+              ]
+            },
+            "sortOptions": [
+              {
+                "label": "Most Popular",
+                "value": "popular"
+              },
+              {
+                "label": "Price: Low to High",
+                "value": "price_asc"
+              },
+              {
+                "label": "Price: High to Low",
+                "value": "price_desc"
+              },
+              {
+                "label": "Duration: Short to Long",
+                "value": "duration_asc"
+              },
+              {
+                "label": "Rating: High to Low",
+                "value": "rating_desc"
+              }
+            ],
+            "pagination": {
+              "itemsPerPage": 9,
+              "currentPage": 1,
+              "totalPages": 2
+            },
+            "packages": [
+              {
+                "id": "pkg-1",
+                "title": "Bali, Indonesia",
+                "subtitle": "Beaches, Temples & Culture",
+                "image": "/whychoose_packages.jpg",
+                "duration": "5 Days",
+                "durationDays": 5,
+                "price": 699,
+                "priceFormatted": "$699",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 320,
+                "tourType": [
+                  "Family Tour",
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Adventure Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackagedetails?id=pkg-1",
+                "details": {
+                  "countryBadge": "INDONESIA",
+                  "location": "Bali, Indonesia",
+                  "durationBadge": "5 Days / 4 Nights",
+                  "galleryImages": [
+                    "/whychoose_packages.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Bali, a tropical paradise known for its stunning beaches, ancient temples, lush rice terraces, and vibrant culture. This 5-day tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    { "label": "Flights Included", "icon": "FaPlane" },
+                    { "label": "Hotel Stay", "icon": "FaHotel" },
+                    { "label": "Sightseeing Tours", "icon": "FaBinoculars" },
+                    { "label": "Daily Breakfast", "icon": "FaUtensils" },
+                    { "label": "Airport Transfers", "icon": "FaCar" }
+                  ],
+                  "quickStats": [
+                    { "label": "Destination", "value": "Bali, Indonesia", "icon": "FaMapMarkerAlt" },
+                    { "label": "Duration", "value": "5 Days 4 Nights", "icon": "FaCalendarAlt" },
+                    { "label": "Tour Type", "value": "Leisure / Family", "icon": "FaUsers" },
+                    { "label": "Best Time to Visit", "value": "Apr - Oct", "icon": "FaTag" }
+                  ],
+                  "overview": "Bali is a dream destination that offers something for every traveler — from pristine beaches and crystal-clear waters to ancient temples and lush rice terraces. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Bali with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    { "title": "Visit stunning beaches like Kuta, Seminyak & Nusa Dua", "icon": "FaTree" },
+                    { "title": "Discover lush rice terraces and natural landscapes", "icon": "FaMountain" },
+                    { "title": "Explore iconic temples such as Uluwatu & Tanah Lot", "icon": "FaLandmark" },
+                    { "title": "Experience Balinese culture and local traditions", "icon": "FaHandshake" },
+                    { "title": "Capture breathtaking sunsets and scenic views", "icon": "FaCamera" },
+                    { "title": "Enjoy shopping, local markets and delicious Balinese cuisine", "icon": "FaShoppingBag" }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "4 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Sightseeing tours as per itinerary",
+                    "Professional tour guide",
+                    "All applicable taxes"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, etc.)",
+                    "Optional activities and excursions",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Bali",
+                      "description": "Welcome to Bali! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure exploring nearby beaches."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Uluwatu Temple & Kecak Dance",
+                      "description": "After breakfast, visit the iconic Uluwatu Temple, enjoy stunning cliff views and witness the famous traditional Kecak Dance performance at sunset."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Nusa Penida Island Tour",
+                      "description": "Explore the breathtaking beauty of Nusa Penida, including Kelingking Beach, Angel's Billabong, Broken Beach, and Crystal Bay."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Tanah Lot & Local Sightseeing",
+                      "description": "Visit the famous Tanah Lot Temple, explore local art markets, and enjoy authentic Balinese culture, cuisine, and evening sunset."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with unforgettable memories of Bali."
+                    }
+                  ],
+                  "sidebarBanner": {
+                    "title": "Discover Bali",
+                    "image": "/whychoose_fjord.jpg"
+                  },
+                  "sidebarGallery": [
+                    "/whychoose_packages.jpg",
+                    "/about1.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg"
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-2",
+                      "title": "Singapore",
+                      "subtitle": "City of Lights & Modern Marvels",
+                      "image": "/blog1.jpg",
+                      "duration": "6 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 280,
+                      "priceFormatted": "$899",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-2"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Bangkok, Thailand",
+                      "subtitle": "Vibrant Culture & Street Life",
+                      "image": "/blog2.jpg",
+                      "duration": "7 Days",
+                      "rating": 4.7,
+                      "reviewsCount": 190,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "pkg-2",
+                "title": "Paris, France",
+                "subtitle": "City of Love & Lights",
+                "image": "/about1.jpg",
+                "duration": "6 Days",
+                "durationDays": 6,
+                "price": 899,
+                "priceFormatted": "$899",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 280,
+                "tourType": [
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-3",
+                "title": "Dubai, UAE",
+                "subtitle": "Modern City, Timeless Experiences",
+                "image": "/about2.jpg",
+                "duration": "4 Days",
+                "durationDays": 4,
+                "price": 599,
+                "priceFormatted": "$599",
+                "priceUnit": "/Person",
+                "rating": 4.7,
+                "reviewsCount": 410,
+                "tourType": [
+                  "Luxury Tour",
+                  "Family Tour",
+                  "Group Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-4",
+                "title": "Maldives",
+                "subtitle": "Crystal Waters & Peaceful Escapes",
+                "image": "/whychoose_fjord.jpg",
+                "duration": "5 Days",
+                "durationDays": 5,
+                "price": 799,
+                "priceFormatted": "$799",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 360,
+                "tourType": [
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-5",
+                "title": "Switzerland",
+                "subtitle": "Alpine Beauty & Scenic Trains",
+                "image": "/santorini_mission.jpg",
+                "duration": "7 Days",
+                "durationDays": 7,
+                "price": 1299,
+                "priceFormatted": "$1,299",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 310,
+                "tourType": [
+                  "Family Tour",
+                  "Luxury Tour",
+                  "Group Tour",
+                  "Adventure Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-6",
+                "title": "Santorini, Greece",
+                "subtitle": "White Villages & Blue Views",
+                "image": "/whychoose_guide.jpg",
+                "duration": "5 Days",
+                "durationDays": 5,
+                "price": 1099,
+                "priceFormatted": "$1,099",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 275,
+                "tourType": [
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-7",
+                "title": "Bangkok, Thailand",
+                "subtitle": "Vibrant Culture & Street Life",
+                "image": "/whychoose_main.jpg",
+                "duration": "6 Days",
+                "durationDays": 6,
+                "price": 699,
+                "priceFormatted": "$699",
+                "priceUnit": "/Person",
+                "rating": 4.7,
+                "reviewsCount": 390,
+                "tourType": [
+                  "Budget Tour",
+                  "Group Tour",
+                  "Adventure Tour",
+                  "Family Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-8",
+                "title": "New York, USA",
+                "subtitle": "Iconic Sights & Urban Adventures",
+                "image": "/blog1.jpg",
+                "duration": "8 Days",
+                "durationDays": 8,
+                "price": 1399,
+                "priceFormatted": "$1,399",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 450,
+                "tourType": [
+                  "Family Tour",
+                  "Group Tour",
+                  "Weekend Getaway"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-9",
+                "title": "London, UK",
+                "subtitle": "History, Culture & Royal Vibes",
+                "image": "/blog2.jpg",
+                "duration": "5 Days",
+                "durationDays": 5,
+                "price": 999,
+                "priceFormatted": "$999",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 320,
+                "tourType": [
+                  "Family Tour",
+                  "Group Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": true,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-10",
+                "title": "Goa, India",
+                "subtitle": "Golden Beaches & Coastal Serenity",
+                "image": "/Travelphotos.jpg",
+                "duration": "4 Days",
+                "durationDays": 4,
+                "price": 399,
+                "priceFormatted": "$399",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 290,
+                "tourType": [
+                  "Weekend Getaway",
+                  "Couple Tour",
+                  "Budget Tour",
+                  "Adventure Tour"
+                ],
+                "destinationType": "Domestic",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-11",
+                "title": "Kerala, India",
+                "subtitle": "God's Own Country & Backwaters",
+                "image": "/whychoose_safety.jpg",
+                "duration": "6 Days",
+                "durationDays": 6,
+                "price": 549,
+                "priceFormatted": "$549",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 340,
+                "tourType": [
+                  "Family Tour",
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Pilgrimage Tour"
+                ],
+                "destinationType": "Domestic",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-12",
+                "title": "Himachal Pradesh, India",
+                "subtitle": "Snow Peaks & Mountain Trails",
+                "image": "/whychoose_support.jpg",
+                "duration": "7 Days",
+                "durationDays": 7,
+                "price": 499,
+                "priceFormatted": "$499",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 310,
+                "tourType": [
+                  "Adventure Tour",
+                  "Group Tour",
+                  "Family Tour",
+                  "Wildlife Tour"
+                ],
+                "destinationType": "Domestic",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-13",
+                "title": "Tokyo & Kyoto, Japan",
+                "subtitle": "Tradition Meets Futuristic Wonder",
+                "image": "/blog3.jpg",
+                "duration": "9 Days",
+                "durationDays": 9,
+                "price": 1499,
+                "priceFormatted": "$1,499",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 260,
+                "tourType": [
+                  "Luxury Tour",
+                  "Family Tour",
+                  "Couple Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-14",
+                "title": "Cape Town, South Africa",
+                "subtitle": "Wild Safaris & Table Mountain Views",
+                "image": "/achievement.jpg",
+                "duration": "8 Days",
+                "durationDays": 8,
+                "price": 1199,
+                "priceFormatted": "$1,199",
+                "priceUnit": "/Person",
+                "rating": 4.7,
+                "reviewsCount": 215,
+                "tourType": [
+                  "Wildlife Tour",
+                  "Adventure Tour",
+                  "Group Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-15",
+                "title": "Varanasi & Rishikesh, India",
+                "subtitle": "Spiritual Ghats & Holy Ganges",
+                "image": "/whychooseus.jpg",
+                "duration": "5 Days",
+                "durationDays": 5,
+                "price": 349,
+                "priceFormatted": "$349",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 195,
+                "tourType": [
+                  "Pilgrimage Tour",
+                  "Budget Tour",
+                  "Family Tour"
+                ],
+                "destinationType": "Domestic",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-16",
+                "title": "Rome & Amalfi, Italy",
+                "subtitle": "Ancient History & Cliffside Coasts",
+                "image": "/founder.jpg",
+                "duration": "7 Days",
+                "durationDays": 7,
+                "price": 1249,
+                "priceFormatted": "$1,249",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 280,
+                "tourType": [
+                  "Honeymoon Tour",
+                  "Couple Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-17",
+                "title": "Rajasthan Heritage, India",
+                "subtitle": "Royal Palaces & Desert Forts",
+                "image": "/contact-bg.jpg",
+                "duration": "6 Days",
+                "durationDays": 6,
+                "price": 479,
+                "priceFormatted": "$479",
+                "priceUnit": "/Person",
+                "rating": 4.8,
+                "reviewsCount": 330,
+                "tourType": [
+                  "Family Tour",
+                  "Group Tour",
+                  "Luxury Tour",
+                  "Weekend Getaway"
+                ],
+                "destinationType": "Domestic",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              },
+              {
+                "id": "pkg-18",
+                "title": "Sydney & Cairns, Australia",
+                "subtitle": "Harbour Bridge & Great Barrier Reef",
+                "image": "/subbanner.jpg",
+                "duration": "10 Days",
+                "durationDays": 10,
+                "price": 1699,
+                "priceFormatted": "$1,699",
+                "priceUnit": "/Person",
+                "rating": 4.9,
+                "reviewsCount": 220,
+                "tourType": [
+                  "Adventure Tour",
+                  "Family Tour",
+                  "Wildlife Tour",
+                  "Luxury Tour"
+                ],
+                "destinationType": "International",
+                "facilities": [
+                  "Flights",
+                  "Hotel",
+                  "Sightseeing"
+                ],
+                "featured": false,
+                "href": "/tourpackage"
+              }
+            ]
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "TravelServices1": {
+            "title": "Our Services",
+            "subtitle": "What we offer",
+            "items": [
+              {
+                "id": "01",
+                "subtitle": "GLOBAL CONNECTIVITY",
+                "titlePart1": "Flight",
+                "titlePart2": "Booking",
+                "description": "Book cheap flights to anywhere in the world. Enjoy seamless booking experiences with multiple airlines, competitive prices, and real-time support.",
+                "features": [
+                  {
+                    "text": "Global Airlines",
+                    "icon": "FaPlane"
+                  },
+                  {
+                    "text": "Price Match",
+                    "icon": "FaTag"
+                  },
+                  {
+                    "text": "24/7 Support",
+                    "icon": "FaHeadset"
+                  }
+                ],
+                "image": "/blog1.jpg",
+                "imageOverlayText": "Take\nFlight",
+                "theme": "dark"
+              },
+              {
+                "id": "02",
+                "subtitle": "COMFORTABLE STAYS",
+                "titlePart1": "Hotel",
+                "titlePart2": "Reservations",
+                "description": "Handpicked hotels for every budget, from luxury resorts to cozy stays. We ensure comfortable, safe, and memorable accommodations wherever you go.",
+                "features": [
+                  {
+                    "text": "Wide Selection",
+                    "icon": "FaBed"
+                  },
+                  {
+                    "text": "Best Rates",
+                    "icon": "FaCertificate"
+                  },
+                  {
+                    "text": "Verified Properties",
+                    "icon": "FaMapMarkerAlt"
+                  }
+                ],
+                "image": "/about1.jpg",
+                "imageOverlayText": "Relax\n& Unwind",
+                "theme": "light"
+              },
+              {
+                "id": "03",
+                "subtitle": "MEMORABLE JOURNEYS",
+                "titlePart1": "Tour",
+                "titlePart2": "Packages",
+                "description": "Explore a variety of domestic and international tour packages designed for families, couples, groups, and solo travelers. Customized itineraries for unforgettable experiences.",
+                "features": [
+                  {
+                    "text": "Customized Trips",
+                    "icon": "FaUsers"
+                  },
+                  {
+                    "text": "Popular Destinations",
+                    "icon": "FaMap"
+                  }
+                ],
+                "image": "/whychoose_fjord.jpg",
+                "imageOverlayText": "Discover\nNew Places",
+                "theme": "dark"
+              },
+              {
+                "id": "04",
+                "subtitle": "LUXURY VOYAGES",
+                "titlePart1": "Cruise",
+                "titlePart2": "Deals",
+                "description": "Set sail on the most luxurious cruise lines. Discover exotic islands, endless ocean views, and premium onboard entertainment for the perfect holiday.",
+                "features": [
+                  {
+                    "text": "Ocean Views",
+                    "icon": "FaShip"
+                  },
+                  {
+                    "text": "Luxury Cabins",
+                    "icon": "FaBed"
+                  },
+                  {
+                    "text": "Onboard Dining",
+                    "icon": "FaUtensils"
+                  }
+                ],
+                "image": "/blog2.jpg",
+                "imageOverlayText": "Sail\nAway",
+                "theme": "light"
+              },
+              {
+                "id": "05",
+                "subtitle": "SAFE TRAVELS",
+                "titlePart1": "Travel",
+                "titlePart2": "Insurance",
+                "description": "Travel with peace of mind. Our comprehensive travel insurance covers medical emergencies, trip cancellations, and lost luggage so you can focus on enjoying your trip.",
+                "features": [
+                  {
+                    "text": "Medical Cover",
+                    "icon": "FaBriefcaseMedical"
+                  },
+                  {
+                    "text": "Trip Cancelation",
+                    "icon": "FaTimesCircle"
+                  },
+                  {
+                    "text": "Baggage Protection",
+                    "icon": "FaSuitcase"
+                  }
+                ],
+                "image": "/about2.jpg",
+                "imageOverlayText": "Travel\nSafe",
+                "theme": "dark"
+              }
+            ]
           }
         }
       }

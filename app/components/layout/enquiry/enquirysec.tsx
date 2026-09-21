@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   FaHeadset,
   FaCog,
@@ -162,26 +163,96 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
           <div className="lg:col-span-7">
             <div className="rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.08)] border border-gray-100 bg-white">
               {/* Dark Card Header Banner */}
-              <div className="relative bg-[#0b1727] px-6 sm:px-8 py-6 sm:py-7 text-white overflow-hidden">
-                {/* Background Map Watermark Graphic */}
-                <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px]" />
+              <div className="relative bg-[#081426] px-6 sm:px-8 md:px-9 py-6 sm:py-7 md:py-8 text-white overflow-hidden rounded-t-[24px] sm:rounded-t-[28px]">
+                {/* World Map Background Graphic Overlay */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+                >
+                  <div className="absolute -right-4 -top-8 w-[100%] sm:w-[80%] md:w-[65%] h-[150%] opacity-20 sm:opacity-25 mix-blend-screen">
+                    <Image
+                      src="/world.jpg"
+                      alt="World Map Background"
+                      fill
+                      unoptimized
+                      className="object-contain object-right filter invert brightness-150 contrast-125"
+                    />
+                  </div>
+                </div>
 
-                <div className="relative z-10 flex items-start justify-between">
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="max-w-[70%] sm:max-w-[75%]">
+                    <h2 className="text-3xl sm:text-4xl md:text-[42px] font-black tracking-tight leading-none">
                       {form.headerTitle}{" "}
-                      <span className="text-[#ff2e63]">
+                      <span className="bg-gradient-to-r from-[#FF2B55] via-[#FF3B4E] to-[#FF5E3A] bg-clip-text text-transparent">
                         {form.headerHighlight}
                       </span>
                     </h2>
-                    <p className="text-slate-300 text-xs sm:text-sm font-medium mt-1.5">
+                    <p className="text-white/95 text-xs sm:text-sm md:text-[15px] font-normal mt-2 sm:mt-2.5 leading-snug">
                       {form.headerSubtitle}
                     </p>
                   </div>
 
-                  {/* Red Origami Plane Icon */}
-                  <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-[#ff2e63] shrink-0 border border-white/10">
-                    <FaPaperPlane className="w-5 h-5 transform -rotate-12" />
+                  {/* Red Origami Paper Plane with Dotted Flight Trail */}
+                  <div className="relative shrink-0 flex items-center justify-end w-20 sm:w-28 md:w-32 h-16 sm:h-20 select-none pointer-events-none">
+                    <svg
+                      viewBox="0 0 140 90"
+                      className="w-full h-full overflow-visible"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        {/* Flight Trail Gradient */}
+                        <linearGradient id="trailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#FF5A75" stopOpacity="0.4" />
+                          <stop offset="100%" stopColor="#FF2E55" stopOpacity="0.95" />
+                        </linearGradient>
+                        {/* Plane Top Wing Gradient */}
+                        <linearGradient id="planeTopFace" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#FF6B4A" />
+                          <stop offset="50%" stopColor="#FF2B57" />
+                          <stop offset="100%" stopColor="#E6194A" />
+                        </linearGradient>
+                        {/* Plane Underwing / Shadow Gradient */}
+                        <linearGradient id="planeBottomFacet" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#D81B43" />
+                          <stop offset="100%" stopColor="#8E0A24" />
+                        </linearGradient>
+                        {/* Plane Spine Highlight */}
+                        <linearGradient id="planeSpineHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.85" />
+                          <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.25" />
+                          <stop offset="100%" stopColor="#FF2E55" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+
+                      {/* Dashed Flight Trail */}
+                      <path
+                        d="M 12 70 C 35 73, 58 64, 76 44"
+                        stroke="url(#trailGrad)"
+                        strokeWidth="2.2"
+                        strokeDasharray="5 4"
+                        strokeLinecap="round"
+                      />
+
+                      {/* Origami 3D Plane */}
+                      <g transform="translate(62, 10)">
+                        {/* Underwing / Bottom Shadow Facet */}
+                        <polygon points="58,5 22,46 16,34" fill="url(#planeBottomFacet)" />
+
+                        {/* Left Wing Facet */}
+                        <polygon points="58,5 4,28 22,46" fill="#D9163D" />
+
+                        {/* Main Upper Right Wing */}
+                        <polygon points="58,5 22,46 36,20" fill="url(#planeTopFace)" />
+
+                        {/* Top Main Wing Upper Surface */}
+                        <polygon points="58,5 4,28 36,20" fill="url(#planeTopFace)" />
+
+                        {/* Center Crease / Spine Highlight Stripe */}
+                        <polygon points="58,5 18,25 36,20" fill="url(#planeSpineHighlight)" />
+                      </g>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -207,7 +278,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 {/* Row 1: Full Name & Email Address */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.nameLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -228,7 +299,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.emailLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -252,7 +323,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 {/* Row 2: Phone Number & Travel Type */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.phoneLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -273,7 +344,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.travelTypeLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -305,7 +376,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 {/* Row 3: Preferred Destination & Travel Date */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.destinationLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -326,7 +397,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.travelDateLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -349,7 +420,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 {/* Row 4: Number of Travelers & Budget (Optional) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.travelersLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -378,7 +449,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    <label className="block text-sm font-bold text-slate-700 mb-1.5">
                       {form.budgetLabel}
                     </label>
                     <div className="relative flex items-center border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -406,7 +477,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
 
                 {/* Message Field */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                  <label className="block text-sm font-bold text-slate-700 mb-1.5">
                     {form.messageLabel}
                   </label>
                   <div className="relative flex items-start border border-gray-200 rounded-xl px-3.5 py-3 bg-white focus-within:border-[#ff2e63] focus-within:ring-2 focus-within:ring-[#ff2e63]/10 transition-all">
@@ -439,7 +510,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   />
                   <label
                     htmlFor="enquiry-consent"
-                    className="text-xs text-slate-600 cursor-pointer leading-relaxed"
+                    className="text-[13px] sm:text-sm text-slate-600 cursor-pointer leading-relaxed"
                   >
                     {form.consentText}
                   </label>
@@ -458,7 +529,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 </button>
 
                 {/* Security Note */}
-                <div className="flex items-center justify-center gap-1.5 text-xs text-gray-500 pt-1">
+                <div className="flex items-center justify-center gap-1.5 text-sm sm:text-base text-gray-500 pt-1">
                   <FaLock className="w-3 h-3 text-gray-400" />
                   <span>{form.securityNote}</span>
                 </div>

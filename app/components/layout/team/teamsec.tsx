@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { site as travelData } from "@/data/index";
 import type { TravelTeamData as TeamData } from "@/data/index";
 
@@ -42,9 +43,10 @@ export default function TeamSec({ data: propData }: TeamSecProps = {}) {
         {/* Team Members Grid: 2 rows of 4 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {data.members.map((member) => (
-            <div
+            <Link
               key={member.id}
-              className="group relative bg-[#edf7fc] rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+              href={`/teamdetails?id=${member.id}`}
+              className="group relative bg-[#edf7fc] rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer"
             >
               {/* Top Landscape / Scenic Background Image */}
               <div className="relative w-full h-44 sm:h-48 overflow-hidden bg-slate-100">
@@ -71,7 +73,7 @@ export default function TeamSec({ data: propData }: TeamSecProps = {}) {
                 </div>
 
                 {/* Member Name */}
-                <h3 className="text-lg sm:text-[19px] font-bold text-[#0f172a] group-hover:text-[#00b4d8] transition-colors duration-200">
+                <h3 className="text-lg sm:text-[19px] font-bold text-[#0f172a] group-hover:text-[#ff2e63] transition-colors duration-200">
                   {member.name}
                 </h3>
 
@@ -83,7 +85,7 @@ export default function TeamSec({ data: propData }: TeamSecProps = {}) {
                 {/* Yellow / Golden Accent Underline */}
                 <div className="w-10 h-[2.5px] bg-[#f59e0b] rounded-full mt-2.5 mx-auto" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

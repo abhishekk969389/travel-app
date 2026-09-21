@@ -36,6 +36,9 @@ export type TravelPaymentPolicyData = typeof sections.PaymentPolicy.variants.Tra
 export type TravelRefundPolicyData = typeof sections.RefundPolicy.variants.TravelRefundPolicy1;
 export type TravelTermsConditionData = typeof sections.TermsCondition.variants.TravelTermsCondition1;
 export type TravelEnquiryData = typeof sections.Enquiry.variants.TravelEnquiry1;
+export type TravelSitemapData = typeof sections.Sitemap.variants.TravelSitemap1;
+export type TravelServicesData = typeof sections.Services.variants.TravelServices1;
+export type TravelTourPackagesPageData = typeof sections.TourPackagesPage.variants.TravelTourPackagesPage1;
 
 // Nested helper types
 export type LinkItem = TravelNavbarData["navLinks"][number];
@@ -44,15 +47,69 @@ export type DestinationItem = TravelDestinationsData["items"][number];
 export type DestinationCardItem = TravelDestinationsPageData["domesticDestinations"][number];
 export type DestinationTagItem = DestinationCardItem["tags"][number];
 export type PackageItem = TravelPackagesData["items"][number];
+export type TourPackageCardItem = TravelTourPackagesPageData["packages"][number];
+export type TourPackageDetails = NonNullable<TourPackageCardItem["details"]>;
+export type TourPackageItineraryItem = NonNullable<TourPackageDetails["itinerary"]>[number];
+export type TourPackageHighlightItem = NonNullable<TourPackageDetails["highlights"]>[number];
+export type TourPackageQuickStat = NonNullable<TourPackageDetails["quickStats"]>[number];
+export type TourPackageQuickInclusion = NonNullable<TourPackageDetails["quickInclusions"]>[number];
+export type TourPackageRelatedItem = NonNullable<TourPackageDetails["relatedPackages"]>[number];
+export type TourPackageFilterGroupItem = TravelTourPackagesPageData["filterSidebar"]["groups"][number];
+export type TourPackageSortOptionItem = TravelTourPackagesPageData["sortOptions"][number];
 export type WhyChooseFeature = TravelWhyChooseUsData["features"][number];
 export type WhyChoosePageFeature = TravelWhyChooseUsPageData["features"][number];
 export type AchievementItem = TravelAchievementsData["items"][number];
 export type BlogPostItem = TravelBlogData["posts"][number];
+
+export interface BlogDetailPlace {
+  id?: string;
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface BlogDetailQuote {
+  text: string;
+  brushText?: string;
+}
+
+export interface BlogDetailsData {
+  category: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  author: string;
+  featuredImage: string;
+  brushImage: string;
+  brushText: string;
+  locationTag: {
+    title: string;
+    subtitle: string;
+  };
+  introParagraph: string;
+  section1: {
+    title: string;
+    content: string;
+  };
+  section2: {
+    title: string;
+    places: BlogDetailPlace[];
+  };
+  quote: BlogDetailQuote;
+  section3: {
+    title: string;
+    tips: string[];
+    conclusion: string;
+  };
+}
 export type TrustBadge = TravelFooterData["trustBadges"][number];
 export type BreadcrumbItem = TravelSubBannersData["about"]["breadcrumbs"][number];
 export type StoryFeature = TravelOurStoryData["features"][number];
 export type AwardItem = TravelAwardsData["items"][number];
 export type TeamMemberItem = TravelTeamData["members"][number];
+export type TeamMemberDetails = NonNullable<TeamMemberItem["details"]>;
+export type TeamDestinationItem = NonNullable<TeamMemberDetails["destinations"]>[number];
+export type TeamWhyTravelFeature = NonNullable<TeamMemberDetails["whyTravelFeatures"]>[number];
 export type TravelPaginationData = TravelDestinationsPageData["pagination"];
 export type GalleryItem = TravelGalleryData["items"][number];
 export type GalleryTabItem = TravelGalleryData["tabs"][number];
@@ -67,6 +124,10 @@ export type LocationOfficePinData = LocationCardData["officePin"];
 export type PolicyItem = TravelPrivacyPolicyData["items"][number];
 export type EnquiryFeatureItem = TravelEnquiryData["features"][number];
 export type EnquiryFormData = TravelEnquiryData["form"];
+export type SitemapCategoryItem = TravelSitemapData["categories"][number];
+export type SitemapLinkItem = SitemapCategoryItem["links"][number];
+export type ServiceItem = TravelServicesData["items"][number];
+export type ServiceFeature = ServiceItem["features"][number];
 export type NavDropdownItem = {
   name: string;
   href: string;
@@ -84,6 +145,7 @@ export const site = {
   destinations: sections.Destinations.variants.TravelDestinations1,
   destinationsPage: sections.Destinations.variants.TravelDestinationsPage,
   packages: sections.Packages.variants.TravelPackages1,
+  tourPackagesPage: sections.TourPackagesPage.variants.TravelTourPackagesPage1,
   whyChoose: sections.WhyChooseUs.variants.TravelWhyChooseUs1,
   whyChoosePage: sections.WhyChooseUs.variants.TravelWhyChooseUsPage,
   achievements: sections.Achievements.variants.TravelAchievements1,
@@ -108,6 +170,8 @@ export const site = {
   refundPolicy: sections.RefundPolicy.variants.TravelRefundPolicy1,
   termsCondition: sections.TermsCondition.variants.TravelTermsCondition1,
   enquiry: sections.Enquiry.variants.TravelEnquiry1,
+  sitemap: sections.Sitemap.variants.TravelSitemap1,
+  services: sections.Services.variants.TravelServices1,
 };
 
 export default travelData;

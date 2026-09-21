@@ -25,7 +25,7 @@ export default function AboutSection({
   const data: AboutUsData = propData || travelData.aboutUs;
 
   return (
-    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white overflow-hidden">
+    <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 ">
       {/* Background Dotted Map Pattern */}
       <div
         className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none bg-[radial-gradient(#12161f_1px,transparent_1px)] [background-size:16px_16px]"

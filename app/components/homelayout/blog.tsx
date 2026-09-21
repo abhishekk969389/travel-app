@@ -80,13 +80,15 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                         >
                             {/* Card Image Container */}
                             <div className="relative w-full h-[220px] sm:h-[240px] overflow-hidden bg-slate-100">
-                                <Image
-                                    src={post.image}
-                                    alt={post.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                />
+                                <Link href={`/blogdetails?id=${post.id}`} className="block relative w-full h-full">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out cursor-pointer"
+                                    />
+                                </Link>
 
                                 {/* Date Badge */}
                                 <div
@@ -119,14 +121,14 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
 
                                     {/* Title */}
                                     <h3 className="text-base sm:text-lg font-bold text-[#1b2534] leading-snug group-hover:text-[#ff3560] transition-colors duration-200 line-clamp-2 mb-6">
-                                        <Link href={post.href}>{post.title}</Link>
+                                        <Link href={`/blogdetails?id=${post.id}`}>{post.title}</Link>
                                     </h3>
                                 </div>
 
                                 {/* Read More Button */}
                                 <div>
                                     <Link
-                                        href={post.href}
+                                        href={`/blogdetails?id=${post.id}`}
                                         className="inline-flex items-center gap-2 rounded-full border border-pink-300 px-5 py-2 text-xs sm:text-sm font-bold text-[#ff3560] hover:bg-[#ff3560] hover:text-white transition-all duration-300 group/btn"
                                     >
                                         <span>Read More</span>
