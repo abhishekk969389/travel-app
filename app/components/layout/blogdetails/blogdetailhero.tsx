@@ -98,16 +98,16 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
 
         {/* Bottom-Left Location Tag Badge */}
         {locationTag?.title && (
-          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 bg-black/60 backdrop-blur-md border border-white/20 px-4 py-3 sm:px-5 sm:py-3.5 md:px-6 md:py-6 rounded-2xl text-white max-w-sm flex items-start gap-3 shadow-lg">
-            <div className="w-8 h-8 rounded-full bg-[#ff2e63] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-              <FaMapMarkerAlt className="w-5 h-5 text-white" />
+          <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-auto z-20 bg-black/65 backdrop-blur-md border border-white/20 px-3.5 py-2.5 sm:px-5 sm:py-3.5 md:px-6 md:py-6 rounded-xl sm:rounded-2xl text-white max-w-full sm:max-w-sm flex items-center sm:items-start gap-2.5 sm:gap-3 shadow-lg">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#ff2e63] flex items-center justify-center shrink-0 shadow-sm">
+              <FaMapMarkerAlt className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            <div>
-              <h4 className="text-xs sm:text-sm font-extrabold text-white leading-tight">
+            <div className="min-w-0 flex-1">
+              <h4 className="text-xs sm:text-sm font-extrabold text-white leading-tight truncate sm:whitespace-normal">
                 {locationTag.title}
               </h4>
               {locationTag.subtitle && (
-                <p className="text-[11px] sm:text-sm text-slate-300 font-normal mt-0.5">
+                <p className="text-[11px] sm:text-sm text-slate-300 font-normal mt-0.5 line-clamp-2 sm:line-clamp-none leading-snug">
                   {locationTag.subtitle}
                 </p>
               )}

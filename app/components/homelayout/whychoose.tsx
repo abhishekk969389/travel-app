@@ -28,22 +28,22 @@ export default function WhyChoose() {
     const renderIcon = (iconName: string, iconBadgeText?: string) => {
         switch (iconName) {
             case "UserCheck":
-                return <UserCheck className="w-6 h-6 stroke-[2.2] text-slate-900" />;
+                return <UserCheck className="w-10 h-10 stroke-[2.2] text-slate-900" />;
             case "ShieldCheck":
-                return <ShieldCheck className="w-6 h-6 stroke-[2.2] text-slate-900" />;
+                return <ShieldCheck className="w-10 h-10 stroke-[2.2] text-slate-900" />;
             case "MapPin":
-                return <MapPin className="w-6 h-6 stroke-[2.2] text-slate-900" />;
+                return <MapPin className="w-10 h-10 stroke-[2.2] text-slate-900" />;
             case "Headphones":
                 return (
                     <div className="relative flex flex-col items-center justify-center">
-                        <Headphones className="w-5 h-5 stroke-[2.2] text-slate-900" />
+                        <Headphones className="w-10 h-10 stroke-[2.2] text-slate-900" />
                         {iconBadgeText && (
                             <span className="text-[9px] font-extrabold text-[#ff2a5f] leading-none mt-0.5">{iconBadgeText}</span>
                         )}
                     </div>
                 );
             default:
-                return <Mountain className="w-6 h-6 stroke-[2.2] text-slate-900" />;
+                return <Mountain className="w-10 h-10 stroke-[2.2] text-slate-900" />;
         }
     };
 
@@ -200,7 +200,7 @@ export default function WhyChoose() {
                                     />
 
                                     {/* Circular Icon Badge - Placed right above content */}
-                                    <div className="relative z-10 self-start w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-white p-0.5 flex items-center justify-center shadow-sm ring-4 ring-rose-500/20 border-1 border-[#ff2a5f] mb-1">
+                                    <div className="relative z-10 self-start w-17 h-17 rounded-full bg-white p-0.5 flex items-center justify-center shadow-sm ring-4 ring-rose-500/20 border-1 border-[#ff2a5f] mb-1">
                                         <div className="w-full h-full rounded-full bg-slate-50 flex items-center justify-center">
                                             {renderIcon(feature.icon, feature.iconBadgeText)}
                                         </div>
@@ -220,13 +220,13 @@ export default function WhyChoose() {
                                     </div>
 
                                     {/* Bottom Right Arrow Button */}
-                                    <Link
+                                    {/* <Link
                                         href={feature.href}
                                         aria-label={`Learn more about ${feature.titlePrefix} ${feature.titleHighlight}`}
                                         className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-gradient-to-r from-[#ff2a5f] to-[#ff6b3d] text-[#ffffff] flex items-center justify-center shadow-md group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#ff2a5f]/40 transition-all duration-300 z-20"
                                     >
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </StaggerItem>
                         ))}

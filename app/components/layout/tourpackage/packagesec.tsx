@@ -243,7 +243,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                     {/* ================= LEFT COLUMN: FILTER SIDEBAR ================= */}
                     <div
                         className={`lg:col-span-3 ${isMobileFilterOpen ? "block" : "hidden lg:block"
-                            } sticky top-24 space-y-6`}
+                            } lg:sticky lg:top-24 space-y-6`}
                     >
                         <div className="bg-white rounded-[20px] sm:rounded-[24px] border border-gray-200/80 shadow-[0_10px_35px_rgba(0,0,0,0.05)] overflow-hidden">
                             {/* Filter Top Header Banner */}
@@ -383,7 +383,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
 
                                     {/* Dropdown Options Popup */}
                                     {isSortDropdownOpen && (
-                                        <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-gray-100 py-1.5 z-40 overflow-hidden">
+                                        <div className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-gray-100 py-1.5 z-40 overflow-hidden">
                                             {sortOptions.map((opt) => {
                                                 const isSelected = opt.value === sortBy;
                                                 return (

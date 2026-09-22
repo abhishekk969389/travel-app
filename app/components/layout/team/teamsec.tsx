@@ -65,7 +65,7 @@ export default function TeamSec({ data: propData }: TeamSecProps = {}) {
                 {/* Bottom Card Content */}
                 <div className="relative pt-16 pb-6 px-4 text-center flex flex-col items-center flex-1">
                   {/* Circular Portrait Image Overlapping Scenic Background */}
-                  <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-4 border-white shadow-md overflow-hidden bg-white">
+                  <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full border-4 border-white shadow-md overflow-hidden bg-white">
                     <Image
                       src={member.image || "/team.jpg"}
                       alt={member.name}

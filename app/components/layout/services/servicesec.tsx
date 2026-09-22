@@ -18,26 +18,26 @@ export default function ServiceSec() {
 
     return (
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14">
-            <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+            <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col space-y-8 sm:space-y-10 md:space-y-12">
                 {services.items.map((item: ServiceItem, index: number) => {
                     const isLight = item.theme === 'light';
                     const serviceSlug = createSlug(`${item.titlePart1 || ''} ${item.titlePart2 || ''}`);
 
                     return (
                         <FadeIn key={item.id || index} direction="up" delay={index * 0.1} className="w-full">
-                            <div className="flex flex-col md:flex-row w-full h-auto md:h-[450px] relative justify-center items-center">
+                            <div className="flex flex-col lg:flex-row w-full h-auto lg:h-[370px] relative justify-center items-center">
 
                             {isLight ? (
                                 // --- LIGHT THEME CARD (Image Left, Text Right) ---
                                 <>
                                     {/* Left: Image Box */}
-                                    <div className="relative w-full md:w-[60%] h-[300px] md:h-[75%] z-10 md:pr-12 md:-skew-x-[8deg] group ml-3 mt-4 md:ml-6 md:mt-6">
+                                    <div className="relative w-full lg:w-[60%] h-[280px] sm:h-[300px] lg:h-[88%] z-10 lg:pr-12 lg:-skew-x-[8deg] group ml-3 mt-4 lg:ml-6 lg:mt-6">
                                         {/* Pink gradient background */}
-                                        <div className="absolute top-0 left-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform -translate-x-3 -translate-y-4 shadow-lg hidden md:block"></div>
+                                        <div className="absolute top-0 left-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform -translate-x-3 -translate-y-4 shadow-lg hidden lg:block"></div>
 
                                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-xl">
                                             {/* Unskew inner image */}
-                                            <div className="w-full h-full md:w-[120%] md:h-[120%] md:skew-x-[8deg] md:-ml-[10%] md:-mt-[5%] relative">
+                                            <div className="w-full h-full lg:w-[120%] lg:h-[120%] lg:skew-x-[8deg] lg:-ml-[10%] lg:-mt-[5%] relative">
                                                 <Image
                                                     src={item.image}
                                                     alt={item.titlePart1}
@@ -46,7 +46,7 @@ export default function ServiceSec() {
                                                 />
                                                 <div className="absolute inset-0 bg-black/20"></div>
                                                 <div
-                                                    className="absolute font-[family-name:var(--font-script)] text-3xl  text-[#1e3a8a] font-normal bottom-8 left-12 md:bottom-12 md:left-24 text-white leading-tight z-20 flex flex-col items-start"
+                                                    className="absolute font-[family-name:var(--font-script)] text-3xl  text-[#1e3a8a] font-normal bottom-12 left-12 lg:bottom-12 lg:left-24 text-white leading-tight z-20 flex flex-col items-start"
 
                                                 >
                                                     {item.imageOverlayText.split('\n').map((line, i) => (
@@ -59,8 +59,8 @@ export default function ServiceSec() {
                                     </div>
 
                                     {/* Right: Text Box */}
-                                    <div className="relative w-full md:w-[50%] h-auto md:h-[85%] bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-20 md:-ml-[15%] md:-skew-x-[8deg] p-8 sm:p-10 flex flex-col justify-center mt-[-2rem] md:mt-0">
-                                        <div className="md:skew-x-[8deg] flex flex-col h-full w-full">
+                                    <div className="relative w-full lg:w-[50%] h-auto lg:h-full bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-20 lg:-ml-[15%] lg:-skew-x-[8deg] p-6 sm:p-8 lg:p-8 flex flex-col justify-center mt-[-2rem] lg:mt-0">
+                                        <div className="lg:skew-x-[8deg] flex flex-col h-full w-full">
                                             {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
                                                 <span className="text-4xl font-bold text-red-500">{item.id}</span>
@@ -71,7 +71,7 @@ export default function ServiceSec() {
                                             </div>
 
                                             {/* Title */}
-                                            <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">
+                                            <h3 className="text-3xl lg:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-gray-900">{item.titlePart1} </span>
                                                 <span className="text-red-500">{item.titlePart2}</span>
                                             </h3>
@@ -115,8 +115,8 @@ export default function ServiceSec() {
                                 // --- DARK THEME CARD (Text Left, Image Right) ---
                                 <>
                                     {/* Left: Text Box */}
-                                    <div className="relative w-full md:w-[45%] h-auto md:h-[85%] bg-[#0f172a] rounded-[2rem] shadow-2xl z-20 md:-mr-[12%] md:-skew-x-[8deg] p-8 sm:p-10 flex flex-col justify-center order-2 md:order-1 mt-[-2rem] md:mt-0">
-                                        <div className="md:skew-x-[8deg] flex flex-col h-full w-full">
+                                    <div className="relative w-full lg:w-[45%] h-auto lg:h-full bg-[#0f172a] rounded-[2rem] shadow-2xl z-20 lg:-mr-[12%] lg:-skew-x-[8deg] p-6 sm:p-8 lg:p-8 flex flex-col justify-center order-2 lg:order-1 mt-[-2rem] lg:mt-0">
+                                        <div className="lg:skew-x-[8deg] flex flex-col h-full w-full">
                                             {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
                                                 <span className="text-4xl font-bold text-red-500">{item.id}</span>
@@ -127,7 +127,7 @@ export default function ServiceSec() {
                                             </div>
 
                                             {/* Title */}
-                                            <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">
+                                            <h3 className="text-3xl lg:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-white">{item.titlePart1} </span>
                                                 <span className="text-pink-500">{item.titlePart2}</span>
                                             </h3>
@@ -168,13 +168,13 @@ export default function ServiceSec() {
                                     </div>
 
                                     {/* Right: Image Box */}
-                                    <div className="relative w-full md:w-[60%] h-[300px] md:h-[75%] z-10 md:pl-8 md:-skew-x-[8deg] group order-1 md:order-2 mr-4 mt-4 md:mr-6 md:mt-6">
+                                    <div className="relative w-full lg:w-[60%] h-[280px] sm:h-[300px] lg:h-[88%] z-10 lg:pl-8 lg:-skew-x-[8deg] group order-1 lg:order-2 mr-4 mt-4 lg:mr-6 lg:mt-6">
                                         {/* Pink gradient background */}
-                                        <div className="absolute top-0 right-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform translate-x-4 -translate-y-4 shadow-lg hidden md:block"></div>
+                                        <div className="absolute top-0 right-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform translate-x-4 -translate-y-4 shadow-lg hidden lg:block"></div>
 
                                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-xl">
                                             {/* Unskew inner image */}
-                                            <div className="w-full h-full md:w-[120%] md:h-[120%] md:skew-x-[8deg] md:-ml-[10%] md:-mt-[5%] relative">
+                                            <div className="w-full h-full lg:w-[120%] lg:h-[120%] lg:skew-x-[8deg] lg:-ml-[10%] lg:-mt-[5%] relative">
                                                 <Image
                                                     src={item.image}
                                                     alt={item.titlePart1}
@@ -183,7 +183,7 @@ export default function ServiceSec() {
                                                 />
                                                 <div className="absolute inset-0 bg-black/20"></div>
                                                 <div
-                                                    className="absolute font-[family-name:var(--font-script)] text-3xl  text-white font-normal bottom-8 left-8 md:bottom-12 md:left-[30%] lg:left-[35%] text-white leading-tight z-20 flex flex-col items-start"
+                                                    className="absolute font-[family-name:var(--font-script)] text-3xl  text-white font-normal bottom-12 left-8 lg:bottom-12 lg:left-[35%] text-white leading-tight z-20 flex flex-col items-start"
 
                                                 >
                                                     {item.imageOverlayText.split('\n').map((line, i) => (

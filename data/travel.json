@@ -52,7 +52,7 @@
             ],
             "cta": {
               "text": "Plan Your Next Journey",
-              "href": "/plan"
+              "href": "/tourpackage"
             }
           }
         }
@@ -779,7 +779,7 @@
             ],
             "cta": {
               "text": "View All Packages",
-              "href": "/packages"
+              "href": "/tourpackage"
             }
           }
         }
@@ -796,7 +796,7 @@
               "description": "We don't just offer trips — we deliver unforgettable, safe, and professionally guided ice mountain adventures.",
               "cta": {
                 "text": "Explore Package",
-                "href": "/packages"
+                "href": "/tourpackage"
               },
               "image": "/whychoose_main.jpg",
               "brushImage": "/brush.png",
@@ -1787,35 +1787,35 @@
             "services": [
               {
                 "name": "Family Tours",
-                "href": "/services/family-tours"
+                "href": "/tourpackagedetails?name=new-york-usa"
               },
               {
                 "name": "Honeymoon Tours",
-                "href": "/services/honeymoon-tours"
+                "href": "/tourpackagedetails?name=maldives"
               },
               {
                 "name": "Group Tours",
-                "href": "/services/group-tours"
+                "href": "/tourpackagedetails?name=bangkok-thailand"
               },
               {
-                "name": "Corporate Travel",
-                "href": "/services/corporate-travel"
+                "name": "Couple Tour",
+                "href": "/tourpackagedetails?name=goa-india"
               },
               {
                 "name": "Adventure Tours",
-                "href": "/services/adventure-tours"
+                "href": "/tourpackagedetails?name=sydney-cairns-australia"
               },
               {
                 "name": "Pilgrimage Tours",
-                "href": "/services/pilgrimage-tours"
+                "href": "/tourpackagedetails?name=varanasi-rishikesh-india"
               },
               {
                 "name": "Luxury Tours",
-                "href": "/services/luxury-tours"
+                "href": "/tourpackagedetails?name=switzerland"
               },
               {
-                "name": "Visa Assistance",
-                "href": "/services/visa-assistance"
+                "name": "Wildlife Tour",
+                "href": "/tourpackagedetails?name=cape-town-south-africa"
               }
             ],
             "Help & Support": [
@@ -2309,7 +2309,7 @@
             ],
             "cta": {
               "text": "Discover Our Story",
-              "href": "/about"
+              "href": "/whychooseus"
             },
             "doodleTextLines": [
               "Travel",
@@ -2484,7 +2484,7 @@
                 "id": "team-1",
                 "name": "Janny Willson",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team1.jpg",
                 "bgImage": "/blog1.jpg",
                 "slug": "janny-willson",
                 "details": {
@@ -2563,7 +2563,7 @@
                 "id": "team-2",
                 "name": "Janny Willson",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team2.jpg",
                 "bgImage": "/blog2.jpg",
                 "slug": "janny-willson",
                 "details": {
@@ -2629,7 +2629,7 @@
                 "id": "team-3",
                 "name": "Jacob Jones",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team3.jpg",
                 "bgImage": "/blog3.jpg",
                 "slug": "jacob-jones",
                 "details": {
@@ -2695,7 +2695,7 @@
                 "id": "team-4",
                 "name": "Maria Prova",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team4.jpg",
                 "bgImage": "/blog1.jpg",
                 "slug": "maria-prova",
                 "details": {
@@ -2761,7 +2761,7 @@
                 "id": "team-5",
                 "name": "Alif Mahmud",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team5.jpg",
                 "bgImage": "/blog2.jpg",
                 "slug": "alif-mahmud",
                 "details": {
@@ -2827,7 +2827,7 @@
                 "id": "team-6",
                 "name": "Rebeka Maliha",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team6.jpg",
                 "bgImage": "/blog3.jpg",
                 "slug": "rebeka-maliha",
                 "details": {
@@ -2893,7 +2893,7 @@
                 "id": "team-7",
                 "name": "Karan Mehta",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team7.jpg",
                 "bgImage": "/blog1.jpg",
                 "slug": "karan-mehta",
                 "details": {
@@ -2959,7 +2959,7 @@
                 "id": "team-8",
                 "name": "Neha Sharma",
                 "role": "Tourist Guide",
-                "image": "/team.jpg",
+                "image": "/teams/team8.jpg",
                 "bgImage": "/blog2.jpg",
                 "slug": "neha-sharma",
                 "details": {
@@ -5111,7 +5111,7 @@
                 "subtitle": "GLOBAL CONNECTIVITY",
                 "titlePart1": "Flight",
                 "titlePart2": "Booking",
-                "description": "Book cheap flights to anywhere in the world. Enjoy seamless booking experiences with multiple airlines, competitive prices, and real-time support.",
+                "description": "Book cheap flights to anywhere in the world. Enjoy seamless booking experiences with multiple airlines, competitive price.",
                 "features": [
                   {
                     "text": "Global Airlines",

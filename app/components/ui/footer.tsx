@@ -98,9 +98,9 @@ export default function Footer() {
 
       <div className="relative z-10 mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8 pt-14 lg:pt-16">
         {/* Brand | Links | Destinations | Services | Stay Updated */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5 xl:gap-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5 xl:gap-6">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-3">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-3">
             <Link href="/" className="inline-block">
               <Image
                 src={data.brand.logo.src}
@@ -131,17 +131,17 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <FooterLinkList title="Quick Links" items={data.quickLinks} />
           </div>
 
           {/* Our Services */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <FooterLinkList title="Our Services" items={data.services} />
           </div>
 
           {/* Help & Support */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <FooterLinkList
               title={data["Help & Support"] ? "Help & Support" : "Popular Destinations"}
               items={data["Help & Support"] || (data as any).destinations || []}
@@ -149,7 +149,7 @@ export default function Footer() {
           </div>
 
           {/* Stay Updated — right of Our Services */}
-          <div className="relative z-[2] sm:col-span-2 lg:col-span-3">
+          <div className="relative z-[2] col-span-2 sm:col-span-2 lg:col-span-3">
             <h3 className="text-[1.05rem] font-bold text-white">{data.newsletter.title}</h3>
             <span className="mt-2.5 mb-4 block h-[3px] w-11 rounded-full bg-[#ff5a5f]" />
 
@@ -229,7 +229,7 @@ export default function Footer() {
                 type="button"
                 onClick={scrollToTop}
                 aria-label="Back to top"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ff5a5f] text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#e84a50]"
+                className="flex h-9 w-9 cursor-pointer shrink-0 items-center justify-center rounded-full bg-[#ff5a5f] text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#e84a50]"
               >
                 <FaArrowUp className="h-3.5 w-3.5" />
               </button>

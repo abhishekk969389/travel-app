@@ -240,7 +240,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
         </ScaleIn>
 
         {/* ================= 2. MIDDLE COLUMN: CONTENT & PRICE CTA (4 COLS) ================= */}
-        <FadeIn direction="up" className="lg:col-span-4 flex flex-col justify-between h-[380px] sm:h-[420px] lg:h-[460px]">
+        <FadeIn direction="up" className="lg:col-span-4 flex flex-col justify-between h-auto lg:h-[460px]">
           <div className="overflow-y-auto pr-1 space-y-3.5 scrollbar-thin">
             {/* Red Bar Line + Country Name */}
             <div className="flex items-center gap-2 mb-1">
@@ -302,7 +302,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
           </div>
 
           {/* Starting From & Book Now CTA Card */}
-          <div className="bg-white rounded-2xl p-4 sm:p-4.5 border border-slate-100 shadow-sm flex items-center justify-between gap-3 shrink-0">
+          <div className="bg-white rounded-2xl p-4 sm:p-4.5 border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 mt-4 lg:mt-0">
             <div>
               <span className="block text-sm font-semibold text-slate-400">
                 Starting From
@@ -323,7 +323,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
                 const formEl = document.getElementById("enquiry-form");
                 formEl?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="py-2.5 sm:py-3 px-6 rounded-full bg-gradient-to-r from-[#ff1d58] via-[#ff3b5c] to-[#ff7244] hover:opacity-95 text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-md shadow-[#ff2e63]/25 transition-all cursor-pointer"
+              className="w-full sm:w-auto py-2.5 sm:py-3 px-6 rounded-full bg-gradient-to-r from-[#ff1d58] via-[#ff3b5c] to-[#ff7244] hover:opacity-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-[#ff2e63]/25 transition-all cursor-pointer"
             >
               <span>Book Now</span>
               <FaArrowRight className="w-3 h-3" />
@@ -332,24 +332,24 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
         </FadeIn>
 
         {/* ================= 3. RIGHT COLUMN: ENQUIRE NOW FORM CARD (4 COLS) ================= */}
-        <ScaleIn className="lg:col-span-4 h-[380px] sm:h-[420px] lg:h-[460px]" id="enquiry-form">
-          <div className="bg-white rounded-[24px] p-5 sm:p-5.5 border border-slate-100 shadow-md flex flex-col justify-between h-full">
+        <ScaleIn className="lg:col-span-4 h-auto lg:h-[460px]" id="enquiry-form">
+          <div className="bg-white rounded-[24px] p-4.5 sm:p-5.5 border border-slate-100 shadow-md flex flex-col justify-between h-full">
             <div>
               {/* Header */}
-              <div className="mb-3">
+              <div className="mb-2.5">
                 <div className="flex items-center gap-2 mb-0.5">
                   <span className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full" />
                   <h3 className="text-lg sm:text-xl font-extrabold text-[#091724] tracking-tight">
                     Enquire Now
                   </h3>
                 </div>
-                <p className="text-sm text-slate-500">
+                <p className="text-xs sm:text-sm text-slate-500">
                   Get a free quote for this tour package
                 </p>
               </div>
 
               {/* Form Inputs */}
-              <form onSubmit={handleFormSubmit} className="space-y-2.5">
+              <form onSubmit={handleFormSubmit} className="space-y-2 sm:space-y-2.5">
                 {/* Full Name */}
                 <div className="relative">
                   <FaUser className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />

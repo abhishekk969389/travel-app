@@ -34,7 +34,7 @@ export default function Achievement() {
   return (
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-xl bg-[#08121e] shadow-2xl py-8 px-5 sm:px-8 lg:px-10 xl:px-12 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-6 xl:gap-8">
+        <div className="relative overflow-hidden rounded-xl bg-[#08121e] shadow-2xl py-8 sm:py-10 lg:py-8 px-5 sm:px-8 lg:px-10 xl:px-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6 xl:gap-8">
 
           {/* Background Image */}
           <Image
@@ -53,21 +53,21 @@ export default function Achievement() {
           />
 
           {/* Left Side: Title & Description */}
-          <FadeIn direction="left" className="relative z-10 max-w-[220px] lg:max-w-[240px] xl:max-w-[280px] shrink-0 w-full">
+          <FadeIn direction="left" className="relative z-10 w-full max-w-full sm:max-w-xl lg:max-w-[240px] xl:max-w-[280px] shrink-0 text-center lg:text-left">
             <div>
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
                 <span className="w-6 h-[3px] bg-[#f59e0b] rounded-full inline-block" />
                 <span className="text-xs font-bold tracking-widest text-slate-200 uppercase">
                   {data.subtitle}
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-black text-white leading-tight tracking-tight mb-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-black text-white leading-tight tracking-tight mb-2.5 sm:mb-3">
                 {data.headingPrefix}{" "}
                 <span className="text-[#f59e0b]">{data.headingHighlight}</span>
               </h2>
 
-              <p className="text-slate-300 text-xs sm:text-sm font-normal leading-relaxed whitespace-pre-line">
+              <p className="text-slate-300 text-xs sm:text-sm md:text-base lg:text-xs xl:text-sm font-normal leading-relaxed whitespace-pre-line max-w-lg mx-auto lg:mx-0">
                 {data.description}
               </p>
             </div>
@@ -77,26 +77,26 @@ export default function Achievement() {
           <div className="relative z-10 flex-1 w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-4 xl:gap-8">
 
             {/* 4 Stat Columns with Reduced Height Centered Vertical Dividers */}
-            <StaggerContainer className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-0 w-full">
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-0 w-full">
               {data.items.map((item: AchievementItem, index: number) => {
                 const IconComp = iconMap[item.icon] || FaTrophy;
                 return (
-                  <StaggerItem key={item.id} className="relative flex flex-col items-center text-center px-1 lg:px-2 py-3 sm:py-0">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 rounded-full border border-dashed border-white/40 bg-slate-900/50 backdrop-blur-md flex items-center justify-center text-[#f59e0b] mb-2 lg:mb-3 shadow-md">
-                      <IconComp className="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
+                  <StaggerItem key={item.id} className="relative flex flex-col items-center text-center px-2 lg:px-2 py-1 md:py-0">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-14 lg:h-14 xl:w-16 xl:h-16 rounded-full border border-dashed border-white/40 bg-slate-900/50 backdrop-blur-md flex items-center justify-center text-[#f59e0b] mb-2 sm:mb-2.5 lg:mb-3 shadow-md">
+                      <IconComp className="w-6 h-6 sm:w-7 sm:h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
                     </div>
 
-                    <div className="text-xl lg:text-2xl xl:text-3xl font-extrabold text-white tracking-tight mb-1">
+                    <div className="text-2xl sm:text-3xl md:text-2xl lg:text-2xl xl:text-3xl font-extrabold text-white tracking-tight mb-1">
                       {item.number}
                     </div>
 
-                    <div className="text-[11px] lg:text-xs font-medium text-slate-200 leading-snug">
+                    <div className="text-xs sm:text-sm md:text-xs font-medium text-slate-200 leading-snug">
                       {item.label}
                     </div>
 
                     {/* Reduced Height Centered Vertical Divider Line */}
                     {index < data.items.length - 1 && (
-                      <div className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 lg:h-14 bg-slate-300/80 pointer-events-none" />
+                      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 lg:h-14 bg-slate-300/80 pointer-events-none" />
                     )}
                   </StaggerItem>
                 );
