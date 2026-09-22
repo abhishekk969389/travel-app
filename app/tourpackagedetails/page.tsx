@@ -4,22 +4,34 @@ import TourDetailOverview from "@/app/components/layout/tourpackagedetails/tourd
 import TourDetailItinerary from "@/app/components/layout/tourpackagedetails/tourdetailitinerary";
 import TourDetailSidebar from "@/app/components/layout/tourpackagedetails/tourdetailsidebar";
 import Achievement from "@/app/components/ui/achievement";
-import { site as travelData } from "@/data/index";
+import { site as travelData, createSlug } from "@/data/index";
 import type { TravelTourPackagesPageData, TourPackageCardItem } from "@/data/index";
 
 interface TourPackageDetailsPageProps {
-  searchParams?: Promise<{ id?: string }>;
+  searchParams?: Promise<{ id?: string; name?: string; slug?: string; title?: string }>;
 }
 
 export default async function TourPackageDetailsPage({ searchParams }: TourPackageDetailsPageProps) {
   const resolvedSearchParams = searchParams ? await searchParams : {};
-  const packageId = resolvedSearchParams.id;
+  const query =
+    resolvedSearchParams.name ||
+    resolvedSearchParams.slug ||
+    resolvedSearchParams.id ||
+    resolvedSearchParams.title ||
+    "";
 
   const tourPackagesData: TravelTourPackagesPageData = travelData.tourPackagesPage;
   const packagesList: TourPackageCardItem[] = tourPackagesData.packages;
+  const querySlug = createSlug(query);
 
   const pkg =
-    packagesList.find((p) => packageId && p.id === packageId) || packagesList[0];
+    packagesList.find(
+      (p) =>
+        (query && p.id === query) ||
+        (query && (p as any).slug === query) ||
+        (querySlug && createSlug(p.title) === querySlug) ||
+        (query && p.title.toLowerCase().includes(query.toLowerCase()))
+    ) || packagesList[0];
 
   return (
     <section className="min-h-screen">

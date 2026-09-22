@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import type { TourPackageCardItem, TourPackageItineraryItem } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface TourDetailItineraryProps {
   pkg?: TourPackageCardItem;
@@ -57,24 +58,24 @@ export default function TourDetailItinerary({ pkg }: TourDetailItineraryProps) {
   return (
     <div className="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm mt-8 sm:mt-10 overflow-hidden">
       {/* Header with Pink/Red Accent Horizontal Bar */}
-      <div className="flex items-center gap-3 mb-8">
+      <FadeIn direction="up" className="flex items-center gap-3 mb-8">
         <span className="w-7 h-[3px] bg-[#ff2e63] rounded-full" />
         <h3 className="text-xl sm:text-2xl font-black text-[#0b1724] tracking-tight">
           Tour Itinerary
         </h3>
-      </div>
+      </FadeIn>
 
       {/* Vertical Timeline & Cards Container */}
       <div className="relative">
         {/* Single Continuous Unbroken Vertical Pink Line (0 gaps/breaks, aligned perfectly through dot centers) */}
         <div className="absolute left-[104px] sm:left-[132px] top-[-10px] bottom-6 w-[1.5px] -translate-x-1/2 bg-[#ff2e63]/60 z-0 pointer-events-none" />
 
-        <div className="space-y-5 sm:space-y-6">
+        <StaggerContainer className="space-y-5 sm:space-y-6">
           {itinerary.map((item, idx) => {
             const isOpen = openIndex === idx;
 
             return (
-              <div
+              <StaggerItem
                 key={idx}
                 className="relative flex items-start gap-3 sm:gap-5 group"
               >
@@ -159,10 +160,10 @@ export default function TourDetailItinerary({ pkg }: TourDetailItineraryProps) {
                     </div>
                   </button>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </div>
   );

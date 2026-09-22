@@ -14,6 +14,7 @@ import {
   FaExpand,
 } from "react-icons/fa";
 import type { TourPackageCardItem } from "@/data/index";
+import { FadeIn, StaggerContainer, MotionCard, ScaleIn } from "@/app/components/ui/animations";
 
 interface TourDetailSidebarProps {
   pkg?: TourPackageCardItem;
@@ -87,7 +88,7 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
   return (
     <div className="space-y-8">
       {/* 1. Discover Banner Graphic Card */}
-      <div className="relative rounded-[24px] overflow-hidden h-[240px] sm:h-[280px] flex flex-col justify-end p-6 shadow-md border border-slate-100 bg-slate-900 group">
+      <ScaleIn className="relative rounded-[24px] overflow-hidden h-[240px] sm:h-[280px] flex flex-col justify-end p-6 shadow-md border border-slate-100 bg-slate-900 group">
         <Image
           src={details?.sidebarBanner?.image || "/whychoose_fjord.jpg"}
           alt={details?.sidebarBanner?.title || "Discover Bali"}
@@ -103,10 +104,10 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
           </h3>
           <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mt-2" />
         </div>
-      </div>
+      </ScaleIn>
 
       {/* 2. Photo Gallery Widget */}
-      <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm space-y-4">
+      <FadeIn direction="up" className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h4 className="text-lg font-extrabold text-[#12161f] tracking-tight">
@@ -163,10 +164,10 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
             </div>
           ))}
         </div>
-      </div>
+      </FadeIn>
 
       {/* 3. Related Tour Packages Widget */}
-      <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm space-y-4">
+      <FadeIn direction="up" className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h4 className="text-lg font-extrabold text-[#12161f] tracking-tight">
@@ -198,12 +199,12 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
         </div>
 
         {/* 2 Related Package Cards Side-by-Side */}
-        <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+        <StaggerContainer className="grid grid-cols-2 gap-2.5 sm:gap-3">
           {relatedPackages.map((relPkg) => {
             const isWishlisted = wishlist.includes(relPkg.id);
 
             return (
-              <div
+              <MotionCard
                 key={relPkg.id}
                 className="bg-white rounded-2xl overflow-hidden border-none shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between"
               >
@@ -275,11 +276,11 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </MotionCard>
             );
           })}
-        </div>
-      </div>
+        </StaggerContainer>
+      </FadeIn>
 
       {/* Lightbox Gallery Modal Popup */}
       {isModalOpen && (

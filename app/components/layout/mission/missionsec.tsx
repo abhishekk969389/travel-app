@@ -6,6 +6,7 @@ import { FaBullseye, FaEye, FaCrosshairs, FaCompass, FaLightbulb } from "react-i
 import { LuTarget, LuEye } from "react-icons/lu";
 import { site as travelData } from "@/data/index";
 import type { TravelMissionData as MissionData } from "@/data/index";
+import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],
@@ -72,59 +73,63 @@ export default function MissionSec({ data: propData }: MissionSecProps = {}) {
 
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Top Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8 lg:mb-10">
-          <div className="flex items-center justify-center gap-2.5 mb-2.5">
-            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
-              {data.header.subtitle}
-            </span>
-            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+        <FadeIn direction="up">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8 lg:mb-10">
+            <div className="flex items-center justify-center gap-2.5 mb-2.5">
+              <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+              <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
+                {data.header.subtitle}
+              </span>
+              <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-4">
+              {data.header.headingLine1}
+              <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
+            </h2>
+
+            <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
+              {data.header.description}
+            </p>
           </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-4">
-            {data.header.headingLine1}
-            <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
-          </h2>
-
-          <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
-            {data.header.description}
-          </p>
-        </div>
+        </FadeIn>
 
         {/* Row 1: OUR MISSION (Left Text, Right Image) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16 sm:mb-20 lg:mb-28">
           {/* Mission Text Column */}
-          <div className="lg:col-span-6 flex flex-col justify-center">
-            {/* Badge */}
-            <div className="flex items-center gap-3.5 mb-3">
-              <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#ffecef] text-[#ff2e63] shrink-0 shadow-sm">
-                {renderMissionIcon(data.mission.icon)}
+          <FadeIn direction="left" className="lg:col-span-6 flex flex-col justify-center">
+            <div>
+              {/* Badge */}
+              <div className="flex items-center gap-3.5 mb-3">
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#ffecef] text-[#ff2e63] shrink-0 shadow-sm">
+                  {renderMissionIcon(data.mission.icon)}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-[2px] w-5 rounded-full bg-[#ff2e63]" />
+                  <span className="text-xs sm:text-sm font-bold tracking-wider text-[#ff2e63] uppercase">
+                    {data.mission.badge}
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="h-[2px] w-5 rounded-full bg-[#ff2e63]" />
-                <span className="text-xs sm:text-sm font-bold tracking-wider text-[#ff2e63] uppercase">
-                  {data.mission.badge}
-                </span>
+
+              {/* Heading */}
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#12161f] tracking-tight leading-tight my-4">
+                {data.mission.headingPrefix} <br />
+                <span>{data.mission.headingHighlightPrefix}</span>
+                <span className="text-[#ff2e63]">{data.mission.headingHighlight}</span>
+              </h3>
+
+              {/* Paragraphs */}
+              <div className="space-y-4 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                {data.mission.paragraphs.map((p, idx) => (
+                  <p key={idx}>{p}</p>
+                ))}
               </div>
             </div>
-
-            {/* Heading */}
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#12161f] tracking-tight leading-tight my-4">
-              {data.mission.headingPrefix} <br />
-              <span>{data.mission.headingHighlightPrefix}</span>
-              <span className="text-[#ff2e63]">{data.mission.headingHighlight}</span>
-            </h3>
-
-            {/* Paragraphs */}
-            <div className="space-y-4 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-              {data.mission.paragraphs.map((p, idx) => (
-                <p key={idx}>{p}</p>
-              ))}
-            </div>
-          </div>
+          </FadeIn>
 
           {/* Mission Image Column with Tilted Pink Backdrop */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
+          <ScaleIn className="lg:col-span-6 relative flex items-center justify-center">
             <div className="relative w-full max-w-[560px]">
               {/* Pink Tilted Accent Card */}
               <div
@@ -173,13 +178,13 @@ export default function MissionSec({ data: propData }: MissionSecProps = {}) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScaleIn>
         </div>
 
         {/* Row 2: OUR VISION (Left Image, Right Text) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Vision Image Column with Tilted Teal Backdrop */}
-          <div className="lg:col-span-6 relative flex items-center justify-center order-2 lg:order-1 p-2 sm:p-4">
+          <ScaleIn className="lg:col-span-6 relative flex items-center justify-center order-2 lg:order-1 p-2 sm:p-4">
             <div className="relative w-full max-w-[560px]">
               {/* Teal Tilted Accent Card */}
               <div
@@ -228,69 +233,71 @@ export default function MissionSec({ data: propData }: MissionSecProps = {}) {
                 </div>
               </div>
             </div>
-          </div>
+          </ScaleIn>
 
           {/* Vision Text Column with Watermark Background */}
-          <div className="lg:col-span-6 relative flex flex-col justify-center order-1 lg:order-2">
-            {/* Faint watermark globe & airplane trail */}
-            <div className="absolute -right-8 -bottom-12 w-64 h-64 opacity-15 pointer-events-none select-none hidden sm:block">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full text-slate-400"
-                fill="none"
-              >
-                <circle
-                  cx="120"
-                  cy="120"
-                  r="70"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M50 120h140 M120 50c25 25 40 45 40 70s-15 45-40 70c-25-25-40-45-40-70s15-45 40-70z"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M10 60 C 40 40, 70 80, 90 60 C 110 40, 140 30, 170 10"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                />
-                <path
-                  d="M170 10 L 175 6 L 176 13 Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-
-            {/* Badge */}
-            <div className="flex items-center gap-3.5 mb-3">
-              <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#e0f7f6] text-[#0d9488] shrink-0 shadow-sm">
-                {renderMissionIcon(data.vision.icon)}
+          <FadeIn direction="right" className="lg:col-span-6 relative flex flex-col justify-center order-1 lg:order-2">
+            <div>
+              {/* Faint watermark globe & airplane trail */}
+              <div className="absolute -right-8 -bottom-12 w-64 h-64 opacity-15 pointer-events-none select-none hidden sm:block">
+                <svg
+                  viewBox="0 0 200 200"
+                  className="w-full h-full text-slate-400"
+                  fill="none"
+                >
+                  <circle
+                    cx="120"
+                    cy="120"
+                    r="70"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <path
+                    d="M50 120h140 M120 50c25 25 40 45 40 70s-15 45-40 70c-25-25-40-45-40-70s15-45 40-70z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <path
+                    d="M10 60 C 40 40, 70 80, 90 60 C 110 40, 140 30, 170 10"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeDasharray="4 4"
+                  />
+                  <path
+                    d="M170 10 L 175 6 L 176 13 Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="h-[2px] w-5 rounded-full bg-[#0d9488]" />
-                <span className="text-xs sm:text-sm font-bold tracking-wider text-[#0d9488] uppercase">
-                  {data.vision.badge}
-                </span>
+
+              {/* Badge */}
+              <div className="flex items-center gap-3.5 mb-3">
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#e0f7f6] text-[#0d9488] shrink-0 shadow-sm">
+                  {renderMissionIcon(data.vision.icon)}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-[2px] w-5 rounded-full bg-[#0d9488]" />
+                  <span className="text-xs sm:text-sm font-bold tracking-wider text-[#0d9488] uppercase">
+                    {data.vision.badge}
+                  </span>
+                </div>
+              </div>
+
+              {/* Heading */}
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#12161f] tracking-tight leading-tight my-4">
+                {data.vision.headingPrefix} <br />
+                <span>{data.vision.headingHighlightPrefix}</span>
+                <span className="text-[#ff2e63]">{data.vision.headingHighlight}</span>
+              </h3>
+
+              {/* Paragraphs */}
+              <div className="space-y-4 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed relative z-10">
+                {data.vision.paragraphs.map((p, idx) => (
+                  <p key={idx}>{p}</p>
+                ))}
               </div>
             </div>
-
-            {/* Heading */}
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#12161f] tracking-tight leading-tight my-4">
-              {data.vision.headingPrefix} <br />
-              <span>{data.vision.headingHighlightPrefix}</span>
-              <span className="text-[#ff2e63]">{data.vision.headingHighlight}</span>
-            </h3>
-
-            {/* Paragraphs */}
-            <div className="space-y-4 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed relative z-10">
-              {data.vision.paragraphs.map((p, idx) => (
-                <p key={idx}>{p}</p>
-              ))}
-            </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

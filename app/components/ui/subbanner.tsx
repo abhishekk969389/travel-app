@@ -9,6 +9,7 @@ import type {
   SubBannerPageKey,
   BreadcrumbItem,
 } from "@/data/index";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface SubBannerProps {
   pageKey?: SubBannerPageKey | string;
@@ -56,7 +57,8 @@ export default function SubBanner({
 
       {/* Content */}
       <div className="relative z-10 max-w-[1320px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-9 md:py-11 lg:py-14">
-        <div className="max-w-2xl">
+        <FadeIn direction="up">
+          <div className="max-w-2xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.55rem] font-bold text-white tracking-tight mb-2.5 sm:mb-3 lg:mb-4 drop-shadow-md">
             {title}
           </h1>
@@ -92,6 +94,7 @@ export default function SubBanner({
             </div>
           </nav>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

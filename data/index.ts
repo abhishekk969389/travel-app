@@ -7,6 +7,7 @@ const sections = travelData.TravelIndustries.sections;
 export type TravelTopbarData = typeof sections.Topbar.variants.TravelTopbar1;
 export type TravelNavbarData = typeof sections.Navbar.variants.TravelNavbar1;
 export type TravelBannerData = typeof sections.Banner.variants.TravelBanner1;
+export type BannerSlideItem = NonNullable<TravelBannerData["slides"]>[number];
 export type TravelAboutUsData = typeof sections.AboutUs.variants.TravelAboutUs1;
 export type TravelDestinationsData = typeof sections.Destinations.variants.TravelDestinations1;
 export type TravelDestinationsPageData = typeof sections.Destinations.variants.TravelDestinationsPage;
@@ -60,48 +61,9 @@ export type WhyChooseFeature = TravelWhyChooseUsData["features"][number];
 export type WhyChoosePageFeature = TravelWhyChooseUsPageData["features"][number];
 export type AchievementItem = TravelAchievementsData["items"][number];
 export type BlogPostItem = TravelBlogData["posts"][number];
-
-export interface BlogDetailPlace {
-  id?: string;
-  name: string;
-  description: string;
-  image: string;
-}
-
-export interface BlogDetailQuote {
-  text: string;
-  brushText?: string;
-}
-
-export interface BlogDetailsData {
-  category: string;
-  title: string;
-  subtitle: string;
-  date: string;
-  author: string;
-  featuredImage: string;
-  brushImage: string;
-  brushText: string;
-  locationTag: {
-    title: string;
-    subtitle: string;
-  };
-  introParagraph: string;
-  section1: {
-    title: string;
-    content: string;
-  };
-  section2: {
-    title: string;
-    places: BlogDetailPlace[];
-  };
-  quote: BlogDetailQuote;
-  section3: {
-    title: string;
-    tips: string[];
-    conclusion: string;
-  };
-}
+export type BlogDetailsData = NonNullable<BlogPostItem["details"]>;
+export type BlogDetailPlace = BlogDetailsData["section2"]["places"][number];
+export type BlogDetailQuote = BlogDetailsData["quote"];
 export type TrustBadge = TravelFooterData["trustBadges"][number];
 export type BreadcrumbItem = TravelSubBannersData["about"]["breadcrumbs"][number];
 export type StoryFeature = TravelOurStoryData["features"][number];
@@ -128,6 +90,87 @@ export type SitemapCategoryItem = TravelSitemapData["categories"][number];
 export type SitemapLinkItem = SitemapCategoryItem["links"][number];
 export type ServiceItem = TravelServicesData["items"][number];
 export type ServiceFeature = ServiceItem["features"][number];
+
+export interface ServiceOverviewFeature {
+  title: string;
+  icon: string;
+}
+
+export interface ServiceWhyChooseReason {
+  title: string;
+  desc: string;
+  icon?: string;
+}
+
+export interface ServiceDetailsData {
+  id?: string;
+  serviceBadge: string;
+  titlePart1: string;
+  titleHighlight: string;
+  tagline: string;
+  description: string;
+  buttonText: string;
+  heroFeatures: { label: string; icon: string }[];
+  badgeOverlay: { title: string; subtitle: string };
+  featuredImage: string;
+  overview: {
+    subtitle: string;
+    title: string;
+    description: string;
+    features: ServiceOverviewFeature[];
+  };
+  whyChoose: {
+    title: string;
+    reasons: ServiceWhyChooseReason[];
+  };
+  rightCard: {
+    image: string;
+    handwritingText: string;
+  };
+}
+
+export const createSlug = (text: string): string => {
+  if (!text) return '';
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
+export const getServiceDetails = (identifier?: string): ServiceDetailsData => {
+  const detailsMap = (sections.Services.variants.TravelServices1 as any).serviceDetails || {};
+  if (!identifier) {
+    return detailsMap['01'] || Object.values(detailsMap)[0];
+  }
+
+  const cleanId = identifier.trim();
+  const cleanSlug = createSlug(cleanId);
+
+  // 1. Direct ID match
+  if (detailsMap[cleanId]) {
+    return detailsMap[cleanId];
+  }
+
+  // 2. Search through details map values by slug or title match
+  const items: ServiceDetailsData[] = Object.values(detailsMap);
+  const found = items.find((item) => {
+    if (item.id === cleanId) return true;
+    const fullTitle = `${item.titlePart1 || ''} ${item.titleHighlight || ''}`.trim();
+    const itemSlug = createSlug(fullTitle);
+    if (itemSlug === cleanSlug) return true;
+    if (fullTitle.toLowerCase().includes(cleanId.toLowerCase())) return true;
+    return false;
+  });
+
+  return found || detailsMap['01'] || items[0];
+};
+
+export const getAllServiceDetails = (): ServiceDetailsData[] => {
+  const detailsMap = (sections.Services.variants.TravelServices1 as any).serviceDetails || {};
+  return Object.values(detailsMap);
+};
 export type NavDropdownItem = {
   name: string;
   href: string;

@@ -1,7 +1,11 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
-import { site, ServiceItem, ServiceFeature } from '@/data/index';
+import Link from 'next/link';
+import { site, ServiceItem, ServiceFeature, createSlug } from '@/data/index';
 import * as FaIcons from 'react-icons/fa';
+import { FadeIn, ScaleIn } from '@/app/components/ui/animations';
 
 type IconName = keyof typeof FaIcons;
 
@@ -13,13 +17,15 @@ export default function ServiceSec() {
     }
 
     return (
-        <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-4 md:-mb-8 lg:-mb-12">
+        <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14">
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
                 {services.items.map((item: ServiceItem, index: number) => {
                     const isLight = item.theme === 'light';
+                    const serviceSlug = createSlug(`${item.titlePart1 || ''} ${item.titlePart2 || ''}`);
 
                     return (
-                        <div key={item.id || index} className="flex flex-col md:flex-row w-full h-auto md:h-[450px] relative justify-center items-center">
+                        <FadeIn key={item.id || index} direction="up" delay={index * 0.1} className="w-full">
+                            <div className="flex flex-col md:flex-row w-full h-auto md:h-[450px] relative justify-center items-center">
 
                             {isLight ? (
                                 // --- LIGHT THEME CARD (Image Left, Text Right) ---
@@ -53,7 +59,7 @@ export default function ServiceSec() {
                                     </div>
 
                                     {/* Right: Text Box */}
-                                    <div className="relative w-full md:w-[50%] h-auto md:h-[85%] bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-20 md:-ml-[15%] md:-skew-x-[8deg] p-8 flex flex-col justify-center mt-[-2rem] md:mt-0">
+                                    <div className="relative w-full md:w-[50%] h-auto md:h-[85%] bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-20 md:-ml-[15%] md:-skew-x-[8deg] p-8 sm:p-10 flex flex-col justify-center mt-[-2rem] md:mt-0">
                                         <div className="md:skew-x-[8deg] flex flex-col h-full w-full">
                                             {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
@@ -65,7 +71,7 @@ export default function ServiceSec() {
                                             </div>
 
                                             {/* Title */}
-                                            <h3 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                                            <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-gray-900">{item.titlePart1} </span>
                                                 <span className="text-red-500">{item.titlePart2}</span>
                                             </h3>
@@ -92,10 +98,10 @@ export default function ServiceSec() {
 
                                             {/* CTA */}
                                             <div className="mt-auto">
-                                                <button className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                                                <Link href={`/servicedetails?name=${serviceSlug}`} className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2">
                                                     Explore Service
                                                     <FaIcons.FaArrowRight size={14} />
-                                                </button>
+                                                </Link>
                                             </div>
 
                                             {/* Decorative Watermark */}
@@ -109,7 +115,7 @@ export default function ServiceSec() {
                                 // --- DARK THEME CARD (Text Left, Image Right) ---
                                 <>
                                     {/* Left: Text Box */}
-                                    <div className="relative w-full md:w-[45%] h-auto md:h-[85%] bg-[#0f172a] rounded-[2rem] shadow-2xl z-20 md:-mr-[12%] md:-skew-x-[8deg] p-8 flex flex-col justify-center order-2 md:order-1 mt-[-2rem] md:mt-0">
+                                    <div className="relative w-full md:w-[45%] h-auto md:h-[85%] bg-[#0f172a] rounded-[2rem] shadow-2xl z-20 md:-mr-[12%] md:-skew-x-[8deg] p-8 sm:p-10 flex flex-col justify-center order-2 md:order-1 mt-[-2rem] md:mt-0">
                                         <div className="md:skew-x-[8deg] flex flex-col h-full w-full">
                                             {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
@@ -121,7 +127,7 @@ export default function ServiceSec() {
                                             </div>
 
                                             {/* Title */}
-                                            <h3 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                                            <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-white">{item.titlePart1} </span>
                                                 <span className="text-pink-500">{item.titlePart2}</span>
                                             </h3>
@@ -148,10 +154,10 @@ export default function ServiceSec() {
 
                                             {/* CTA */}
                                             <div className="mt-auto">
-                                                <button className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 w-fit">
+                                                <Link href={`/servicedetails?name=${serviceSlug}`} className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 w-fit">
                                                     Explore Service
                                                     <FaIcons.FaArrowRight size={14} />
-                                                </button>
+                                                </Link>
                                             </div>
 
                                             {/* Decorative Watermark */}
@@ -191,7 +197,8 @@ export default function ServiceSec() {
                                 </>
                             )}
                         </div>
-                    );
+                    </FadeIn>
+                );
                 })}
             </div>
         </section>

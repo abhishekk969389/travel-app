@@ -13,6 +13,7 @@ import {
 import type { TeamMemberItem, TeamDestinationItem, TeamWhyTravelFeature } from "@/data/index";
 import { ImQuotesRight } from "react-icons/im";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 
 interface TeamAboutSecProps {
   member?: TeamMemberItem;
@@ -62,7 +63,7 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
   return (
     <div className="space-y-8 sm:space-y-10 flex flex-col justify-between">
       {/* 1. About Member & Quote Box Section */}
-      <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
+      <FadeIn direction="up" className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Bio Text Column */}
           <div className="lg:col-span-8 flex flex-col justify-between">
@@ -101,24 +102,26 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
             </div>
           </div>
         </div>
-      </div>
+      </FadeIn>
 
       {/* 2. Destinations Expertise Grid */}
       <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
         {/* Header */}
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
-          <span>{details.destinationsTitlePrefix || "Destinations"} </span>
-          <span className="text-[#ff2e63]">
-            {details.destinationsTitleHighlight || "Expertise"}
-          </span>
-        </h3>
-        {/* Red Accent Underline */}
-        <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+        <FadeIn direction="up">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
+            <span>{details.destinationsTitlePrefix || "Destinations"} </span>
+            <span className="text-[#ff2e63]">
+              {details.destinationsTitleHighlight || "Expertise"}
+            </span>
+          </h3>
+          {/* Red Accent Underline */}
+          <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+        </FadeIn>
 
         {/* 5 Cards Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
+        <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
           {destinationsList.map((dest, idx) => (
-            <div
+            <StaggerItem
               key={dest.name + idx}
               className="group bg-[#f8fafc] rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
             >
@@ -136,9 +139,9 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
                   {dest.name}
                 </span>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
 
       {/* 3. Why Travel with Member & Scenic Feature Card */}
@@ -146,7 +149,7 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Features Column */}
           <div className="lg:col-span-7 flex flex-col justify-between">
-            <div>
+            <FadeIn direction="up">
               {/* Header */}
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
                 <span>{details.whyTravelTitlePrefix || "Why Travel with"} </span>
@@ -170,11 +173,11 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
                   </div>
                 ))}
               </div>
-            </div>
+            </FadeIn>
           </div>
 
           {/* Right Scenic Graphic Card */}
-          <div className="lg:col-span-5 relative rounded-2xl overflow-hidden min-h-[220px] sm:min-h-[240px] flex flex-col justify-center p-6 shadow-md border border-slate-100 bg-slate-900 group">
+          <ScaleIn className="lg:col-span-5 relative rounded-2xl overflow-hidden min-h-[220px] sm:min-h-[240px] flex flex-col justify-center p-6 shadow-md border border-slate-100 bg-slate-900 group">
             <Image
               src={details.whyTravelImage || "/whychoose_fjord.jpg"}
               alt="Good People Great Journeys"
@@ -190,7 +193,7 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
               </h4>
               <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mt-2" />
             </div>
-          </div>
+          </ScaleIn>
         </div>
       </div>
     </div>

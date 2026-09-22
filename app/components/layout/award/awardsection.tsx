@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Kaushan_Script } from "next/font/google";
 import { site as travelData } from "@/data/index";
 import type { TravelAwardsData as AwardsData } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 const scriptFont = Kaushan_Script({
     subsets: ["latin"],
@@ -75,27 +76,29 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Top Header */}
-                <div className="text-center max-w-2xl mx-auto mb-6">
-                    <div className="flex items-center justify-center gap-2.5 mb-2.5">
-                        <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
-                        <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
-                            {data.header.subtitle}
-                        </span>
-                        <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+                <FadeIn direction="up">
+                    <div className="text-center max-w-2xl mx-auto mb-6">
+                        <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+                            <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
+                                {data.header.subtitle}
+                            </span>
+                            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+                        </div>
+
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
+                            {data.header.headingLine1}
+                            <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
+                        </h2>
+
+                        <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
+                            {data.header.description}
+                        </p>
                     </div>
-
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
-                        {data.header.headingLine1}
-                        <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
-                    </h2>
-
-                    <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
-                        {data.header.description}
-                    </p>
-                </div>
+                </FadeIn>
 
                 {/* Awards Cards Grid - 5 Columns Layout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
+                <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
                     {data.items.map((item, idx) => {
                         const isPink = idx % 2 === 0;
                         const themeClasses = isPink
@@ -103,42 +106,43 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                             : "bg-[#edf7fc] border-[#d8effa] hover:border-[#bae6fd]";
 
                         return (
-                            <div
-                                key={item.id || idx}
-                                className={`group relative flex flex-col items-center ${themeClasses} rounded-2xl sm:rounded-[24px] p-3 border shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5`}
-                            >
-                                {/* Photo Frame Container - Taller Image Height */}
-                                <div className="relative w-full aspect-[4/4.8] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900/5 mb-4">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        fill
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
-                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
+                            <StaggerItem key={item.id || idx}>
+                                <div
+                                    className={`group relative flex flex-col items-center ${themeClasses} rounded-2xl sm:rounded-[24px] p-3 border shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 h-full`}
+                                >
+                                    {/* Photo Frame Container - Taller Image Height */}
+                                    <div className="relative w-full aspect-[4/4.8] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900/5 mb-4">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                    </div>
+
+                                    {/* Year with pink underline bar */}
+                                    <div className="flex flex-col items-center mb-2.5">
+                                        <span className="text-sm sm:text-[15px] font-semibold text-slate-600 tracking-wider">
+                                            {item.year}
+                                        </span>
+                                        <div className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full mt-1.5" />
+                                    </div>
+
+                                    {/* Award Title - Larger Font Size */}
+                                    <h3 className="text-base sm:text-lg font-bold text-[#12161f] text-center leading-snug mb-2.5 group-hover:text-[#ff2e63] transition-colors duration-200">
+                                        {item.title}
+                                    </h3>
+
+                                    {/* Award Description - Larger Font Size */}
+                                    <p className="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mt-auto">
+                                        {item.description}
+                                    </p>
                                 </div>
-
-                                {/* Year with pink underline bar */}
-                                <div className="flex flex-col items-center mb-2.5">
-                                    <span className="text-sm sm:text-[15px] font-semibold text-slate-600 tracking-wider">
-                                        {item.year}
-                                    </span>
-                                    <div className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full mt-1.5" />
-                                </div>
-
-                                {/* Award Title - Larger Font Size */}
-                                <h3 className="text-base sm:text-lg font-bold text-[#12161f] text-center leading-snug mb-2.5 group-hover:text-[#ff2e63] transition-colors duration-200">
-                                    {item.title}
-                                </h3>
-
-                                {/* Award Description - Larger Font Size */}
-                                <p className="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mt-auto">
-                                    {item.description}
-                                </p>
-                            </div>
+                            </StaggerItem>
                         );
                     })}
-                </div>
+                </StaggerContainer>
             </div>
         </section>
     );

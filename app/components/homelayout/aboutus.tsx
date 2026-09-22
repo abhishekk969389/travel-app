@@ -7,6 +7,7 @@ import { FaArrowRight, FaRoute, FaMapMarkedAlt } from "react-icons/fa";
 import { site as travelData } from "@/data/index";
 import type { TravelAboutUsData as AboutUsData } from "@/data/index";
 import { IoIosPeople } from "react-icons/io";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function AboutSection({
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
         {/* Left Side: Images & Floating Badges */}
-        <div className="lg:col-span-6 relative w-full max-w-[560px] mx-auto min-h-[460px] sm:min-h-[510px] flex items-center justify-center">
+        <ScaleIn className="lg:col-span-6 relative w-full max-w-[560px] mx-auto min-h-[460px] sm:min-h-[510px] flex items-center justify-center">
 
           {/* Bottom-Right L-Shaped Corner Frame Accent */}
           <div className="absolute bottom-[5px] right-[0px] sm:right-[5px] w-[180px] sm:w-[220px] h-[180px] sm:h-[220px] border-b-[10px] border-r-[10px] border-[#ff2e63] rounded-br-[10px] pointer-events-none z-0" />
@@ -94,31 +95,33 @@ export default function AboutSection({
             <div className="w-10 h-[3.5px] bg-gradient-to-r from-[#ff2e63] to-[#ff6b00] rounded-full mt-3" />
           </div>
 
-        </div>
+        </ScaleIn>
 
         {/* Right Side: Content */}
         <div className="lg:col-span-6 flex flex-col justify-center">
 
-          {/* Subtitle in Script Font */}
-          <span className={`${scriptFont.className} italic text-2xl sm:text-3xl text-[#ff2e63] font-normal mb-1`}>
-            {data.subtitle}
-          </span>
+          <FadeIn direction="up">
+            {/* Subtitle in Script Font */}
+            <span className={`${scriptFont.className} italic text-2xl sm:text-3xl text-[#ff2e63] font-normal mb-1 block`}>
+              {data.subtitle}
+            </span>
 
-          {/* Main Heading */}
-          <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold  text-[#12161f] tracking-tight leading-[1.15] mb-4">
-            {data.titlePrefix} <br />
-            <span className="text-[#ff2e63]">{data.titleHighlight}</span>
-          </h2>
+            {/* Main Heading */}
+            <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#12161f] tracking-tight leading-[1.15] mb-4">
+              {data.titlePrefix} <br />
+              <span className="text-[#ff2e63]">{data.titleHighlight}</span>
+            </h2>
 
-          {/* Description */}
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-[540px]">
-            {data.description}
-          </p>
+            {/* Description */}
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-[540px]">
+              {data.description}
+            </p>
+          </FadeIn>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 pt-4 border-t border-gray-100">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 pt-4 border-t border-gray-100">
             {data.features.map((feature, index) => (
-              <div
+              <StaggerItem
                 key={feature.id}
                 className={`flex items-start gap-3.5 ${
                   index === 0 ? "sm:border-r sm:border-gray-200 sm:pr-5" : "sm:pl-1"
@@ -139,12 +142,12 @@ export default function AboutSection({
                     {feature.description}
                   </p>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Bottom Actions & Founder Info */}
-          <div
+          <FadeIn direction="up" delay={0.2}
             className={`flex flex-col sm:flex-row items-center ${
               showCta ? "justify-start items-start sm:items-center" : "justify-center"
             } gap-4 sm:gap-5 pt-5 border-t border-gray-100`}
@@ -179,7 +182,7 @@ export default function AboutSection({
                 </p>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
         </div>
 

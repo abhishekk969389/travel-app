@@ -142,7 +142,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-4 pt-3 pb-6 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden absolute top-full left-0 right-0 w-full max-h-[calc(100vh-80px)] overflow-y-auto bg-white border-t border-gray-100 px-4 pt-3 pb-8 shadow-2xl z-50 animate-in slide-in-from-top-2 duration-200 overscroll-contain">
           <div className="flex flex-col space-y-1">
             {data.navLinks.map((link: LinkItem) => {
               const hasSubmenu = Boolean(

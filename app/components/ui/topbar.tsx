@@ -16,32 +16,33 @@ export default function TopHeader() {
     const data: TopbarData = travelData.topbar;
 
     return (
-        <header className="bg-[#0f171e] text-white w-full overflow-hidden text-sm">
-            <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <header className="bg-[#0f171e] text-white w-full overflow-hidden text-xs sm:text-sm">
+            <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[40px] sm:min-h-[44px]">
 
-                {/* Left Side: Contact Details */}
-                <div className="flex items-center space-x-6 py-">
-                    {/* Phone */}
-                    <div className="flex items-center space-x-1">
-                        <div className="p-1 rounded-full text-[#ff2e63]">
-                            <Phone className="w-4 h-4 fill-current transform -rotate-12" />
+                {/* Left Side: Contact Details (Mobile: Phone only; sm+: Phone | Email) */}
+                <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6 py-2 sm:py-0">
+                    {/* Phone Number */}
+                    <div className="flex items-center space-x-1 sm:space-x-1.5 shrink-0">
+                        <div className="p-0.5 sm:p-1 rounded-full text-[#ff2e63]">
+                            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current transform -rotate-12" />
                         </div>
                         <a
                             href={data.contactInfo.phone.href}
-                            className="font-medium hover:text-gray-300 transition-colors"
+                            className="font-medium text-xs sm:text-sm hover:text-gray-300 transition-colors whitespace-nowrap"
                         >
                             {data.contactInfo.phone.number}
                         </a>
                     </div>
 
-                    <span className="text-gray-600">|</span>
+                    {/* Separator between Phone and Email (Hidden on mobile) */}
+                    <span className="hidden sm:inline text-gray-600">|</span>
 
-                    {/* Email */}
-                    <div className="flex items-center space-x-2">
-                        <Mail className="w-5 h-5 text-white" />
+                    {/* Email Address (Hidden on mobile) */}
+                    <div className="hidden sm:flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+                        <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                         <a
                             href={data.contactInfo.email.href}
-                            className="font-medium hover:text-gray-300 transition-colors"
+                            className="font-medium text-xs sm:text-sm hover:text-gray-300 transition-colors whitespace-nowrap"
                         >
                             {data.contactInfo.email.address}
                         </a>
@@ -49,33 +50,34 @@ export default function TopHeader() {
                 </div>
 
                 {/* Right Side: Links, Social Icons & CTA */}
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
 
-                    {/* Links */}
-                    <nav className="hidden md:flex items-center space-x-6 text-gray-200">
+                    {/* Navigation Links (Hidden on mobile/sm/md, only shown on lg+ desktop) */}
+                    <nav className="hidden lg:flex items-center space-x-4 lg:space-x-6 text-gray-200">
                         {data.navLinks.map((link) => (
-                            <Link key={link.name} href={link.href} className="hover:text-white transition-colors">
+                            <Link key={link.name} href={link.href} className="hover:text-white transition-colors whitespace-nowrap">
                                 {link.name}
                             </Link>
                         ))}
                     </nav>
 
-                    <span className="hidden md:block text-gray-600">|</span>
+                    {/* Separator (Hidden on mobile/sm/md, only shown on lg+ desktop) */}
+                    <span className="hidden lg:block text-gray-600">|</span>
 
-                    {/* Social Icons */}
-                    <div className="flex items-center space-x-4">
+                    {/* Social Icons (Always visible on mobile & desktop) */}
+                    <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 shrink-0">
                         {data.socialLinks.map((item) => {
                             const IconComponent = socialIconMap[item.icon];
                             return (
-                                <a key={item.platform} href={item.href} className="hover:text-gray-400 transition-colors" aria-label={item.platform}>
-                                    {IconComponent && <IconComponent className="w-4 h-4" />}
+                                <a key={item.platform} href={item.href} className="hover:text-gray-400 transition-colors p-0.5 sm:p-1" aria-label={item.platform}>
+                                    {IconComponent && <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
                                 </a>
                             );
                         })}
                     </div>
 
-                    {/* Skewed Gradient CTA Button */}
-                    <div className="relative group cursor-pointer py-3.5 pl-8 pr-6 flex items-center">
+                    {/* Skewed Gradient CTA Button (Hidden on mobile, shown on sm+) */}
+                    <div className="hidden sm:flex relative group cursor-pointer py-3.5 pl-5 sm:pl-6 pr-3 sm:pr-4 items-center shrink-0">
                         {/* Extension to right screen edge in solid end-gradient color */}
                         <div
                             className="absolute top-0 bottom-0 left-0 -right-[100vw] bg-[#a8004c]"
@@ -89,9 +91,9 @@ export default function TopHeader() {
                         />
 
                         {/* Button Content */}
-                        <Link href={data.cta.href} className="relative flex items-center space-x-2 text-white font-medium text-sm z-10">
+                        <Link href={data.cta.href} className="relative flex items-center space-x-2 text-white font-medium text-xs sm:text-sm z-10 whitespace-nowrap">
                             <span>{data.cta.text}</span>
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </div>
 

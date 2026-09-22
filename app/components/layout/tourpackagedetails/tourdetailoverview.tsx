@@ -15,6 +15,7 @@ import {
   FaShoppingBag,
 } from "react-icons/fa";
 import type { TourPackageCardItem } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface TourDetailOverviewProps {
   pkg?: TourPackageCardItem;
@@ -93,7 +94,7 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
       {/* Combined Overview & Highlights Section Card */}
       <div className="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm space-y-8">
         {/* Overview Sub-Section */}
-        <div>
+        <FadeIn direction="up">
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#12161f] tracking-tight mb-2">
             Overview
           </h3>
@@ -102,34 +103,36 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
             {details?.overview ||
               `${pkg.title} is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of ${pkg.title} with comfortable stays, guided tours, and unforgettable experiences.`}
           </p>
-        </div>
+        </FadeIn>
 
         {/* Highlights Sub-Section */}
         <div>
-          <h3 className="text-xl sm:text-2xl font-extrabold text-[#12161f] tracking-tight mb-2">
-            Highlights
-          </h3>
-          <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+          <FadeIn direction="up">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#12161f] tracking-tight mb-2">
+              Highlights
+            </h3>
+            <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {highlights.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3.5 group">
+              <StaggerItem key={idx} className="flex items-start gap-3.5 group">
                 <div className="w-10 h-10 rounded-full bg-[#ffe8ed] group-hover:bg-[#ff2e63] transition-colors duration-300 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
                   {renderHighlightIcon(item.icon)}
                 </div>
                 <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
                   {item.title}
                 </span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
 
       {/* 4. What's Included & What's Not Included Side-by-Side */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* What's Included */}
-        <div className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
+        <FadeIn direction="up" className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
           <h3 className="text-lg sm:text-xl font-extrabold text-[#12161f] tracking-tight mb-2">
             What's Included
           </h3>
@@ -143,10 +146,10 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </FadeIn>
 
         {/* What's Not Included */}
-        <div className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
+        <FadeIn direction="up" className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
           <h3 className="text-lg sm:text-xl font-extrabold text-[#12161f] tracking-tight mb-2">
             What's Not Included
           </h3>
@@ -160,7 +163,7 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </FadeIn>
       </div>
     </div>
   );

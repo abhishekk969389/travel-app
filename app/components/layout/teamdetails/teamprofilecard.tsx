@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaMapMarkerAlt, FaEnvelope, FaMap, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 import type { TeamMemberItem } from "@/data/index";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { ScaleIn } from "@/app/components/ui/animations";
 
 interface TeamProfileCardProps {
   member?: TeamMemberItem;
@@ -17,7 +18,7 @@ export default function TeamProfileCard({ member }: TeamProfileCardProps) {
   const stats = details.stats || { yearsOfExperience: "5+", toursCompleted: "200+" };
 
   return (
-    <div className="bg-[#0b1824] rounded-[22px] overflow-hidden shadow-2xl text-white flex flex-col h-full border">
+    <ScaleIn className="bg-[#0b1824] rounded-[22px] overflow-hidden shadow-2xl text-white flex flex-col h-full border">
       {/* Top Main Image Container */}
       <div className="relative w-full h-[360px] sm:h-[400px] lg:h-[540px] overflow-hidden bg-slate-800">
         <Image
@@ -129,6 +130,6 @@ export default function TeamProfileCard({ member }: TeamProfileCardProps) {
           </Link>
         </div>
       </div>
-    </div>
+    </ScaleIn>
   );
 }

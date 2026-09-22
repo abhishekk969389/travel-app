@@ -20,13 +20,14 @@ import {
     FaRegHeart,
     FaCheck,
 } from "react-icons/fa";
-import { site as travelData } from "@/data/index";
+import { site as travelData, createSlug } from "@/data/index";
 import type {
     TravelTourPackagesPageData,
     TourPackageCardItem,
     TourPackageFilterGroupItem,
 } from "@/data/index";
 import Pagination from "@/app/components/ui/pagination";
+import { FadeIn, StaggerContainer, MotionCard } from "@/app/components/ui/animations";
 
 interface PackageSecProps {
     data?: TravelTourPackagesPageData;
@@ -199,7 +200,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 bg-white">
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
                     {/* Red Accent Badge */}
                     <div className="inline-flex items-center justify-center gap-3 mb-3">
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
@@ -219,7 +220,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                     <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
                         {header.description}
                     </p>
-                </div>
+                </FadeIn>
 
                 {/* Mobile Filter Toggle Button */}
                 <div className="lg:hidden mb-6 flex items-center justify-between gap-4 bg-gray-50 p-4 rounded-2xl border border-gray-200/80">
@@ -411,13 +412,13 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
 
                         {/* Packages Grid (3 Columns) */}
                         {currentPackages.length > 0 ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+                            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
                                 {currentPackages.map((pkg: TourPackageCardItem) => {
                                     const isWishlisted = wishlist.includes(pkg.id);
-                                    const detailHref = `/tourpackagedetails?id=${pkg.id}`;
+                                    const detailHref = `/tourpackagedetails?name=${createSlug(pkg.title)}`;
 
                                     return (
-                                        <div
+                                        <MotionCard
                                             key={pkg.id}
                                             className="group bg-white rounded-[22px] overflow-hidden border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
                                         >
@@ -518,10 +519,10 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </MotionCard>
                                     );
                                 })}
-                            </div>
+                            </StaggerContainer>
                         ) : (
                             /* Empty State */
                             <div className="bg-gray-50 rounded-2xl p-10 text-center border border-gray-200/80 my-8">

@@ -14,6 +14,7 @@ import type {
   TravelGalleryData as GalleryData,
   GalleryItem,
 } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface ImageGalleryProps {
   data?: GalleryData;
@@ -100,27 +101,29 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
-          {/* Badge with Horizontal Lines */}
-          <div className="flex items-center justify-center gap-3 mb-2.5">
-            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
-              {data.header.badge}
-            </span>
-            <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+        <FadeIn direction="up">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            {/* Badge with Horizontal Lines */}
+            <div className="flex items-center justify-center gap-3 mb-2.5">
+              <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+              <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
+                {data.header.badge}
+              </span>
+              <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
+              {data.header.headingPrefix}
+              <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+              {data.header.description}
+            </p>
           </div>
-
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
-            {data.header.headingPrefix}
-            <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
-          </h2>
-
-          {/* Description */}
-          <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-            {data.header.description}
-          </p>
-        </div>
+        </FadeIn>
 
         {/* Category Tabs / Pills - Single Line Always */}
         <div className="w-full max-w-4xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-nowrap overflow-x-auto no-scrollbar py-2 mb-8 sm:mb-10">
@@ -174,60 +177,63 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
         </div>
 
         {/* 6 Columns Gallery Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+        <StaggerContainer key={activeTab + isExpanded} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {displayedItems.map((item: GalleryItem, idx: number) => (
-            <div
-              key={item.id || idx}
-              onClick={() => openLightbox(idx)}
-              className="group relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-slate-100"
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
+            <StaggerItem key={item.id || idx}>
+              <div
+                onClick={() => openLightbox(idx)}
+                className="group relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-slate-100 h-full"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
 
-              {/* Subtle Hover Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-2.5">
-                <p className="text-white text-[11px] sm:text-xs font-semibold line-clamp-1 drop-shadow-sm">
-                  {item.title}
-                </p>
+                {/* Subtle Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-2.5">
+                  <p className="text-white text-[11px] sm:text-xs font-semibold line-clamp-1 drop-shadow-sm">
+                    {item.title}
+                  </p>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
 
           {/* More Photos Card: ONLY rendered in 'All' tab when NOT expanded */}
           {activeTab === "all" && !isExpanded && (
-            <div
-              onClick={handleOpenAll}
-              className="group relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-slate-900"
-              role="button"
-              tabIndex={0}
-              aria-label={data.subHeader.viewAllText}
-            >
-              <Image
-                src={data.morePhotosCard?.image || "/footer-bg.jpg"}
-                alt={data.morePhotosCard?.label || "More Photos"}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
-                className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
-              />
+            <StaggerItem>
+              <div
+                onClick={handleOpenAll}
+                className="group relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-slate-900 h-full"
+                role="button"
+                tabIndex={0}
+                aria-label={data.subHeader.viewAllText}
+              >
+                <Image
+                  src={data.morePhotosCard?.image || "/footer-bg.jpg"}
+                  alt={data.morePhotosCard?.label || "More Photos"}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                />
 
-              {/* Dark Backdrop Overlay with Search Icon and Count */}
-              <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-2 group-hover:bg-black/45 transition-colors">
-                <FaSearch className="w-5 h-5 sm:w-6 sm:h-6 text-white mb-1.5 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-white font-extrabold text-lg sm:text-xl md:text-2xl leading-tight">
-                  {data.morePhotosCard?.count || "+10"}
-                </span>
-                <span className="text-white/90 text-[11px] sm:text-xs font-medium mt-0.5">
-                  {data.morePhotosCard?.label || "More Photos"}
-                </span>
+                {/* Dark Backdrop Overlay with Search Icon and Count */}
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-2 group-hover:bg-black/45 transition-colors">
+                  <FaSearch className="w-5 h-5 sm:w-6 sm:h-6 text-white mb-1.5 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-white font-extrabold text-lg sm:text-xl md:text-2xl leading-tight">
+                    {data.morePhotosCard?.count || "+10"}
+                  </span>
+                  <span className="text-white/90 text-[11px] sm:text-xs font-medium mt-0.5">
+                    {data.morePhotosCard?.label || "More Photos"}
+                  </span>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
           )}
-        </div>
+        </StaggerContainer>
       </div>
 
       {/* Lightbox Modal for Photo Preview */}

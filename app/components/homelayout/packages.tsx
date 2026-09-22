@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { site as travelData } from "@/data/index";
 import type { TravelPackagesData as PackagesData } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 export default function Packages() {
     const data: PackagesData = travelData.packages;
@@ -85,40 +86,42 @@ export default function Packages() {
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* SECTION HEADER */}
-                <div className="text-center mb-8">
-                    {/* Subtitle with Red Accent Lines */}
-                    <div className="inline-flex items-center justify-center gap-3 mb-1.5">
-                        <span className="w-8 sm:w-12 h-[2px] bg-[#ff2e63] rounded-full" />
-                        <span className="font-[family-name:var(--font-script)] text-2xl sm:text-3xl text-[#ff2e63] font-normal">
-                            {data.subtitle}
-                        </span>
-                        <span className="w-8 sm:w-12 h-[2px] bg-[#ff2e63] rounded-full" />
+                <FadeIn direction="up">
+                    <div className="text-center mb-8">
+                        {/* Subtitle with Red Accent Lines */}
+                        <div className="inline-flex items-center justify-center gap-3 mb-1.5">
+                            <span className="w-8 sm:w-12 h-[2px] bg-[#ff2e63] rounded-full" />
+                            <span className="font-[family-name:var(--font-script)] text-2xl sm:text-3xl text-[#ff2e63] font-normal">
+                                {data.subtitle}
+                            </span>
+                            <span className="w-8 sm:w-12 h-[2px] bg-[#ff2e63] rounded-full" />
+                        </div>
+
+                        {/* Main Title */}
+                        <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black font-bold text-[#12161f] tracking-tight leading-tight mb-3">
+                            <span>{data.titlePrefix}</span>
+                            <span className="bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] bg-clip-text text-transparent">
+                                {data.titleHighlight}
+                            </span>
+                        </h2>
+
+                        {/* Sub-description */}
+                        <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed whitespace-pre-line">
+                            {data.description}
+                        </p>
                     </div>
-
-                    {/* Main Title */}
-                    <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black font-bold text-[#12161f] tracking-tight leading-tight mb-3">
-                        <span>{data.titlePrefix}</span>
-                        <span className="bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] bg-clip-text text-transparent">
-                            {data.titleHighlight}
-                        </span>
-                    </h2>
-
-                    {/* Sub-description */}
-                    <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed whitespace-pre-line">
-                        {data.description}
-                    </p>
-                </div>
+                </FadeIn>
 
                 {/* PACKAGE CARDS GRID (4 Columns) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-6">
+                <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-6">
                     {data.items.map((pkg) => {
                         const isFav = !!favorites[pkg.id];
 
                         return (
-                            <div
-                                key={pkg.id}
-                                className="group relative bg-white rounded-xl border border-slate-100/80 overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-                            >
+                            <StaggerItem key={pkg.id} className="h-full">
+                                <div
+                                    className="group relative bg-white rounded-xl border border-slate-100/80 overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full"
+                                >
                                 {/* Image Container & Badges */}
                                 <div className="relative w-full h-[220px] sm:h-[235px] overflow-hidden bg-slate-100">
                                     <Image
@@ -223,22 +226,25 @@ export default function Packages() {
 
                                 </div>
                             </div>
+                        </StaggerItem>
                         );
                     })}
-                </div>
+                </StaggerContainer>
 
                 {/* BOTTOM CTA BUTTON */}
-                <div className="text-center mt-6">
-                    <Link
-                        href={data.cta.href}
-                        className="inline-flex items-center gap-2.5 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-[#ff2e63]/30 hover:shadow-xl hover:shadow-[#ff2e63]/40 hover:scale-[1.03] transition-all duration-300"
-                    >
-                        <span>{data.cta.text}</span>
-                        <svg className="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </Link>
-                </div>
+                <FadeIn direction="up">
+                    <div className="text-center mt-6">
+                        <Link
+                            href={data.cta.href}
+                            className="inline-flex items-center gap-2.5 px-10 py-5 rounded-2xl bg-gradient-to-r from-[#ff2e63] via-[#ff4d6d] to-[#ff6b00] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-[#ff2e63]/30 hover:shadow-xl hover:shadow-[#ff2e63]/40 hover:scale-[1.03] transition-all duration-300"
+                        >
+                            <span>{data.cta.text}</span>
+                            <svg className="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </Link>
+                    </div>
+                </FadeIn>
 
             </div>
         </section>

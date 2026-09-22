@@ -13,6 +13,7 @@ import type {
   TravelContactUsData as ContactUsData,
   ContactCardItem,
 } from "@/data/index";
+import { FadeIn, StaggerContainer, MotionCard } from "@/app/components/ui/animations";
 
 interface MainContactProps {
   data?: ContactUsData;
@@ -42,7 +43,7 @@ export default function MainContact({
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="relative text-center max-w-2xl mx-auto mb-6">
+        <FadeIn direction="up" className="relative text-center max-w-2xl mx-auto mb-6">
           {/* Badge with Horizontal Red Lines */}
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="h-[2px] w-7 sm:w-8 rounded-full bg-[#ff2e63]" />
@@ -62,12 +63,12 @@ export default function MainContact({
           <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             {data.header.description}
           </p>
-        </div>
+        </FadeIn>
 
         {/* 4 Contact Information Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {data.cards.map((card: ContactCardItem) => (
-            <div
+            <MotionCard
               key={card.id}
               className="bg-white rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-gray-200 shadow-[0_2px_14px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_26px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col justify-between"
             >
@@ -111,9 +112,9 @@ export default function MainContact({
                   )}
                 </div>
               )}
-            </div>
+            </MotionCard>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

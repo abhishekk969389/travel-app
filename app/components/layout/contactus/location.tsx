@@ -7,6 +7,7 @@ import type {
   LocationCardData,
   LocationOfficePinData,
 } from "@/data/index";
+import { ScaleIn } from "@/app/components/ui/animations";
 
 interface ContactLocationProps {
   data?: ContactLocationData;
@@ -41,7 +42,7 @@ export default function ContactLocation({
           <div className="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-full p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-start justify-between pointer-events-none">
             {/* Floating Dark Location Card */}
             {data.locationCard && (
-              <div className="pointer-events-auto bg-[#0b1727] rounded-[22px] sm:rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-11 max-w-[420px] w-full shadow-[0_20px_50px_rgba(11,23,39,0.55)] border border-white/10 backdrop-blur-sm animate-fadeIn">
+              <ScaleIn className="pointer-events-auto bg-[#0b1727] rounded-[22px] sm:rounded-[26px] p-6 sm:p-8 md:p-10 lg:p-11 max-w-[420px] w-full shadow-[0_20px_50px_rgba(11,23,39,0.55)] border border-white/10 backdrop-blur-sm">
                 {/* Badge */}
                 <div className="flex items-center gap-3 mb-3 sm:mb-4">
                   <span className="w-7 sm:w-8 h-[3px] bg-[#ff2e63] rounded-full" />
@@ -70,7 +71,7 @@ export default function ContactLocation({
                   <span>{data.locationCard.buttonText}</span>
                   <FaArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-              </div>
+              </ScaleIn>
             )}
             </div>
         </div>

@@ -3,27 +3,33 @@ import TeamProfileCard from "@/app/components/layout/teamdetails/teamprofilecard
 import TeamAboutSec from "@/app/components/layout/teamdetails/teamaboutsec";
 import TeamMomentsSec from "@/app/components/layout/teamdetails/teammomentssec";
 import Achievement from "@/app/components/ui/achievement";
-import { site as travelData } from "@/data/index";
+import { site as travelData, createSlug } from "@/data/index";
 import type { TravelTeamData } from "@/data/index";
 
 interface TeamDetailsPageProps {
-  searchParams?: Promise<{ id?: string; slug?: string }>;
+  searchParams?: Promise<{ id?: string; name?: string; slug?: string; title?: string }>;
 }
 
 export default async function TeamDetailsPage({ searchParams }: TeamDetailsPageProps) {
   const resolvedSearchParams = searchParams ? await searchParams : {};
-  const memberId = resolvedSearchParams.id;
-  const memberSlug = resolvedSearchParams.slug;
+  const query =
+    resolvedSearchParams.name ||
+    resolvedSearchParams.slug ||
+    resolvedSearchParams.id ||
+    resolvedSearchParams.title ||
+    "";
 
   const teamData: TravelTeamData = travelData.team;
   const members = teamData.members;
+  const querySlug = createSlug(query);
 
-  // Find member by ID or slug, default to first member (Janny Willson / team-1)
   const member =
     members.find(
       (m) =>
-        (memberId && m.id === memberId) ||
-        (memberSlug && m.slug === memberSlug)
+        (query && m.id === query) ||
+        (query && m.slug === query) ||
+        (querySlug && createSlug(m.name) === querySlug) ||
+        (query && m.name.toLowerCase().includes(query.toLowerCase()))
     ) || members[0];
 
   return (

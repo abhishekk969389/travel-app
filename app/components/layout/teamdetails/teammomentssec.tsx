@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { TeamMemberItem } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface TeamMomentsSecProps {
   member?: TeamMemberItem;
@@ -25,19 +26,21 @@ export default function TeamMomentsSec({ member }: TeamMomentsSecProps) {
   return (
     <div className="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm mt-8 sm:mt-10">
       {/* Header */}
-      <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
-        <span>{details.momentsTitlePrefix || "Moments from"} </span>
-        <span className="text-[#ff2e63]">
-          {details.momentsTitleName || `${firstName}'s Journeys`}
-        </span>
-      </h3>
-      {/* Red Accent Underline */}
-      <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+      <FadeIn direction="up">
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
+          <span>{details.momentsTitlePrefix || "Moments from"} </span>
+          <span className="text-[#ff2e63]">
+            {details.momentsTitleName || `${firstName}'s Journeys`}
+          </span>
+        </h3>
+        {/* Red Accent Underline */}
+        <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
+      </FadeIn>
 
       {/* 4 Image Gallery Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {momentsList.map((imgSrc, idx) => (
-          <div
+          <StaggerItem
             key={idx}
             className="group relative h-48 sm:h-52 md:h-56 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300"
           >
@@ -50,9 +53,9 @@ export default function TeamMomentsSec({ member }: TeamMomentsSecProps) {
             />
             {/* Subtle Gradient Overlay on Hover */}
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </div>
   );
 }

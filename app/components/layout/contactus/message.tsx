@@ -24,6 +24,7 @@ import type {
   TravelContactMessageData as ContactMessageData,
   ContactMessageFeatureItem,
 } from "@/data/index";
+import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 
 interface ContactMessageProps {
   data?: ContactMessageData;
@@ -122,7 +123,7 @@ export default function ContactMessage({
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Form Card */}
-          <div className="lg:col-span-7 xl:col-span-6">
+          <FadeIn direction="up" className="lg:col-span-7 xl:col-span-6">
             <div className="bg-white rounded-3xl sm:rounded-[36px] p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-gray-100/80">
               {/* Header Badge */}
               <div className="flex items-center gap-2.5 mb-2.5">
@@ -282,10 +283,10 @@ export default function ContactMessage({
                 </div>
               </form>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Column: Tropical Island Story & Features */}
-          <div className="lg:col-span-5 xl:col-span-6 flex flex-col justify-between h-full min-h-[460px] lg:min-h-[580px] pt-4 lg:pt-0">
+          <ScaleIn className="lg:col-span-5 xl:col-span-6 flex flex-col justify-between h-full min-h-[460px] lg:min-h-[580px] pt-4 lg:pt-0">
             {/* Top Right: Script Taglines */}
             <div className="flex justify-center lg:justify-end lg:pr-20 xl:pr-40">
               <div className="inline-flex flex-col items-center rotate-[-4deg]">
@@ -356,7 +357,7 @@ export default function ContactMessage({
                 ))}
               </div>
             </div>
-          </div>
+          </ScaleIn>
         </div>
       </div>
 

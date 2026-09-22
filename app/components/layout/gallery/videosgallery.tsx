@@ -15,6 +15,7 @@ import type {
   TravelVideoGalleryData as VideoGalleryData,
   VideoGalleryItem,
 } from "@/data/index";
+import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface VideosGalleryProps {
   data?: VideoGalleryData;
@@ -114,59 +115,60 @@ export default function VideosGallery({ data: propData }: VideosGalleryProps = {
         </div>
 
         {/* 6-Columns Video Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-4.5">
+        <StaggerContainer key={isExpanded ? "expanded" : "collapsed"} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-4.5">
           {displayedItems.map((item: VideoGalleryItem, idx: number) => (
-            <div
-              key={item.id || idx}
-              onClick={() => openVideo(idx)}
-              className="group flex flex-col cursor-pointer"
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  openVideo(idx);
-                }
-              }}
-              aria-label={`Play ${item.title}`}
-            >
-              {/* Thumbnail Container */}
-              <div className="relative aspect-[16/10] w-full rounded-xl sm:rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-slate-900">
-                <Image
-                  src={item.thumbnail}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            <StaggerItem key={item.id || idx}>
+              <div
+                onClick={() => openVideo(idx)}
+                className="group flex flex-col cursor-pointer h-full"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    openVideo(idx);
+                  }
+                }}
+                aria-label={`Play ${item.title}`}
+              >
+                {/* Thumbnail Container */}
+                <div className="relative aspect-[16/10] w-full rounded-xl sm:rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-slate-900">
+                  <Image
+                    src={item.thumbnail}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
 
-                {/* Subtle dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300" />
+                  {/* Subtle dark overlay on hover */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300" />
 
-                {/* Center Circular Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-white/90 bg-black/45 backdrop-blur-xs flex items-center justify-center text-white shadow-md group-hover:scale-110 group-hover:bg-[#ff2e63] group-hover:border-[#ff2e63] transition-all duration-300">
-                    <FaPlay className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 fill-current" />
+                  {/* Center Circular Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-white/90 bg-black/45 backdrop-blur-xs flex items-center justify-center text-white shadow-md group-hover:scale-110 group-hover:bg-[#ff2e63] group-hover:border-[#ff2e63] transition-all duration-300">
+                      <FaPlay className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 fill-current" />
+                    </div>
+                  </div>
+
+                  {/* Duration Badge: Bottom-Left Corner */}
+                  <div className="absolute bottom-2 left-2 px-1.5 sm:px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-xs text-white text-[10px] sm:text-[11px] font-semibold font-mono tracking-tight shadow-xs">
+                    {item.duration}
                   </div>
                 </div>
 
-                {/* Duration Badge: Bottom-Left Corner */}
-                <div className="absolute bottom-2 left-2 px-1.5 sm:px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-xs text-white text-[10px] sm:text-[11px] font-semibold font-mono tracking-tight shadow-xs">
-                  {item.duration}
+                {/* Title & Subtitle Below Thumbnail */}
+                <div className="mt-2.5 sm:mt-3 text-center px-1">
+                  <h4 className="text-xs sm:text-[14px] md:text-[16px] font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors line-clamp-1 leading-snug">
+                    {item.title}
+                  </h4>
+                  <p className="text-[11px] text-sm sm:text-[14px] text-slate-500 font-medium mt-0.5 line-clamp-1">
+                    {item.subtitle}
+                  </p>
                 </div>
               </div>
-
-              {/* Title & Subtitle Below Thumbnail */}
-              <div className="mt-2.5 sm:mt-3 text-center px-1">
-                <h4 className="text-xs sm:text-[14px] md:text-[16px] font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors line-clamp-1 leading-snug">
-                  {item.title}
-                </h4>
-                <p className="text-[11px] text-sm sm:text-[14px] text-slate-500 font-medium mt-0.5 line-clamp-1">
-                  {item.subtitle}
-                </p>
-              </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
 
       {/* Lightbox Video Modal (Matching exact ImageGallery Lightbox UI) */}

@@ -7,6 +7,7 @@ import { Kaushan_Script } from "next/font/google";
 import { FaPlay, FaTimes } from "react-icons/fa";
 import { site as travelData } from "@/data/index";
 import type { TravelOurStoryData as OurStoryData } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],
@@ -88,63 +89,71 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
         {/* Left Column: Story Content */}
         <div className="lg:col-span-6 flex flex-col justify-between">
           <div>
-            {/* Subtitle from JSON */}
-            <div className="flex items-center gap-2 mb-4">
-              <span className="h-[2.5px] w-7 rounded-full bg-[#ff2e63]" />
-              <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
-                {data.subtitle}
-              </span>
-            </div>
+            <FadeIn direction="left">
+              <div>
+                {/* Subtitle from JSON */}
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="h-[2.5px] w-7 rounded-full bg-[#ff2e63]" />
+                  <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
+                    {data.subtitle}
+                  </span>
+                </div>
 
-            {/* Main Heading from JSON */}
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#12161f] tracking-tight leading-[1.15] mb-5">
-              {data.headingLine1} <br />
-              <span>{data.headingLine2Prefix}</span>
-              <span className="text-[#ff2e63]">
-                {data.headingLine2Highlight}
-              </span>
-            </h2>
+                {/* Main Heading from JSON */}
+                <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#12161f] tracking-tight leading-[1.15] mb-5">
+                  {data.headingLine1} <br />
+                  <span>{data.headingLine2Prefix}</span>
+                  <span className="text-[#ff2e63]">
+                    {data.headingLine2Highlight}
+                  </span>
+                </h2>
 
-            {/* Description from JSON */}
-            <p className="text-gray-600 text-sm sm:text-base text-justify leading-relaxed mb-6 max-w-[540px]">
-              {data.description}
-            </p>
+                {/* Description from JSON */}
+                <p className="text-gray-600 text-sm sm:text-base text-justify leading-relaxed mb-6 max-w-[540px]">
+                  {data.description}
+                </p>
+              </div>
+            </FadeIn>
 
             {/* 3 Features dynamically mapped from JSON */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 mb-8 pt-1">
+            <StaggerContainer className="flex flex-wrap items-center gap-6 sm:gap-8 mb-8 pt-1">
               {data.features.map((feature) => (
-                <div key={feature.id} className="flex items-center gap-3">
-                  <div className="text-[#ff2e63] shrink-0">
-                    {renderFeatureIcon(feature.icon)}
+                <StaggerItem key={feature.id}>
+                  <div className="flex items-center gap-3">
+                    <div className="text-[#ff2e63] shrink-0">
+                      {renderFeatureIcon(feature.icon)}
+                    </div>
+                    <div className="text-xs sm:text-sm font-bold text-[#12161f] leading-tight">
+                      <p>{feature.titleLine1}</p>
+                      <p>{feature.titleLine2}</p>
+                    </div>
                   </div>
-                  <div className="text-xs sm:text-sm font-bold text-[#12161f] leading-tight">
-                    <p>{feature.titleLine1}</p>
-                    <p>{feature.titleLine2}</p>
-                  </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
 
             {/* CTA Button from JSON */}
-            <div className="flex items-center">
-              <Link
-                href={data.cta.href}
-                className="group inline-flex items-center gap-3 rounded-2xl sm:rounded-[20px] bg-gradient-to-r from-[#ff0f55] via-[#ff3b50] to-[#ff7922] px-8 sm:px-9 py-3.5 sm:py-4 text-[15px] sm:text-[16px] font-medium text-white shadow-lg shadow-[#ff1a53]/25 hover:shadow-xl hover:opacity-95 transition-all duration-300"
-              >
-                <span>{data.cta.text}</span>
-                <svg
-                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 stroke-current"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            <FadeIn direction="up">
+              <div className="flex items-center">
+                <Link
+                  href={data.cta.href}
+                  className="group inline-flex items-center gap-3 rounded-2xl sm:rounded-[20px] bg-gradient-to-r from-[#ff0f55] via-[#ff3b50] to-[#ff7922] px-8 sm:px-9 py-3.5 sm:py-4 text-[15px] sm:text-[16px] font-medium text-white shadow-lg shadow-[#ff1a53]/25 hover:shadow-xl hover:opacity-95 transition-all duration-300"
                 >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
-            </div>
+                  <span>{data.cta.text}</span>
+                  <svg
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 stroke-current"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </Link>
+              </div>
+            </FadeIn>
           </div>
 
           {/* Bottom Left Script Tagline from JSON & Looping Flight Path */}
@@ -203,7 +212,7 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
         </div>
 
         {/* Right Column: Video & Image Card from JSON */}
-        <div className="lg:col-span-6 relative flex flex-col h-full min-h-[420px] lg:min-h-full">
+        <FadeIn direction="right" className="lg:col-span-6 relative flex flex-col h-full min-h-[420px] lg:min-h-full">
           <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] lg:min-h-full rounded-3xl lg:rounded-[36px] overflow-hidden shadow-2xl group bg-slate-900">
             {/* Main Preview Image from JSON */}
             <Image
@@ -284,7 +293,7 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       {/* Video Modal Popup with dynamic videoUrl from JSON */}

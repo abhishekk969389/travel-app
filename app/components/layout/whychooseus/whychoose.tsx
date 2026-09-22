@@ -13,6 +13,7 @@ import {
 } from "react-icons/lu";
 import { site as travelData } from "@/data/index";
 import type { TravelWhyChooseUsPageData as WhyChooseData, WhyChoosePageFeature } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 
 const scriptFont = Kaushan_Script({
   subsets: ["latin"],
@@ -181,31 +182,32 @@ export default function WhyChoose({ data: propData }: WhyChooseProps = {}) {
           
           {/* Left Column: Heading, Description & Features Grid */}
           <div className="lg:col-span-8 flex flex-col justify-center">
-            
-            {/* Subtitle */}
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="h-[3px] w-7 rounded-full bg-[#e5a824]" />
-              <span className="text-xs sm:text-sm font-bold tracking-widest text-[#082038] uppercase">
-                {data.header.subtitle}
-              </span>
-            </div>
+            <FadeIn direction="up">
+              {/* Subtitle */}
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="h-[3px] w-7 rounded-full bg-[#e5a824]" />
+                <span className="text-xs sm:text-sm font-bold tracking-widest text-[#082038] uppercase">
+                  {data.header.subtitle}
+                </span>
+              </div>
 
-            {/* Main Heading */}
-            <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold  text-[#12161f] tracking-tight leading-[1.15] mb-4">
-              {data.header.headingLine1} <br />
-              <span>{data.header.headingLine2Prefix}</span>
-              <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
-            </h2>
+              {/* Main Heading */}
+              <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold  text-[#12161f] tracking-tight leading-[1.15] mb-4">
+                {data.header.headingLine1} <br />
+                <span>{data.header.headingLine2Prefix}</span>
+                <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
+              </h2>
 
-            {/* Description Paragraph */}
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
-              {data.header.description}
-            </p>
+              {/* Description Paragraph */}
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+                {data.header.description}
+              </p>
+            </FadeIn>
 
             {/* 6 Features Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-x-6 sm:gap-y-8">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-x-6 sm:gap-y-8">
               {data.features.map((feature: WhyChoosePageFeature) => (
-                <div key={feature.id} className="flex items-start gap-3 group">
+                <StaggerItem key={feature.id} className="flex items-start gap-3 group">
                   {/* Icon Badge */}
                   <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#e8f2f6] text-[#082038] shrink-0 border border-[#d8e6ed] shadow-xs group-hover:bg-[#ff2e63] group-hover:text-white transition-colors duration-300">
                     {renderFeatureIcon(feature.icon)}
@@ -220,19 +222,19 @@ export default function WhyChoose({ data: propData }: WhyChooseProps = {}) {
                       {feature.description}
                     </p>
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
 
           </div>
 
           {/* Right Column: Curved Hero Frame Component */}
-          <div className="lg:col-span-4 relative mt-6 lg:mt-0 flex justify-center">
+          <ScaleIn className="lg:col-span-4 relative mt-6 lg:mt-0 flex justify-center">
             <CurvedHero
               hero={data.hero}
               floatingNote={data.floatingNote}
             />
-          </div>
+          </ScaleIn>
 
         </div>
       </div>

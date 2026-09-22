@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import { site as travelData } from "@/data/index";
 import type { TravelEnquiryData, EnquiryFeatureItem } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface EnquirySecProps {
   data?: TravelEnquiryData;
@@ -117,50 +118,56 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Heading & Feature Cards */}
           <div className="lg:col-span-5 flex flex-col justify-center pt-2">
-            {/* Badge */}
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="text-xs sm:text-sm font-bold tracking-wider text-[#12161f] uppercase">
-                {data.header.badge}
-              </span>
-              <span className="h-[2px] w-7 sm:w-8 rounded-full bg-[#ff2e63]" />
-            </div>
+            <FadeIn direction="left">
+              <div>
+                {/* Badge */}
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="text-xs sm:text-sm font-bold tracking-wider text-[#12161f] uppercase">
+                    {data.header.badge}
+                  </span>
+                  <span className="h-[2px] w-7 sm:w-8 rounded-full bg-[#ff2e63]" />
+                </div>
 
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-5xl font-extrabold text-[#101828] tracking-tight leading-tight mb-2">
-              {data.header.headingLine1}
-            </h1>
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] lg:text-5xl font-extrabold text-[#ff2e63] tracking-tight leading-tight mb-4">
-              {data.header.headingLine2Prefix}
-              <span>{data.header.headingLine2Highlight}</span>
-            </h2>
+                {/* Main Heading */}
+                <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-5xl font-extrabold text-[#101828] tracking-tight leading-tight mb-2">
+                  {data.header.headingLine1}
+                </h1>
+                <h2 className="text-3xl sm:text-4xl md:text-[42px] lg:text-5xl font-extrabold text-[#ff2e63] tracking-tight leading-tight mb-4">
+                  {data.header.headingLine2Prefix}
+                  <span>{data.header.headingLine2Highlight}</span>
+                </h2>
 
-            {/* Description */}
-            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-lg">
-              {data.header.description}
-            </p>
+                {/* Description */}
+                <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-lg">
+                  {data.header.description}
+                </p>
+              </div>
+            </FadeIn>
 
             {/* 4 Feature Items (2x2 Grid) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
               {data.features.map((feat: EnquiryFeatureItem) => (
-                <div key={feat.id} className="flex items-start gap-3.5">
-                  <div className="w-14 h-14 rounded-full bg-[#ffe8ed] text-[#ff2e63] flex items-center justify-center shrink-0 shadow-sm">
-                    {renderIcon(feat.icon, "w-8 h-8")}
+                <StaggerItem key={feat.id}>
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-14 h-14 rounded-full bg-[#ffe8ed] text-[#ff2e63] flex items-center justify-center shrink-0 shadow-sm">
+                      {renderIcon(feat.icon, "w-8 h-8")}
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-[#101828] mb-0.5">
+                        {feat.title}
+                      </h3>
+                      <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                        {feat.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-base font-bold text-[#101828] mb-0.5">
-                      {feat.title}
-                    </h3>
-                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-                      {feat.description}
-                    </p>
-                  </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
 
           {/* Right Column: Enquiry Form Card */}
-          <div className="lg:col-span-7">
+          <FadeIn direction="right" className="lg:col-span-7">
             <div className="rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.08)] border border-gray-100 bg-white">
               {/* Dark Card Header Banner */}
               <div className="relative bg-[#081426] px-6 sm:px-8 md:px-9 py-6 sm:py-7 md:py-8 text-white overflow-hidden rounded-t-[24px] sm:rounded-t-[28px]">
@@ -535,7 +542,7 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                 </div>
               </form>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

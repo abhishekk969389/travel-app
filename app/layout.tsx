@@ -4,6 +4,7 @@ import "./globals.css";
 import TopHeader from "./components/ui/topbar";
 import Navbar from "./components/ui/navbar";
 import Footer from "./components/ui/footer";
+import SmoothScroll from "./components/ui/smoothscroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,12 +41,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-geist-sans)]">
-        <div className="sticky top-0 z-50 w-full shadow-md">
-          <TopHeader />
-          <Navbar />
-        </div>
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <div className="sticky top-0 z-50 w-full shadow-md">
+            <TopHeader />
+            <Navbar />
+          </div>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

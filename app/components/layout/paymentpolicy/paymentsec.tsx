@@ -2,6 +2,7 @@
 
 import { site as travelData } from "@/data/index";
 import type { TravelPaymentPolicyData } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface PaymentSecProps {
   data?: TravelPaymentPolicyData;
@@ -16,7 +17,7 @@ export default function PaymentSec({
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-6">
           <div className="flex items-center justify-center gap-2.5 mb-3">
             <span className="h-[2px] w-7 sm:w-8 rounded-full bg-[#ff2e63]" />
             <span className="text-xs sm:text-sm font-bold tracking-wider text-[#12161f] uppercase">
@@ -33,12 +34,12 @@ export default function PaymentSec({
           <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
             {data.header.description}
           </p>
-        </div>
+        </FadeIn>
 
         {/* Policy Items List */}
-        <div className="divide-y divide-slate-200">
+        <StaggerContainer className="divide-y divide-slate-200">
           {data.items.map((item, idx) => (
-            <div
+            <StaggerItem
               key={item.number || idx}
               className="flex items-start gap-4 sm:gap-6 md:gap-8 py-6 sm:py-7 md:py-8"
             >
@@ -69,9 +70,9 @@ export default function PaymentSec({
                   )}
                 </p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

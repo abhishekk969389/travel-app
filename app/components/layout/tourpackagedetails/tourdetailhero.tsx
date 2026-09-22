@@ -24,6 +24,7 @@ import {
   FaExpand,
 } from "react-icons/fa";
 import type { TourPackageCardItem } from "@/data/index";
+import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 
 interface TourDetailHeroProps {
   pkg?: TourPackageCardItem;
@@ -138,7 +139,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
       {/* Top 3-Column Grid Layout: Left Gallery | Middle Details | Right Enquire Form */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         {/* ================= 1. LEFT COLUMN: IMAGE GALLERY SLIDER (4 COLS) ================= */}
-        <div className="lg:col-span-4 flex flex-col justify-between">
+        <ScaleIn className="lg:col-span-4 flex flex-col justify-between">
           {/* Main Display Image Container with Floating Bottom Thumbnails */}
           <div className="relative w-full h-[380px] sm:h-[420px] lg:h-[460px] rounded-[24px] overflow-hidden bg-slate-900 border border-slate-100 shadow-md group">
             <Image
@@ -236,10 +237,10 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               })}
             </div>
           </div>
-        </div>
+        </ScaleIn>
 
         {/* ================= 2. MIDDLE COLUMN: CONTENT & PRICE CTA (4 COLS) ================= */}
-        <div className="lg:col-span-4 flex flex-col justify-between h-[380px] sm:h-[420px] lg:h-[460px]">
+        <FadeIn direction="up" className="lg:col-span-4 flex flex-col justify-between h-[380px] sm:h-[420px] lg:h-[460px]">
           <div className="overflow-y-auto pr-1 space-y-3.5 scrollbar-thin">
             {/* Red Bar Line + Country Name */}
             <div className="flex items-center gap-2 mb-1">
@@ -328,10 +329,10 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               <FaArrowRight className="w-3 h-3" />
             </button>
           </div>
-        </div>
+        </FadeIn>
 
         {/* ================= 3. RIGHT COLUMN: ENQUIRE NOW FORM CARD (4 COLS) ================= */}
-        <div className="lg:col-span-4 h-[380px] sm:h-[420px] lg:h-[460px]" id="enquiry-form">
+        <ScaleIn className="lg:col-span-4 h-[380px] sm:h-[420px] lg:h-[460px]" id="enquiry-form">
           <div className="bg-white rounded-[24px] p-5 sm:p-5.5 border border-slate-100 shadow-md flex flex-col justify-between h-full">
             <div>
               {/* Header */}
@@ -436,11 +437,11 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               </form>
             </div>
           </div>
-        </div>
+        </ScaleIn>
       </div>
 
       {/* ================= 4. DOWN ROW: QUICK INFO BAR (FULL WIDTH) ================= */}
-      <div className="bg-white rounded-[24px] px-6 sm:px-8 md:px-10 py-6 sm:py-7 border border-slate-200/90 shadow-sm">
+      <FadeIn direction="up" className="bg-white rounded-[24px] px-6 sm:px-8 md:px-10 py-6 sm:py-7 border border-slate-200/90 shadow-sm">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 items-center">
           {quickStats.map((stat, idx) => {
             const isLast = idx === quickStats.length - 1;
@@ -474,7 +475,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
             );
           })}
         </div>
-      </div>
+      </FadeIn>
 
       {/* ================= 5. LIGHTBOX GALLERY MODAL ================= */}
       {isModalOpen && (

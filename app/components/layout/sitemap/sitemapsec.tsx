@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa";
 import { site as travelData } from "@/data/index";
 import type { TravelSitemapData, SitemapCategoryItem, SitemapLinkItem } from "@/data/index";
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 
 interface SitemapSecProps {
     data?: TravelSitemapData;
@@ -95,7 +96,7 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center max-w-2xl mx-auto mb-6">
+                <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-6">
                     {/* Badge with Gold Line Accents */}
                     <div className="inline-flex items-center justify-center gap-3 mb-2.5">
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
@@ -115,15 +116,15 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                     <p className="text-gray-500 text-xs sm:text-base leading-relaxed max-w-xl mx-auto">
                         {header.description}
                     </p>
-                </div>
+                </FadeIn>
 
                 {/* 5-Columns Grid for Sitemap Categories */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 items-stretch">
+                <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 items-stretch">
                     {categories.map((category: SitemapCategoryItem) => {
                         const isYellowTheme = category.theme === "yellow";
 
                         return (
-                            <div
+                            <StaggerItem
                                 key={category.id}
                                 className="bg-white rounded-[20px] p-5 sm:p-6 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-start"
                             >
@@ -156,12 +157,12 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </StaggerItem>
                         );
                     })}
 
                     {/* 15th Card: Decorative Night Sky & Mountain Graphic Card */}
-                    <div className="relative bg-gradient-to-b from-[#062433] via-[#083042] to-[#0A3D54] rounded-[20px] p-6 text-white overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] select-none">
+                    <ScaleIn className="relative bg-gradient-to-b from-[#062433] via-[#083042] to-[#0A3D54] rounded-[20px] p-6 text-white overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] select-none">
                         {/* Top Stars & Flight Path SVG */}
                         <svg
                             viewBox="0 0 200 120"
@@ -239,8 +240,8 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                 fill="#003847"
                             />
                         </svg>
-                    </div>
-                </div>
+                    </ScaleIn>
+                </StaggerContainer>
             </div>
         </section>
     );
