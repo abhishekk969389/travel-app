@@ -41,7 +41,6 @@ export default function SubBanner({
 
   return (
     <section className="relative overflow-hidden min-h-[160px] sm:min-h-[210px] md:min-h-[260px] lg:min-h-[320px] flex items-center justify-start bg-[#03111b] text-white">
-      {/* Background Image */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src={bgImage}
@@ -51,19 +50,14 @@ export default function SubBanner({
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#03111b]/90 via-[#061927]/75 to-[#03111b]/80" />
       </div>
-
-      {/* Content */}
       <div className="relative z-10 max-w-[1320px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-9 md:py-11 lg:py-14">
         <FadeIn direction="up">
           <div className="max-w-2xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.55rem] font-bold text-white tracking-tight mb-2.5 sm:mb-3 lg:mb-4 drop-shadow-md">
             {title}
           </h1>
-
-          {/* Breadcrumb pill */}
           <nav aria-label="Breadcrumb" className="inline-flex max-w-full">
             <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-2.5 rounded-full bg-slate-700/80 backdrop-blur-md border border-white/15 px-4 sm:px-6 md:px-7 lg:px-8 py-1.5 sm:py-2 md:py-2.5 lg:py-3 shadow-xl max-w-full overflow-x-auto">
               {breadcrumbs.map((item, idx) => {

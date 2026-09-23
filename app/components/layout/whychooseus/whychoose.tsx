@@ -41,8 +41,6 @@ export function PlaneTrailIcon({ className }: IconProps) {
     </svg>
   );
 }
-
-/** Snow-capped peaks used on the "explore" badge. */
 export function MountainIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 48 34" className={className} fill="currentColor" aria-hidden>
@@ -52,8 +50,6 @@ export function MountainIcon({ className }: IconProps) {
     </svg>
   );
 }
-
-/** Tapered brush swoosh underlining the headline. */
 export function BrushStrokeIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 160 18" className={className} fill="currentColor" aria-hidden>
@@ -62,7 +58,6 @@ export function BrushStrokeIcon({ className }: IconProps) {
   );
 }
 
-/** Dynamic icon renderer using react-icons/lu */
 const renderFeatureIcon = (iconName?: string) => {
   switch (iconName?.toLowerCase()) {
     case "users":
@@ -103,7 +98,6 @@ export function CurvedHero({ hero, floatingNote }: CurvedHeroProps = {}) {
 
   return (
     <div className="@container relative mx-auto aspect-[57/82] w-full max-w-[28rem] sm:max-w-[30rem]">
-      {/* Floating handwritten note and airplane flight path doodle at top left of hero */}
       <div className="absolute left-[-28%] sm:left-[-32%] lg:left-[-35%] top-[0%] sm:top-[1%] z-20 flex items-center gap-1.5 select-none pointer-events-none">
         <div className={`${scriptFont.className} text-xl sm:text-2xl lg:text-3xl text-deep font-semibold leading-[1.1] -rotate-6`}>
           {noteLines.map((line, idx) => (
@@ -114,8 +108,6 @@ export function CurvedHero({ hero, floatingNote }: CurvedHeroProps = {}) {
         </div>
         <PlaneTrailIcon className="w-16 sm:w-20 lg:w-24 text-deep transform -rotate-6 -mt-3" />
       </div>
-
-      {/* Yellow accents sitting behind the photo */}
       <span
         aria-hidden
         className="blob-a absolute right-[-1%] top-[1%] h-[25%] w-[31%] bg-sun"
@@ -128,8 +120,6 @@ export function CurvedHero({ hero, floatingNote }: CurvedHeroProps = {}) {
         aria-hidden
         className="blob-b absolute left-[-4%] top-[27%] h-[26%] w-[13%] bg-sun"
       />
-
-      {/* Curved photo frame */}
       <div className="curved-frame absolute bottom-[2%] left-[5%] right-[7%] top-[4%] overflow-hidden shadow-xl">
         <Image
           src={image}
@@ -140,8 +130,6 @@ export function CurvedHero({ hero, floatingNote }: CurvedHeroProps = {}) {
           priority
         />
       </div>
-
-      {/* Handwritten overlay */}
       <p className={`absolute left-[41%] right-[18%] top-[10%] text-center ${scriptFont.className} font-semibold leading-[1.08] text-white drop-shadow-[0_2px_10px_rgba(8,32,56,0.45)] text-[clamp(1.5rem,7.4cqw,3rem)] z-10`}>
         {overlayText.map((line, idx) => (
           <span key={idx}>
@@ -151,8 +139,6 @@ export function CurvedHero({ hero, floatingNote }: CurvedHeroProps = {}) {
         ))}
       </p>
       <BrushStrokeIcon className="absolute left-[57%] top-[32.8%] w-[19%] -rotate-[7deg] text-sun z-10" />
-
-      {/* Explore badge */}
       <div className="absolute bottom-[2%] left-[65%] right-[4%] top-[76%] z-20 flex flex-col items-center justify-center rounded-[14%/18%] bg-white shadow-[0_18px_40px_-14px_rgba(13,40,64,0.35)] p-3">
         <MountainIcon className="w-[40%] text-deep" />
         <p className="mt-[6%] text-center uppercase leading-[1.4] tracking-[0.02em] text-deep text-[clamp(0.6rem,2.8cqw,1.02rem)]">
@@ -179,32 +165,23 @@ export default function WhyChoose({ data: propData }: WhyChooseProps = {}) {
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          {/* Left Column: Heading, Description & Features Grid */}
           <div className="lg:col-span-8 flex flex-col justify-center">
             <FadeIn direction="up">
-              {/* Subtitle */}
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="h-[3px] w-7 rounded-full bg-[#e5a824]" />
                 <span className="text-xs sm:text-sm font-bold tracking-widest text-[#082038] uppercase">
                   {data.header.subtitle}
                 </span>
               </div>
-
-              {/* Main Heading */}
               <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold  text-[#12161f] tracking-tight leading-[1.15] mb-4">
                 {data.header.headingLine1} <br />
                 <span>{data.header.headingLine2Prefix}</span>
                 <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
               </h2>
-
-              {/* Description Paragraph */}
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
                 {data.header.description}
               </p>
             </FadeIn>
-
-            {/* 6 Features Grid */}
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-x-6 sm:gap-y-8">
               {data.features.map((feature: WhyChoosePageFeature) => (
                 <StaggerItem key={feature.id} className="flex items-start gap-3 group">
@@ -212,8 +189,6 @@ export default function WhyChoose({ data: propData }: WhyChooseProps = {}) {
                   <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#e8f2f6] text-[#082038] shrink-0 border border-[#d8e6ed] shadow-xs group-hover:bg-[#ff2e63] group-hover:text-white transition-colors duration-300">
                     {renderFeatureIcon(feature.icon)}
                   </div>
-                  
-                  {/* Title & Description */}
                   <div className="flex flex-col min-w-0">
                     <h3 className="text-sm sm:text-base font-bold text-[#082038] tracking-tight mb-1 leading-snug whitespace-nowrap">
                       {feature.title}
@@ -227,8 +202,6 @@ export default function WhyChoose({ data: propData }: WhyChooseProps = {}) {
             </StaggerContainer>
 
           </div>
-
-          {/* Right Column: Curved Hero Frame Component */}
           <ScaleIn className="lg:col-span-4 relative mt-6 lg:mt-0 flex justify-center">
             <CurvedHero
               hero={data.hero}

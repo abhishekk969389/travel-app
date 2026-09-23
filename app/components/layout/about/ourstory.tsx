@@ -79,27 +79,23 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
 
   return (
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white overflow-hidden">
-      {/* Background Dotted Accent Pattern */}
       <div
         className="absolute top-2 left-1/4 w-40 h-28 opacity-25 pointer-events-none bg-[radial-gradient(#64748b_1.5px,transparent_1.5px)] [background-size:12px_12px]"
         aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-        {/* Left Column: Story Content */}
+
         <div className="lg:col-span-6 flex flex-col justify-between">
           <div>
             <FadeIn direction="left">
               <div>
-                {/* Subtitle from JSON */}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="h-[2.5px] w-7 rounded-full bg-[#ff2e63]" />
                   <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
                     {data.subtitle}
                   </span>
                 </div>
-
-                {/* Main Heading from JSON */}
                 <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#12161f] tracking-tight leading-[1.15] mb-5">
                   {data.headingLine1} <br />
                   <span>{data.headingLine2Prefix}</span>
@@ -107,15 +103,11 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
                     {data.headingLine2Highlight}
                   </span>
                 </h2>
-
-                {/* Description from JSON */}
                 <p className="text-gray-600 text-sm sm:text-base text-justify leading-relaxed mb-6 max-w-[540px]">
                   {data.description}
                 </p>
               </div>
             </FadeIn>
-
-            {/* 3 Features dynamically mapped from JSON */}
             <StaggerContainer className="flex flex-wrap items-center gap-6 sm:gap-8 mb-8 pt-1">
               {data.features.map((feature) => (
                 <StaggerItem key={feature.id}>
@@ -131,8 +123,6 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
                 </StaggerItem>
               ))}
             </StaggerContainer>
-
-            {/* CTA Button from JSON */}
             <FadeIn direction="up">
               <div className="flex items-center">
                 <Link
@@ -155,10 +145,7 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
               </div>
             </FadeIn>
           </div>
-
-          {/* Bottom Left Script Tagline from JSON & Looping Flight Path */}
           <div className="relative flex items-end justify-between w-full max-w-[530px]">
-            {/* Handwritten 3-Line Tagline mapped dynamically from JSON */}
             <div
               className={`text-slate-400 text-left leading-tight rotate-[-10deg] ${scriptFont.className} shrink-0 select-none pb-2`}
             >
@@ -182,15 +169,12 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
                 );
               })}
             </div>
-
-            {/* Looping Airplane Flight Trail */}
             <div className="relative w-56 sm:w-72 md:w-80 h-28 sm:h-34 md:h-38 -ml-6 pointer-events-none select-none">
               <svg
                 viewBox="0 0 260 120"
                 className="w-full h-full text-slate-300 overflow-visible"
                 fill="none"
               >
-                {/* Loop-de-loop dashed path */}
                 <path
                   d="M 10 95 C 45 95, 75 95, 105 95 C 130 95, 150 85, 155 70 C 158 55, 142 45, 128 55 C 115 65, 122 88, 145 95 C 175 105, 210 80, 245 20"
                   stroke="#cbd5e1"
@@ -198,7 +182,6 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
                   strokeDasharray="5 5"
                   strokeLinecap="round"
                 />
-                {/* Airplane flying towards top right */}
                 <g transform="translate(245, 20) rotate(-35) scale(1.2)">
                   <path
                     d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
@@ -210,11 +193,8 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
             </div>
           </div>
         </div>
-
-        {/* Right Column: Video & Image Card from JSON */}
         <FadeIn direction="right" className="lg:col-span-6 relative flex flex-col h-full min-h-[420px] lg:min-h-full">
           <div className="relative w-full flex-1 min-h-[380px] sm:min-h-[440px] lg:min-h-full rounded-3xl lg:rounded-[36px] overflow-hidden shadow-2xl group bg-slate-900">
-            {/* Main Preview Image from JSON */}
             <Image
               src={data.videoCard.image}
               alt={data.headingLine1}
@@ -222,11 +202,7 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-
-            {/* Gradient Overlay for depth */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
-
-            {/* Center Play Button with Script Text from JSON */}
             <div className="absolute inset-0 ml-18 flex items-center justify-center gap-3.5 sm:gap-5 z-10">
               <button
                 onClick={() => setIsVideoOpen(true)}
@@ -266,8 +242,6 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
                 </svg>
               </div>
             </div>
-
-            {/* Bottom Left Floating Badge from JSON */}
             <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 flex items-center gap-3.5 rounded-2xl bg-[#081827]/85 backdrop-blur-md px-4 sm:px-5 py-3 sm:py-3.5 border border-white/10 shadow-2xl">
               <div className="text-white/90 shrink-0">
                 <svg
@@ -295,8 +269,6 @@ export default function OurStory({ data: propData }: OurStoryProps = {}) {
           </div>
         </FadeIn>
       </div>
-
-      {/* Video Modal Popup with dynamic videoUrl from JSON */}
       {isVideoOpen && (
         <div
           role="dialog"

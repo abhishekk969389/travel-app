@@ -37,14 +37,14 @@ export default async function TourPackageDetailsPage({ searchParams }: TourPacka
     <section className="min-h-screen">
       <SubBanner pageKey="tourpackagedetails" />
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14 space-y-10">
-        <TourDetailHero pkg={pkg} />
+        <TourDetailHero pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-8">
-            <TourDetailOverview pkg={pkg} />
-            <TourDetailItinerary pkg={pkg} />
+            <TourDetailOverview pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
+            <TourDetailItinerary pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
           </div>
           <div className="lg:col-span-4">
-            <TourDetailSidebar pkg={pkg} />
+            <TourDetailSidebar pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
           </div>
         </div>
       </div>

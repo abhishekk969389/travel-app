@@ -3,10 +3,6 @@ import AboutUs from "@/app/components/homelayout/aboutus";
 import OurStory from "@/app/components/layout/about/ourstory";
 import Achievement from "../components/ui/achievement";
 
-export const metadata = {
-  title: "About Us | TripNexa",
-  description: "Learn more about TripNexa, our journey, experienced guides, and why travelers choose us.",
-};
 
 export default function AboutPage() {
   return (

@@ -14,11 +14,13 @@ import {
   FaCamera,
   FaShoppingBag,
 } from "react-icons/fa";
-import type { TourPackageCardItem } from "@/data/index";
+import type { TourPackageCardItem, TourPackageDetailsLabels } from "@/data/index";
+import { site } from "@/data/index";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface TourDetailOverviewProps {
   pkg?: TourPackageCardItem;
+  labels?: TourPackageDetailsLabels;
 }
 
 const renderHighlightIcon = (iconName?: string) => {
@@ -40,9 +42,10 @@ const renderHighlightIcon = (iconName?: string) => {
   }
 };
 
-export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
+export default function TourDetailOverview({ pkg, labels: propLabels }: TourDetailOverviewProps) {
   if (!pkg) return null;
 
+  const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
   const details = pkg.details;
 
   const defaultStats = [
@@ -91,12 +94,10 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
 
   return (
     <div className="space-y-8 sm:space-y-10">
-      {/* Combined Overview & Highlights Section Card */}
       <div className="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-100 shadow-sm space-y-8">
-        {/* Overview Sub-Section */}
         <FadeIn direction="up">
           <h3 className="text-xl sm:text-2xl font-extrabold text-[#12161f] tracking-tight mb-2">
-            Overview
+            {labels?.overviewTitle || "Overview"}
           </h3>
           <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-4" />
           <p className="text-sm sm:text-sm md:text-base text-slate-600 leading-relaxed">
@@ -104,12 +105,10 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
               `${pkg.title} is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of ${pkg.title} with comfortable stays, guided tours, and unforgettable experiences.`}
           </p>
         </FadeIn>
-
-        {/* Highlights Sub-Section */}
         <div>
           <FadeIn direction="up">
             <h3 className="text-xl sm:text-2xl font-extrabold text-[#12161f] tracking-tight mb-2">
-              Highlights
+              {labels?.highlightsTitle || "Highlights"}
             </h3>
             <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
           </FadeIn>
@@ -129,12 +128,10 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
         </div>
       </div>
 
-      {/* 4. What's Included & What's Not Included Side-by-Side */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* What's Included */}
         <FadeIn direction="up" className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
           <h3 className="text-lg sm:text-xl font-extrabold text-[#12161f] tracking-tight mb-2">
-            What's Included
+            {labels?.whatsIncludedTitle || "What's Included"}
           </h3>
           <div className="w-10 h-[3px] bg-[#22c55e] rounded-full mb-5" />
 
@@ -147,11 +144,9 @@ export default function TourDetailOverview({ pkg }: TourDetailOverviewProps) {
             ))}
           </ul>
         </FadeIn>
-
-        {/* What's Not Included */}
         <FadeIn direction="up" className="bg-white rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-sm">
           <h3 className="text-lg sm:text-xl font-extrabold text-[#12161f] tracking-tight mb-2">
-            What's Not Included
+            {labels?.whatsNotIncludedTitle || "What's Not Included"}
           </h3>
           <div className="w-10 h-[3px] bg-[#ef4444] rounded-full mb-5" />
 

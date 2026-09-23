@@ -39,7 +39,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
 
     return (
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30">
-            {/* Decorative Flight Trail & Airplane at Top Right */}
             <div className="absolute top-6 right-8 md:right-16 opacity-30 pointer-events-none hidden sm:block">
                 <div className="relative">
                     <svg
@@ -57,7 +56,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
             </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
                 <FadeIn direction="up">
                     <div className="text-center max-w-2xl mx-auto mb-8">
                         <span
@@ -72,13 +70,9 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                         <p className="mt-3 text-sm sm:text-base text-slate-500 leading-relaxed font-normal">
                             {data.description}
                         </p>
-
-                        {/* Accent Line */}
                         <div className="h-[4px] w-14 bg-gradient-to-r from-[#ff3560] to-[#ff8c42] mx-auto mt-4 rounded-full" />
                     </div>
                 </FadeIn>
-
-                {/* Blog Cards Grid with Keyed Stagger Container (Matches Destinations pattern so cards animate smoothly on pagination without disappearing) */}
                 <StaggerContainer key={isBlogPage ? currentPage : "home"} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {displayedPosts.map((post: BlogPostItem) => {
                         const blogSlug = createSlug(post.title);
@@ -87,7 +81,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                                 <div
                                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between h-full"
                                 >
-                                    {/* Card Image Container */}
                                     <div className="relative w-full h-[220px] sm:h-[240px] overflow-hidden bg-slate-100">
                                         <Link href={`/blogdetails?name=${blogSlug}`} className="block relative w-full h-full">
                                             <Image
@@ -98,8 +91,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                                                 className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out cursor-pointer"
                                             />
                                         </Link>
-
-                                        {/* Date Badge */}
                                         <div
                                             className={`absolute top-3 left-3 bg-gradient-to-b ${post.dateBadgeGradient} text-white px-3.5 py-2 rounded-xl text-center shadow-lg backdrop-blur-xs`}
                                         >
@@ -111,11 +102,8 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                                             </span>
                                         </div>
                                     </div>
-
-                                    {/* Card Content */}
                                     <div className="p-6 flex flex-col flex-1 justify-between">
                                         <div>
-                                            {/* Meta (Read time & Category) */}
                                             <div className="flex items-center text-sm sm:text-base font-medium text-slate-500 gap-2.5 sm:gap-3 mb-3">
                                                 <span className="flex items-center gap-1.5">
                                                     <FaRegClock className="text-slate-400 text-sm sm:text-base" />
@@ -127,14 +115,10 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                                                     {post.category}
                                                 </span>
                                             </div>
-
-                                            {/* Title */}
                                             <h3 className="text-base sm:text-lg font-bold text-[#1b2534] leading-snug group-hover:text-[#ff3560] transition-colors duration-200 line-clamp-2 mb-6">
                                                 <Link href={`/blogdetails?name=${blogSlug}`}>{post.title}</Link>
                                             </h3>
                                         </div>
-
-                                        {/* Read More Button */}
                                         <div>
                                             <Link
                                                 href={`/blogdetails?name=${blogSlug}`}
@@ -150,8 +134,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                         );
                     })}
                 </StaggerContainer>
-
-                {/* Pagination (Only on Blog Page) */}
                 {isBlogPage && (
                     <Pagination
                         currentPage={currentPage}
@@ -160,8 +142,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
                         className="mt-10 sm:mt-12"
                     />
                 )}
-
-                {/* View All Blog Button (Only on Homepage, Hidden on Blog Page) */}
                 {!isBlogPage && (
                     <FadeIn direction="up">
                         <div className="text-center mt-6">

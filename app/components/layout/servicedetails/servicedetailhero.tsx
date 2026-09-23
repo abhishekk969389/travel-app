@@ -31,10 +31,8 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-center relative min-h-[510px]">
 
-          {/* LEFT DARK CONTENT CARD (Perfectly Proportioned, Overlapping z-20) */}
           <FadeIn direction="up" className="relative w-full lg:w-[52%] max-w-[644px] z-20 bg-[#081521] border border-slate-800/80 rounded-[2rem] p-7 text-white flex flex-col justify-between mb-8 lg:mb-0">
 
-            {/* Dotted Airplane Path SVG Watermark */}
             <svg
               className="absolute right-6 bottom-14 w-48 h-48 text-white/10 pointer-events-none z-0"
               viewBox="0 0 200 200"
@@ -71,23 +69,19 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
                 </div>
               </div>
 
-              {/* Main Title */}
               <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-white tracking-tight leading-none mb-3">
                 {data.titlePart1}
                 <span className="text-[#ff0055]"> {data.titleHighlight}</span>
               </h1>
 
-              {/* Subtitle / Tagline */}
               <h2 className="text-base sm:text-lg font-bold text-gray-100 mb-4">
                 {data.tagline}
               </h2>
 
-              {/* Description Paragraph */}
               <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-7 max-w-lg font-normal">
                 {data.description}
               </p>
 
-              {/* CTA Button */}
               <div className="mb-7">
                 <button className="bg-gradient-to-r from-[#ff0055] via-[#ff3b00] to-[#ff7b00] hover:brightness-110 text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 text-xs sm:text-sm tracking-wide">
                   <span>{data.buttonText || 'Get Best Flight Deals'}</span>
@@ -96,7 +90,6 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
               </div>
             </div>
 
-            {/* Bottom 3 Features Row */}
             <div className="relative z-10 pt-5 border-t border-white/10 grid grid-cols-3 gap-3">
               {data.heroFeatures?.map((feat, index) => (
                 <div key={index} className="flex items-center gap-3">
@@ -111,13 +104,10 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
             </div>
           </FadeIn>
 
-          {/* RIGHT IMAGE CARD (Balanced Size, Set Behind z-10 with Red Accent Card) */}
           <ScaleIn className="relative w-full lg:w-[57%] lg:-ml-[9%] z-10">
 
-            {/* Top-Right Red Accent Card Block sticking out */}
             <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-44 h-44 sm:w-56 sm:h-56 bg-gradient-to-tr from-[#ff0055] to-[#ff3b00] rounded-[2rem] -z-10 shadow-lg"></div>
 
-            {/* Main Image Container */}
             <div className="relative w-full h-[380px] sm:h-[450px] lg:h-[510px] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
               <Image
                 src={data.featuredImage || '/blog1.jpg'}
@@ -128,7 +118,6 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
-              {/* Floating White Badge Bottom Right */}
               <div className="absolute bottom-5 right-5 sm:bottom-6 sm:right-6 bg-white text-gray-900 rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl flex items-center gap-3 border border-gray-100 z-20">
                 <div className="w-9 h-9 rounded-xl border border-slate-200 text-slate-700 flex items-center justify-center shrink-0">
                   <FaIcons.FaPlane className="w-4 h-4 text-slate-700 transform -rotate-45" />

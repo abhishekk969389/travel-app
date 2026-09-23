@@ -27,7 +27,6 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white border-b border-gray-100 relative z-50">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-5 flex items-center justify-between h-20">
-        {/* Left Side: Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src={data.logo.src}
@@ -38,8 +37,6 @@ export default function Navbar() {
             className="h-auto w-[200px] sm:w-[240px] object-contain"
           />
         </Link>
-
-        {/* Center: Navigation Links (Desktop) */}
         <div className="hidden lg:flex items-center space-x-5 xl:space-x-7">
           {data.navLinks.map((link: LinkItem) => {
             const hasSubmenu = Boolean(
@@ -77,8 +74,6 @@ export default function Navbar() {
                       <span>{link.name}</span>
                     </Link>
                   )}
-
-                  {/* Theme Accent Underline Line right below text */}
                   <span
                     className={`absolute -bottom-1.5 left-0 h-[3px] bg-[#ff2e63] rounded-full transition-all duration-200 ${
                       isCurrentPage
@@ -87,8 +82,6 @@ export default function Navbar() {
                     }`}
                   />
                 </div>
-
-                {/* Dropdown Menu from JSON */}
                 {hasSubmenu && (
                   <div className="absolute top-full left-0 pt-0.5 opacity-0 invisible translate-y-1 group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover/nav:pointer-events-auto">
                     <div className="w-64 bg-white rounded-b-2xl py-3 px-2.5 shadow-2xl border border-gray-100 shadow-slate-900/10">
@@ -116,8 +109,6 @@ export default function Navbar() {
             );
           })}
         </div>
-
-        {/* Right Side: Enquire Now Button & Mobile Hamburger */}
         <div className="flex items-center gap-3">
           <Link
             href={data.cta.href}
@@ -127,8 +118,6 @@ export default function Navbar() {
             <span>{data.cta.text}</span>
             <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
-
-          {/* Mobile Menu Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -139,8 +128,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 w-full max-h-[calc(100vh-80px)] overflow-y-auto bg-white border-t border-gray-100 px-4 pt-3 pb-8 shadow-2xl z-50 animate-in slide-in-from-top-2 duration-200 overscroll-contain">
           <div className="flex flex-col space-y-1">
@@ -188,8 +175,6 @@ export default function Navbar() {
                       </Link>
                     )}
                   </div>
-
-                  {/* Mobile Submenu Accordion */}
                   {hasSubmenu && isDropdownOpen && (
                     <div className="pl-4 pr-2 py-1 space-y-1 bg-slate-50/60 rounded-xl mb-1">
                       {link.dropdownItems?.map((subItem) => {

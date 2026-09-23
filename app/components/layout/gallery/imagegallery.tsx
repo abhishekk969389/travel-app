@@ -34,7 +34,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
         : data.items.slice(0, 11)
       : data.items.filter((item) => item.category === activeTab);
 
-  // Toggle view all / show less
   const handleToggleViewAll = () => {
     if (activeTab !== "all") {
       setActiveTab("all");
@@ -44,19 +43,16 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
     }
   };
 
-  // Open all from card
   const handleOpenAll = () => {
     setActiveTab("all");
     setIsExpanded(true);
   };
 
-  // Tab selection
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
     setPreviewIndex(null);
   };
 
-  // Handle keyboard navigation for modal lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (previewIndex === null) return;
@@ -100,10 +96,8 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
   return (
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Header */}
         <FadeIn direction="up">
           <div className="text-center max-w-2xl mx-auto mb-6">
-            {/* Badge with Horizontal Lines */}
             <div className="flex items-center justify-center gap-3 mb-2.5">
               <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
               <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
@@ -111,21 +105,15 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
               </span>
               <span className="h-[2px] w-6 rounded-full bg-[#ff2e63]" />
             </div>
-
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
               {data.header.headingPrefix}
               <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
             </h2>
-
-            {/* Description */}
             <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
               {data.header.description}
             </p>
           </div>
         </FadeIn>
-
-        {/* Category Tabs / Pills - Single Line Always */}
         <div className="w-full max-w-4xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-nowrap overflow-x-auto no-scrollbar py-2 mb-8 sm:mb-10">
           {data.tabs.map((tab) => {
             const isActive = activeTab === tab.id;
@@ -146,8 +134,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
             );
           })}
         </div>
-
-        {/* Sub-Header Row: Photo Gallery & Dynamic View All / Show Less Photos */}
         <div className="flex items-center justify-between mt-10 sm:mt-12 mb-5 sm:mb-6">
           <div className="flex items-center">
             <span className="w-7 sm:w-8 h-1 bg-[#ff2e63] rounded-full mr-2.5 sm:mr-3" />
@@ -175,8 +161,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
             />
           </button>
         </div>
-
-        {/* 6 Columns Gallery Grid */}
         <StaggerContainer key={activeTab + isExpanded} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {displayedItems.map((item: GalleryItem, idx: number) => (
             <StaggerItem key={item.id || idx}>
@@ -192,7 +176,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
-                {/* Subtle Hover Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-2.5">
                   <p className="text-white text-[11px] sm:text-xs font-semibold line-clamp-1 drop-shadow-sm">
                     {item.title}
@@ -202,7 +185,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
             </StaggerItem>
           ))}
 
-          {/* More Photos Card: ONLY rendered in 'All' tab when NOT expanded */}
           {activeTab === "all" && !isExpanded && (
             <StaggerItem>
               <div
@@ -220,7 +202,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
                   className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
                 />
 
-                {/* Dark Backdrop Overlay with Search Icon and Count */}
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-2 group-hover:bg-black/45 transition-colors">
                   <FaSearch className="w-5 h-5 sm:w-6 sm:h-6 text-white mb-1.5 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-white font-extrabold text-lg sm:text-xl md:text-2xl leading-tight">
@@ -236,10 +217,9 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
         </StaggerContainer>
       </div>
 
-      {/* Lightbox Modal for Photo Preview */}
       {previewIndex !== null && displayedItems[previewIndex] && (
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
-          {/* Close Button */}
+
           <button
             type="button"
             onClick={closeLightbox}
@@ -248,8 +228,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
           >
             <FaTimes className="w-5 h-5" />
           </button>
-
-          {/* Previous Button */}
           <button
             type="button"
             onClick={prevImage}
@@ -258,8 +236,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
           >
             <FaChevronLeft className="w-5 h-5" />
           </button>
-
-          {/* Image Container */}
           <div className="relative max-w-4xl max-h-[85vh] w-full h-[65vh] sm:h-[75vh] flex flex-col items-center justify-center">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
               <Image
@@ -274,8 +250,6 @@ export default function ImageGallery({ data: propData }: ImageGalleryProps = {})
               {displayedItems[previewIndex].title}
             </p>
           </div>
-
-          {/* Next Button */}
           <button
             type="button"
             onClick={nextImage}

@@ -19,7 +19,6 @@ export default function PartnerSection({
 
     return (
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 bg-white">
-            {/* World Map Background (Matching FAQ / Header Style) */}
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-[190px] sm:h-[230px] md:h-[300px] pointer-events-none select-none flex items-start justify-start overflow-hidden z-0 [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
@@ -37,10 +36,8 @@ export default function PartnerSection({
             </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
                 <FadeIn direction="up">
                     <div className="relative text-center max-w-2xl mx-auto mb-6">
-                        {/* Badge with Horizontal Pink Lines */}
                         <div className="flex items-center justify-center gap-3 mb-2.5">
                             <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                             <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
@@ -48,21 +45,15 @@ export default function PartnerSection({
                             </span>
                             <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                         </div>
-
-                        {/* Heading */}
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
                             {data.header.headingPrefix}
                             <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
                         </h2>
-
-                        {/* Description */}
                         <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
                             {data.header.description}
                         </p>
                     </div>
                 </FadeIn>
-
-                {/* Partners Logos Grid */}
                 <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5 lg:gap-6">
                     {data.items.map((item: PartnerItem) => (
                         <StaggerItem key={item.id}>

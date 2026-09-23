@@ -77,7 +77,7 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-[#031926] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 ">
-      {/* Mountain background */}
+
       <div className="pointer-events-none absolute inset-0">
         <Image
           src={data.backgroundImage}
@@ -88,8 +88,6 @@ export default function Footer() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f18]/85 via-[#0a0f18]/92 to-[#0a0f18]" />
       </div>
-
-      {/* Curve image — screen right, next to Stay Updated */}
       <div
         aria-hidden="true"
         className="footer-curve-mask pointer-events-none absolute top-38 right-0 z-[1] hidden h-[280px] w-[min(28vw,180px)] lg:block"
@@ -97,9 +95,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8 pt-14 lg:pt-16">
-        {/* Brand | Links | Destinations | Services | Stay Updated */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5 xl:gap-6">
-          {/* Brand */}
           <div className="col-span-2 sm:col-span-2 lg:col-span-3">
             <Link href="/" className="inline-block">
               <Image
@@ -129,26 +125,18 @@ export default function Footer() {
               })}
             </div>
           </div>
-
-          {/* Quick Links */}
           <div className="col-span-1 lg:col-span-2">
             <FooterLinkList title="Quick Links" items={data.quickLinks} />
           </div>
-
-          {/* Our Services */}
           <div className="col-span-1 lg:col-span-2">
             <FooterLinkList title="Our Services" items={data.services} />
           </div>
-
-          {/* Help & Support */}
           <div className="col-span-1 lg:col-span-2">
             <FooterLinkList
               title={data["Help & Support"] ? "Help & Support" : "Popular Destinations"}
               items={data["Help & Support"] || (data as any).destinations || []}
             />
           </div>
-
-          {/* Stay Updated — right of Our Services */}
           <div className="relative z-[2] col-span-2 sm:col-span-2 lg:col-span-3">
             <h3 className="text-[1.05rem] font-bold text-white">{data.newsletter.title}</h3>
             <span className="mt-2.5 mb-4 block h-[3px] w-11 rounded-full bg-[#ff5a5f]" />
@@ -201,8 +189,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Bottom bar */}
         <div className="mt-12 border-t border-white/15 pt-6 pb-2">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-[0.85rem] text-white/80">

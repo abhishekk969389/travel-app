@@ -28,7 +28,6 @@ export default function FaqSection({
 
     return (
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 bg-white overflow-hidden">
-            {/* World Map Background (Visible only up to heading, not reaching description) */}
       <div
   aria-hidden="true"
   className="absolute inset-x-0 top-0 h-[190px] sm:h-[230px] md:h-[360px] pointer-events-none select-none flex items-start justify-start overflow-hidden z-0 [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
@@ -46,10 +45,8 @@ export default function FaqSection({
 </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Top Header Row with Heart Flight Trail */}
                 <FadeIn direction="up">
                     <div className="relative text-center max-w-2xl mx-auto mb-6">
-                        {/* Badge with Horizontal Pink Lines */}
                         <div className="flex items-center justify-center gap-3 mb-2.5">
                             <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                             <span className="text-xs sm:text-sm font-bold tracking-widest text-[#12161f] uppercase">
@@ -57,19 +54,13 @@ export default function FaqSection({
                             </span>
                             <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                         </div>
-
-                        {/* Heading */}
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
                             {data.header.headingPrefix}
                             <span className="text-[#ff2e63]">{data.header.headingHighlight}</span>
                         </h2>
-
-                        {/* Description */}
                         <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
                             {data.header.description}
                         </p>
-
-                        {/* Decorative Flight Trail with Heart and Plane Icon */}
                         <div className="hidden lg:flex items-center absolute -right-48 xl:-right-64 -top-4 pointer-events-none select-none">
                             <div className="relative w-36 h-28">
                                 <svg
@@ -77,7 +68,6 @@ export default function FaqSection({
                                     fill="none"
                                     className="w-full h-full text-[#ff2e63]/70"
                                 >
-                                    {/* Heart-shaped dotted loop */}
                                     <path
                                         d="M 20 70 C 0 50, 0 15, 35 15 C 55 15, 65 35, 70 45 C 75 35, 85 15, 105 15 C 140 15, 140 50, 100 80 C 85 90, 75 95, 70 98"
                                         stroke="currentColor"
@@ -85,7 +75,6 @@ export default function FaqSection({
                                         strokeDasharray="4 4"
                                         strokeLinecap="round"
                                     />
-                                    {/* Airplane trail extension */}
                                     <path
                                         d="M 100 80 C 120 70, 130 50, 135 30"
                                         stroke="currentColor"
@@ -94,8 +83,6 @@ export default function FaqSection({
                                         strokeLinecap="round"
                                     />
                                 </svg>
-
-                                {/* Red Airplane */}
                                 <div className="absolute right-0 top-3 text-[#ff2e63] transform rotate-45 scale-110">
                                     <FaPlane className="w-5 h-5 drop-shadow-sm" />
                                 </div>
@@ -103,8 +90,6 @@ export default function FaqSection({
                         </div>
                     </div>
                 </FadeIn>
-
-                {/* FAQ Accordion List Container */}
                 <StaggerContainer className="w-full flex flex-col gap-3.5 sm:gap-4">
                     {data.items.map((item: FaqItem) => {
                         const isOpen = openId === item.id;
@@ -117,7 +102,6 @@ export default function FaqSection({
                                             : "bg-white border border-slate-200/80 hover:border-slate-300 p-4 sm:p-5"
                                         }`}
                                 >
-                                    {/* Clickable Header Button */}
                                     <button
                                         type="button"
                                         onClick={() => toggleFaq(item.id)}
@@ -125,7 +109,6 @@ export default function FaqSection({
                                         aria-expanded={isOpen}
                                     >
                                         <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                                            {/* Number Circle Badge */}
                                             <div
                                                 className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-extrabold text-xs sm:text-sm shrink-0 transition-all duration-300 ${isOpen
                                                         ? "bg-[#ff2e63] text-white shadow-xs"
@@ -134,14 +117,10 @@ export default function FaqSection({
                                             >
                                                 {item.number}
                                             </div>
-
-                                            {/* Question Text */}
                                             <h3 className="font-extrabold text-[#0f2942] text-sm sm:text-base md:text-[16.5px] leading-snug truncate sm:whitespace-normal">
                                                 {item.question}
                                             </h3>
                                         </div>
-
-                                        {/* Toggle Icon Circle */}
                                         <div
                                             className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen
                                                     ? "bg-[#ff2e63]/15 text-[#ff2e63] rotate-180"
@@ -155,8 +134,6 @@ export default function FaqSection({
                                             )}
                                         </div>
                                     </button>
-
-                                    {/* Expanded Answer Content with Smooth Accordion Animation */}
                                     <div
                                         className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
                                             isOpen

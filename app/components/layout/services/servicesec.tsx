@@ -28,15 +28,13 @@ export default function ServiceSec() {
                             <div className="flex flex-col lg:flex-row w-full h-auto lg:h-[370px] relative justify-center items-center">
 
                             {isLight ? (
-                                // --- LIGHT THEME CARD (Image Left, Text Right) ---
                                 <>
-                                    {/* Left: Image Box */}
                                     <div className="relative w-full lg:w-[60%] h-[280px] sm:h-[300px] lg:h-[88%] z-10 lg:pr-12 lg:-skew-x-[8deg] group ml-3 mt-4 lg:ml-6 lg:mt-6">
-                                        {/* Pink gradient background */}
+       
                                         <div className="absolute top-0 left-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform -translate-x-3 -translate-y-4 shadow-lg hidden lg:block"></div>
 
                                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-xl">
-                                            {/* Unskew inner image */}
+                 
                                             <div className="w-full h-full lg:w-[120%] lg:h-[120%] lg:skew-x-[8deg] lg:-ml-[10%] lg:-mt-[5%] relative">
                                                 <Image
                                                     src={item.image}
@@ -57,11 +55,8 @@ export default function ServiceSec() {
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Right: Text Box */}
                                     <div className="relative w-full lg:w-[50%] h-auto lg:h-full bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-20 lg:-ml-[15%] lg:-skew-x-[8deg] p-6 sm:p-8 lg:p-8 flex flex-col justify-center mt-[-2rem] lg:mt-0">
                                         <div className="lg:skew-x-[8deg] flex flex-col h-full w-full">
-                                            {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
                                                 <span className="text-4xl font-bold text-red-500">{item.id}</span>
                                                 <div className="flex items-center gap-2">
@@ -69,19 +64,13 @@ export default function ServiceSec() {
                                                     <span className="text-sm font-bold tracking-wider text-red-500 uppercase">{item.subtitle}</span>
                                                 </div>
                                             </div>
-
-                                            {/* Title */}
                                             <h3 className="text-3xl lg:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-gray-900">{item.titlePart1} </span>
                                                 <span className="text-red-500">{item.titlePart2}</span>
                                             </h3>
-
-                                            {/* Description */}
                                             <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed">
                                                 {item.description}
                                             </p>
-
-                                            {/* Features */}
                                             <div className="flex flex-wrap gap-4 md:gap-6 mb-8">
                                                 {item.features?.map((feat: ServiceFeature, i: number) => {
                                                     const Icon = FaIcons[feat.icon as IconName] || FaIcons.FaCheck;
@@ -95,11 +84,9 @@ export default function ServiceSec() {
                                                     );
                                                 })}
                                             </div>
-
-                                            {/* CTA */}
                                             <div className="mt-auto">
                                                 <Link href={`/servicedetails?name=${serviceSlug}`} className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2">
-                                                    Explore Service
+                                                    {item.buttonText || "Explore Service"}
                                                     <FaIcons.FaArrowRight size={14} />
                                                 </Link>
                                             </div>
@@ -112,12 +99,9 @@ export default function ServiceSec() {
                                     </div>
                                 </>
                             ) : (
-                                // --- DARK THEME CARD (Text Left, Image Right) ---
                                 <>
-                                    {/* Left: Text Box */}
                                     <div className="relative w-full lg:w-[45%] h-auto lg:h-full bg-[#0f172a] rounded-[2rem] shadow-2xl z-20 lg:-mr-[12%] lg:-skew-x-[8deg] p-6 sm:p-8 lg:p-8 flex flex-col justify-center order-2 lg:order-1 mt-[-2rem] lg:mt-0">
                                         <div className="lg:skew-x-[8deg] flex flex-col h-full w-full">
-                                            {/* Header */}
                                             <div className="flex items-center gap-4 mb-2">
                                                 <span className="text-4xl font-bold text-red-500">{item.id}</span>
                                                 <div className="flex items-center gap-2">
@@ -125,19 +109,13 @@ export default function ServiceSec() {
                                                     <span className="text-sm font-bold tracking-wider text-red-500 uppercase">{item.subtitle}</span>
                                                 </div>
                                             </div>
-
-                                            {/* Title */}
                                             <h3 className="text-3xl lg:text-4xl font-black mb-4 tracking-tight">
                                                 <span className="text-white">{item.titlePart1} </span>
                                                 <span className="text-pink-500">{item.titlePart2}</span>
                                             </h3>
-
-                                            {/* Description */}
                                             <p className="text-gray-300 mb-8 text-sm md:text-base leading-relaxed">
                                                 {item.description}
                                             </p>
-
-                                            {/* Features */}
                                             <div className="flex flex-wrap gap-4 md:gap-6 mb-8">
                                                 {item.features?.map((feat: ServiceFeature, i: number) => {
                                                     const Icon = FaIcons[feat.icon as IconName] || FaIcons.FaCheck;
@@ -151,29 +129,22 @@ export default function ServiceSec() {
                                                     );
                                                 })}
                                             </div>
-
-                                            {/* CTA */}
                                             <div className="mt-auto">
                                                 <Link href={`/servicedetails?name=${serviceSlug}`} className="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 w-fit">
-                                                    Explore Service
+                                                    {item.buttonText || "Explore Service"}
                                                     <FaIcons.FaArrowRight size={14} />
                                                 </Link>
                                             </div>
-
-                                            {/* Decorative Watermark */}
                                             <div className="absolute bottom-4 right-4 text-white/5 z-[-1]">
                                                 <FaIcons.FaPlane size={100} className="transform -rotate-45" />
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Right: Image Box */}
                                     <div className="relative w-full lg:w-[60%] h-[280px] sm:h-[300px] lg:h-[88%] z-10 lg:pl-8 lg:-skew-x-[8deg] group order-1 lg:order-2 mr-4 mt-4 lg:mr-6 lg:mt-6">
-                                        {/* Pink gradient background */}
+
                                         <div className="absolute top-0 right-0 w-[55%] h-[75%] bg-gradient-to-r from-pink-600 to-red-500 rounded-[2rem] transform translate-x-4 -translate-y-4 shadow-lg hidden lg:block"></div>
 
                                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-xl">
-                                            {/* Unskew inner image */}
                                             <div className="w-full h-full lg:w-[120%] lg:h-[120%] lg:skew-x-[8deg] lg:-ml-[10%] lg:-mt-[5%] relative">
                                                 <Image
                                                     src={item.image}

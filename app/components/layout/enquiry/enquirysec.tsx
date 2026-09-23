@@ -116,19 +116,15 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14  bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left Column: Heading & Feature Cards */}
           <div className="lg:col-span-5 flex flex-col justify-center pt-2">
             <FadeIn direction="left">
               <div>
-                {/* Badge */}
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className="text-xs sm:text-sm font-bold tracking-wider text-[#12161f] uppercase">
                     {data.header.badge}
                   </span>
                   <span className="h-[2px] w-7 sm:w-8 rounded-full bg-[#ff2e63]" />
                 </div>
-
-                {/* Main Heading */}
                 <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-5xl font-extrabold text-[#101828] tracking-tight leading-tight mb-2">
                   {data.header.headingLine1}
                 </h1>
@@ -136,15 +132,11 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   {data.header.headingLine2Prefix}
                   <span>{data.header.headingLine2Highlight}</span>
                 </h2>
-
-                {/* Description */}
                 <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-lg">
                   {data.header.description}
                 </p>
               </div>
             </FadeIn>
-
-            {/* 4 Feature Items (2x2 Grid) */}
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7">
               {data.features.map((feat: EnquiryFeatureItem) => (
                 <StaggerItem key={feat.id}>
@@ -165,13 +157,11 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
               ))}
             </StaggerContainer>
           </div>
-
-          {/* Right Column: Enquiry Form Card */}
           <FadeIn direction="right" className="lg:col-span-7">
             <div className="rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.08)] border border-gray-100 bg-white">
-              {/* Dark Card Header Banner */}
+
               <div className="relative bg-[#081426] px-6 sm:px-8 md:px-9 py-6 sm:py-7 md:py-8 text-white overflow-hidden rounded-t-[24px] sm:rounded-t-[28px]">
-                {/* World Map Background Graphic Overlay */}
+
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 pointer-events-none select-none overflow-hidden"
@@ -209,31 +199,25 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <defs>
-                        {/* Flight Trail Gradient */}
                         <linearGradient id="trailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
                           <stop offset="0%" stopColor="#FF5A75" stopOpacity="0.4" />
                           <stop offset="100%" stopColor="#FF2E55" stopOpacity="0.95" />
                         </linearGradient>
-                        {/* Plane Top Wing Gradient */}
                         <linearGradient id="planeTopFace" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#FF6B4A" />
                           <stop offset="50%" stopColor="#FF2B57" />
                           <stop offset="100%" stopColor="#E6194A" />
                         </linearGradient>
-                        {/* Plane Underwing / Shadow Gradient */}
                         <linearGradient id="planeBottomFacet" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#D81B43" />
                           <stop offset="100%" stopColor="#8E0A24" />
                         </linearGradient>
-                        {/* Plane Spine Highlight */}
                         <linearGradient id="planeSpineHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.85" />
                           <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.25" />
                           <stop offset="100%" stopColor="#FF2E55" stopOpacity="0" />
                         </linearGradient>
                       </defs>
-
-                      {/* Dashed Flight Trail */}
                       <path
                         d="M 12 70 C 35 73, 58 64, 76 44"
                         stroke="url(#trailGrad)"
@@ -241,30 +225,17 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                         strokeDasharray="5 4"
                         strokeLinecap="round"
                       />
-
-                      {/* Origami 3D Plane */}
                       <g transform="translate(62, 10)">
-                        {/* Underwing / Bottom Shadow Facet */}
                         <polygon points="58,5 22,46 16,34" fill="url(#planeBottomFacet)" />
-
-                        {/* Left Wing Facet */}
                         <polygon points="58,5 4,28 22,46" fill="#D9163D" />
-
-                        {/* Main Upper Right Wing */}
                         <polygon points="58,5 22,46 36,20" fill="url(#planeTopFace)" />
-
-                        {/* Top Main Wing Upper Surface */}
                         <polygon points="58,5 4,28 36,20" fill="url(#planeTopFace)" />
-
-                        {/* Center Crease / Spine Highlight Stripe */}
                         <polygon points="58,5 18,25 36,20" fill="url(#planeSpineHighlight)" />
                       </g>
                     </svg>
                   </div>
                 </div>
               </div>
-
-              {/* Form Content */}
               <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-4 sm:space-y-5">
                 {isSuccess && (
                   <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center justify-between animate-fadeIn">
@@ -281,8 +252,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     </button>
                   </div>
                 )}
-
-                {/* Row 1: Full Name & Email Address */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
@@ -326,8 +295,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     </div>
                   </div>
                 </div>
-
-                {/* Row 2: Phone Number & Travel Type */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
@@ -379,8 +346,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     </div>
                   </div>
                 </div>
-
-                {/* Row 3: Preferred Destination & Travel Date */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
@@ -423,8 +388,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     </div>
                   </div>
                 </div>
-
-                {/* Row 4: Number of Travelers & Budget (Optional) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-1.5">
@@ -482,7 +445,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </div>
                 </div>
 
-                {/* Message Field */}
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-1.5">
                     {form.messageLabel}
@@ -502,8 +464,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     />
                   </div>
                 </div>
-
-                {/* Consent Checkbox */}
                 <div className="flex items-start gap-2.5 pt-1">
                   <input
                     type="checkbox"
@@ -522,8 +482,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                     {form.consentText}
                   </label>
                 </div>
-
-                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -534,8 +492,6 @@ export default function EnquirySec({ data: propData }: EnquirySecProps = {}) {
                   </span>
                   <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
-
-                {/* Security Note */}
                 <div className="flex items-center justify-center gap-1.5 text-sm sm:text-base text-gray-500 pt-1">
                   <FaLock className="w-3 h-3 text-gray-400" />
                   <span>{form.securityNote}</span>

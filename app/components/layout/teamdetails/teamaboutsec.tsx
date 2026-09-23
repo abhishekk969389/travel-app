@@ -41,42 +41,21 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
   const { details } = member;
   const firstName = member.name.split(" ")[0];
 
-  const defaultDestinations: TeamDestinationItem[] = [
-    { name: "Europe", image: "/blog1.jpg" },
-    { name: "Himachal", image: "/whychoose_fjord.jpg" },
-    { name: "Kerala", image: "/about2.jpg" },
-    { name: "Bali", image: "/blog2.jpg" },
-    { name: "Dubai", image: "/about1.jpg" },
-  ];
+  const destinationsList = details.destinations || [];
 
-  const destinationsList = details.destinations || defaultDestinations;
-
-  const defaultFeatures: TeamWhyTravelFeature[] = [
-    { title: "Friendly & Registered Guide", icon: "FaUsers" },
-    { title: "Well-Planned & Safe Trips", icon: "FaShieldAlt" },
-    { title: "Strong Destination Knowledge", icon: "FaCompass" },
-    { title: "Passionate Creating Memories", icon: "FaHeart" },
-  ];
-
-  const featuresList = details.whyTravelFeatures || defaultFeatures;
+  const featuresList = details.whyTravelFeatures || [];
 
   return (
     <div className="space-y-8 sm:space-y-10 flex flex-col justify-between">
-      {/* 1. About Member & Quote Box Section */}
       <FadeIn direction="up" className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Bio Text Column */}
           <div className="lg:col-span-8 flex flex-col justify-between">
             <div>
-              {/* Header */}
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
                 <span>{details.aboutTitlePrefix || "About"} </span>
                 <span className="text-[#ff2e63]">{details.aboutName || firstName}</span>
               </h3>
-              {/* Red Accent Underline */}
               <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-4" />
-
-              {/* Bio Paragraphs */}
               <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed mb-3">
                 {details.aboutBio1 ||
                   `${member.name} is a passionate and deep experienced travel guide who loves introducing travelers and creating authentic travel experiences with total care. With over 5 years of rich experience in the travel industry, ${firstName} has guided tours across India, Europe, and other exotic destinations.`}
@@ -87,8 +66,6 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
               </p>
             </div>
           </div>
-
-          {/* Quote Block Card */}
           <div className="lg:col-span-4 bg-[#fff4f6] rounded-2xl p-5 sm:p-6 border border-[#ffe0e6] relative flex flex-col justify-between shadow-sm">
             <BiSolidQuoteAltLeft className="text-[#ff2e63] text-3xl sm:text-4xl absolute top-1" />
             <p className="italic text-slate-700  mt-4 text-xs sm:text-sm md:text-base font-medium leading-relaxed mb-4 relative z-10">
@@ -104,9 +81,7 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
         </div>
       </FadeIn>
 
-      {/* 2. Destinations Expertise Grid */}
       <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
-        {/* Header */}
         <FadeIn direction="up">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
             <span>{details.destinationsTitlePrefix || "Destinations"} </span>
@@ -114,11 +89,8 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
               {details.destinationsTitleHighlight || "Expertise"}
             </span>
           </h3>
-          {/* Red Accent Underline */}
           <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
         </FadeIn>
-
-        {/* 5 Cards Row */}
         <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
           {destinationsList.map((dest, idx) => (
             <StaggerItem
@@ -143,24 +115,17 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
           ))}
         </StaggerContainer>
       </div>
-
-      {/* 3. Why Travel with Member & Scenic Feature Card */}
       <div className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Features Column */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <FadeIn direction="up">
-              {/* Header */}
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#12161f] tracking-tight mb-2">
                 <span>{details.whyTravelTitlePrefix || "Why Travel with"} </span>
                 <span className="text-[#ff2e63]">
                   {details.whyTravelName || `${firstName}?`}
                 </span>
               </h3>
-              {/* Red Accent Underline */}
               <div className="w-10 h-[3px] bg-[#ff2e63] rounded-full mb-6" />
-
-              {/* 4 Feature Items */}
               <div className="space-y-4">
                 {featuresList.map((feat, idx) => (
                   <div key={idx} className="flex items-center gap-3.5 group">
@@ -175,8 +140,6 @@ export default function TeamAboutSec({ member }: TeamAboutSecProps) {
               </div>
             </FadeIn>
           </div>
-
-          {/* Right Scenic Graphic Card */}
           <ScaleIn className="lg:col-span-5 relative rounded-2xl overflow-hidden min-h-[220px] sm:min-h-[240px] flex flex-col justify-center p-6 shadow-md border border-slate-100 bg-slate-900 group">
             <Image
               src={details.whyTravelImage || "/whychoose_fjord.jpg"}

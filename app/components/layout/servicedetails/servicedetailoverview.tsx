@@ -49,7 +49,6 @@ export default function ServiceDetailOverview({ data }: ServiceDetailOverviewPro
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14  bg-white">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
-          {/* Left Column: Overview Details */}
           <FadeIn direction="right" className="lg:col-span-4 flex flex-col justify-between">
             <div>
               <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#ff3b65] uppercase block mb-2">
@@ -61,8 +60,6 @@ export default function ServiceDetailOverview({ data }: ServiceDetailOverviewPro
               <p className="text-slate-600 text-sm sm:text-sm md:text-base leading-relaxed mb-8">
                 {overview.description}
               </p>
-
-              {/* Overview 3 Feature Horizontal Grid */}
               <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-2">
                 {overview.features?.map((feat, index) => (
                   <div key={index} className="flex flex-col items-start">
@@ -77,8 +74,6 @@ export default function ServiceDetailOverview({ data }: ServiceDetailOverviewPro
               </div>
             </div>
           </FadeIn>
-
-          {/* Middle Column: Why Book Flights / Why Choose Card */}
           <FadeIn direction="up" delay={0.1} className="lg:col-span-4 bg-[#fdf3f4] border border-pink-100/70 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#0b1b28] mb-6 leading-tight">
@@ -104,8 +99,6 @@ export default function ServiceDetailOverview({ data }: ServiceDetailOverviewPro
               </div>
             </div>
           </FadeIn>
-
-          {/* Right Column: Luggage Image with Handwriting Script Overlay */}
           <ScaleIn delay={0.2} className="lg:col-span-4 relative min-h-[380px] lg:min-h-[460px] rounded-3xl overflow-hidden shadow-xl group">
             <Image
               src={rightCard.image || '/about2.jpg'}
@@ -113,10 +106,7 @@ export default function ServiceDetailOverview({ data }: ServiceDetailOverviewPro
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Subtle Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-            {/* Script Text Overlay at Bottom */}
             <div className="absolute bottom-6 left-6 right-6 z-10">
               <span className="font-[family-name:var(--font-script)] text-4xl sm:text-5xl text-white font-normal block tracking-wide select-none drop-shadow-lg">
                 {rightCard.handwritingText || 'New Journeys Await'}

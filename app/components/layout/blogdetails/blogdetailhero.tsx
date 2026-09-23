@@ -29,7 +29,6 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
   return (
     <div className="space-y-4">
       <FadeIn direction="up" className="space-y-4">
-        {/* Category Pill Badge */}
         {category && (
           <div>
             <span className="inline-block px-6 py-2 rounded-full bg-[#ff2e63] text-white font-semibold text-xs sm:text-sm shadow-sm tracking-wide">
@@ -37,20 +36,14 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
             </span>
           </div>
         )}
-
-        {/* Main Title */}
         <h1 className="max-w-180 text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] font-black text-[#0d1724] tracking-tight leading-tight">
           {title}
         </h1>
-
-        {/* Subtitle */}
         {subtitle && (
           <p className="text-slate-500 max-w-200 text-sm sm:text-sm md:text-[18px] leading-relaxed font-normal max-w-4xl">
             {subtitle}
           </p>
         )}
-
-        {/* Meta Bar: Date & Author */}
         <div className="flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-500 border-b border-slate-100 pb-4">
           {date && (
             <div className="flex items-center gap-2">
@@ -66,8 +59,6 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
           )}
         </div>
       </FadeIn>
-
-      {/* Hero Featured Image Container */}
       <ScaleIn className="relative w-full h-[320px] sm:h-[420px] md:h-[500px] lg:h-[560px] rounded-[24px] group">
         <Image
           src={featuredImage}
@@ -77,11 +68,8 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
           sizes="(max-width: 1320px) 100vw, 1320px"
           className="object-cover rounded-[24px]"
         />
-
-        {/* Gradient Overlay for bottom text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none rounded-[24px]" />
 
-        {/* Top-Right Brush Badge Accent using public/brush.png */}
         <div className="absolute top-4 right-4 sm:-top-12 sm:-right-18 z-20 w-[180px] sm:w-[240px] md:w-[300px] lg:w-[340px] h-[75px] sm:h-[100px] md:h-[125px] lg:h-[200px] pointer-events-none drop-shadow-sm">
           <Image
             src={brushImage}
@@ -95,8 +83,6 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
             </span>
           </div>
         </div>
-
-        {/* Bottom-Left Location Tag Badge */}
         {locationTag?.title && (
           <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-auto z-20 bg-black/65 backdrop-blur-md border border-white/20 px-3.5 py-2.5 sm:px-5 sm:py-3.5 md:px-6 md:py-6 rounded-xl sm:rounded-2xl text-white max-w-full sm:max-w-sm flex items-center sm:items-start gap-2.5 sm:gap-3 shadow-lg">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#ff2e63] flex items-center justify-center shrink-0 shadow-sm">
@@ -115,8 +101,6 @@ export default function BlogDetailHero({ post, details: propDetails }: BlogDetai
           </div>
         )}
       </ScaleIn>
-
-      {/* Intro Paragraph */}
       {introParagraph && (
         <FadeIn direction="up">
           <p className="text-slate-600 text-sm sm:text-sm md:text-[18px] leading-relaxed font-normal pt-2">

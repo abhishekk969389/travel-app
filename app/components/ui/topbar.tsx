@@ -19,9 +19,7 @@ export default function TopHeader() {
         <header className="bg-[#0f171e] text-white w-full overflow-hidden text-xs sm:text-sm">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[40px] sm:min-h-[44px]">
 
-                {/* Left Side: Contact Details (Mobile: Phone only; sm+: Phone | Email) */}
                 <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6 py-2 sm:py-0">
-                    {/* Phone Number */}
                     <div className="flex items-center space-x-1 sm:space-x-1.5 shrink-0">
                         <div className="p-0.5 sm:p-1 rounded-full text-[#ff2e63]">
                             <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current transform -rotate-12" />
@@ -48,11 +46,7 @@ export default function TopHeader() {
                         </a>
                     </div>
                 </div>
-
-                {/* Right Side: Links, Social Icons & CTA */}
                 <div className="flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
-
-                    {/* Navigation Links (Hidden on mobile/sm/md, only shown on lg+ desktop) */}
                     <nav className="hidden lg:flex items-center space-x-4 lg:space-x-6 text-gray-200">
                         {data.navLinks.map((link) => (
                             <Link key={link.name} href={link.href} className="hover:text-white transition-colors whitespace-nowrap">
@@ -63,8 +57,6 @@ export default function TopHeader() {
 
                     {/* Separator (Hidden on mobile/sm/md, only shown on lg+ desktop) */}
                     <span className="hidden lg:block text-gray-600">|</span>
-
-                    {/* Social Icons (Always visible on mobile & desktop) */}
                     <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 shrink-0">
                         {data.socialLinks.map((item) => {
                             const IconComponent = socialIconMap[item.icon];

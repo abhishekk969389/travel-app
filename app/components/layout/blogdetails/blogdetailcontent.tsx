@@ -20,7 +20,6 @@ export default function BlogDetailContent({ post, details: propDetails }: BlogDe
 
   return (
     <div className="space-y-8">
-      {/* SECTION 1 */}
       {details.section1 && (
         <FadeIn direction="up" className="space-y-3">
           <div className="flex items-center gap-3">
@@ -34,8 +33,6 @@ export default function BlogDetailContent({ post, details: propDetails }: BlogDe
           </p>
         </FadeIn>
       )}
-
-      {/* SECTION 2: Top Places to Explore */}
       {details.section2 && details.section2.places && details.section2.places.length > 0 && (
         <div className="space-y-6">
           <FadeIn direction="up" className="flex items-center gap-3">
@@ -74,23 +71,17 @@ export default function BlogDetailContent({ post, details: propDetails }: BlogDe
           </StaggerContainer>
         </div>
       )}
-
-      {/* QUOTE CARD BANNER */}
       {details.quote?.text && (
         <ScaleIn className="bg-[#fff0f3] rounded-[24px] p-6 sm:p-8 border border-[#ffe0e6]/60 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden">
-          {/* Left Circle Quote Icon */}
+
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#ffe0e8] text-[#ff2e63] flex items-center justify-center shrink-0 shadow-xs">
             <ImQuotesLeft className="w-7 h-7 sm:w-9 sm:h-9" />
           </div>
-
-          {/* Center Quote Text */}
           <div className="flex-1 text-center md:text-left">
             <p className="text-base sm:text-lg md:text-[1.125rem] font-bold text-[#0d1724] italic leading-relaxed">
               &ldquo;{details.quote.text}&rdquo;
             </p>
           </div>
-
-          {/* Right Script Accent Text */}
           <div className="shrink-0 text-center md:text-right rotate-[-6deg] pt-1">
             <div className="font-[family-name:var(--font-script)] text-xl sm:text-2xl md:text-3xl text-[#ff2e63] font-semibold leading-tight">
               {(details.quote.brushText || "Travel More\nWorry Less")
@@ -111,8 +102,6 @@ export default function BlogDetailContent({ post, details: propDetails }: BlogDe
           </div>
         </ScaleIn>
       )}
-
-      {/* SECTION 3: Travel Tips */}
       {details.section3 && (
         <FadeIn direction="up" className="space-y-5 pt-2">
           {details.section3.title && (

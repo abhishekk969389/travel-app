@@ -5,10 +5,6 @@ import ServiceDetailHero from "@/app/components/layout/servicedetails/servicedet
 import ServiceDetailOverview from "@/app/components/layout/servicedetails/servicedetailoverview";
 import { getServiceDetails } from "@/data/index";
 
-export const metadata = {
-  title: "Service Detail | TripNexa",
-  description: "Explore comprehensive details about our premium travel services at TripNexa.",
-};
 
 interface PageProps {
   searchParams: Promise<{ id?: string; name?: string; slug?: string; title?: string }>;

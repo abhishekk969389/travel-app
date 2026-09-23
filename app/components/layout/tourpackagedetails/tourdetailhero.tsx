@@ -23,11 +23,13 @@ import {
   FaTimes,
   FaExpand,
 } from "react-icons/fa";
-import type { TourPackageCardItem } from "@/data/index";
+import type { TourPackageCardItem, TourPackageDetailsLabels } from "@/data/index";
+import { site } from "@/data/index";
 import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 
 interface TourDetailHeroProps {
   pkg?: TourPackageCardItem;
+  labels?: TourPackageDetailsLabels;
 }
 
 const renderInclusionIcon = (iconName: string) => {
@@ -47,8 +49,10 @@ const renderInclusionIcon = (iconName: string) => {
   }
 };
 
-export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
+export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHeroProps) {
   if (!pkg) return null;
+
+  const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
 
   const details = pkg.details;
   const defaultImages = [
@@ -114,7 +118,7 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Thank you for inquiring about ${pkg.title}! We will contact you soon.`);
+    alert(`${labels?.enquiryAlertText || "Thank you for inquiring about"} ${pkg.title}!`);
   };
 
   const countryBadge =
@@ -136,11 +140,8 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
 
   return (
     <div className="space-y-6 sm:space-y-8">
-      {/* Top 3-Column Grid Layout: Left Gallery | Middle Details | Right Enquire Form */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-        {/* ================= 1. LEFT COLUMN: IMAGE GALLERY SLIDER (4 COLS) ================= */}
         <ScaleIn className="lg:col-span-4 flex flex-col justify-between">
-          {/* Main Display Image Container with Floating Bottom Thumbnails */}
           <div className="relative w-full h-[380px] sm:h-[420px] lg:h-[460px] rounded-[24px] overflow-hidden bg-slate-900 border border-slate-100 shadow-md group">
             <Image
               src={galleryImages[activeImageIndex] || pkg.image}
@@ -151,18 +152,12 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               className="object-cover group-hover:scale-105 transition-transform duration-700 cursor-pointer"
               onClick={() => openModal(activeImageIndex)}
             />
-
-            {/* Gradient Overlay at Bottom of Image for Thumbnail Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
-
-            {/* Top Duration Pill Badge */}
             <div className="absolute top-3.5 left-3.5 z-10">
               <span className="px-3.5 py-1.5 rounded-full bg-[#0b1724]/85 backdrop-blur-md text-white font-bold text-xs shadow-sm border border-white/15">
                 {details?.durationBadge || pkg.duration || "5 Days | 4 Nights"}
               </span>
             </div>
-
-            {/* Top Right Controls: Expand & Navigation Arrows */}
             <div className="absolute top-3.5 right-3.5 z-10 flex items-center gap-1.5">
               <button
                 type="button"
@@ -189,8 +184,6 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
                 <FaChevronRight className="w-3 h-3" />
               </button>
             </div>
-
-            {/* Floating Thumbnails Row Overlay at the Bottom of Main Image */}
             <div className="absolute bottom-3 left-3 right-3 z-10 grid grid-cols-6 gap-1.5 sm:gap-2">
               {galleryImages.slice(0, 6).map((imgSrc, idx) => {
                 const isLast = idx === 5;
@@ -220,15 +213,13 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
                       sizes="80px"
                       className="object-cover"
                     />
-
-                    {/* +12 More Dark Overlay Badge on the 6th thumbnail */}
                     {isLast && (
                       <div className="absolute inset-0 bg-[#071524]/90 backdrop-blur-xs flex flex-col items-center justify-center text-white border-2 border-white/90 rounded-lg shadow-inner">
                         <span className="font-black text-xs sm:text-sm tracking-tight drop-shadow-xs">
                           +12
                         </span>
                         <span className="font-bold text-[10px] text-white/90 tracking-wide">
-                          More
+                          {labels?.moreText || "More"}
                         </span>
                       </div>
                     )}
@@ -238,27 +229,20 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
             </div>
           </div>
         </ScaleIn>
-
-        {/* ================= 2. MIDDLE COLUMN: CONTENT & PRICE CTA (4 COLS) ================= */}
         <FadeIn direction="up" className="lg:col-span-4 flex flex-col justify-between h-auto lg:h-[460px]">
           <div className="overflow-y-auto pr-1 space-y-3.5 scrollbar-thin">
-            {/* Red Bar Line + Country Name */}
             <div className="flex items-center gap-2 mb-1">
               <span className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full" />
               <span className="text-sm sm:text-sm md:text-base font-extrabold text-[#ff2e63] uppercase tracking-wider">
                 {countryBadge}
               </span>
             </div>
-
-            {/* Title & Subtitle */}
             <h1 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[34px] font-extrabold text-[#091724] tracking-tight leading-tight">
               {pkg.title}
             </h1>
             <p className="text-sm sm:text-sm md:text-base font-semibold text-slate-500 mb-2">
               {pkg.subtitle}
             </p>
-
-            {/* Rating & Location */}
             <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-700 mb-2.5">
               <div className="flex items-center gap-1.5">
                 <FaStar className="text-[#ff2e63] w-5 h-5" />
@@ -270,14 +254,10 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
                 <span className=" text-slate-800 text-sm sm:text-sm">{location}</span>
               </div>
             </div>
-
-            {/* Description */}
             <p className="text-sm sm:text-sm md:text-md text-slate-600 leading-relaxed mb-3">
               {details?.description ||
                 `Experience the magic of ${pkg.title}, ${pkg.subtitle.toLowerCase()}. This ${pkg.duration} tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.`}
             </p>
-
-            {/* 5 Inclusions Circular Icon Badges */}
             <div className="grid grid-cols-5 gap-2 pt-1 mb-2">
               {(details?.quickInclusions || [
                 { label: "Flights Included", icon: "FaPlane" },
@@ -300,12 +280,10 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               ))}
             </div>
           </div>
-
-          {/* Starting From & Book Now CTA Card */}
           <div className="bg-white rounded-2xl p-4 sm:p-4.5 border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 mt-4 lg:mt-0">
             <div>
               <span className="block text-sm font-semibold text-slate-400">
-                Starting From
+                {labels?.startingFrom || "Starting From"}
               </span>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl sm:text-3xl font-black text-[#ff2e63] leading-none">
@@ -325,71 +303,59 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               }}
               className="w-full sm:w-auto py-2.5 sm:py-3 px-6 rounded-full bg-gradient-to-r from-[#ff1d58] via-[#ff3b5c] to-[#ff7244] hover:opacity-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-[#ff2e63]/25 transition-all cursor-pointer"
             >
-              <span>Book Now</span>
+              <span>{labels?.bookNow || "Book Now"}</span>
               <FaArrowRight className="w-3 h-3" />
             </button>
           </div>
         </FadeIn>
-
-        {/* ================= 3. RIGHT COLUMN: ENQUIRE NOW FORM CARD (4 COLS) ================= */}
         <ScaleIn className="lg:col-span-4 h-auto lg:h-[460px]" id="enquiry-form">
           <div className="bg-white rounded-[24px] p-4.5 sm:p-5.5 border border-slate-100 shadow-md flex flex-col justify-between h-full">
             <div>
-              {/* Header */}
               <div className="mb-2.5">
                 <div className="flex items-center gap-2 mb-0.5">
                   <span className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full" />
                   <h3 className="text-lg sm:text-xl font-extrabold text-[#091724] tracking-tight">
-                    Enquire Now
+                    {labels?.enquireNowTitle || "Enquire Now"}
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500">
-                  Get a free quote for this tour package
+                  {labels?.enquireNowSubtitle || "Get a free quote for this tour package"}
                 </p>
               </div>
-
-              {/* Form Inputs */}
               <form onSubmit={handleFormSubmit} className="space-y-2 sm:space-y-2.5">
-                {/* Full Name */}
                 <div className="relative">
                   <FaUser className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />
                   <input
                     type="text"
                     required
-                    placeholder="Full Name"
+                    placeholder={labels?.namePlaceholder || "Full Name"}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all"
                   />
                 </div>
-
-                {/* Email Address */}
                 <div className="relative">
                   <FaEnvelope className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />
                   <input
                     type="email"
                     required
-                    placeholder="Email Address"
+                    placeholder={labels?.emailPlaceholder || "Email Address"}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all"
                   />
                 </div>
-
-                {/* Phone Number */}
                 <div className="relative">
                   <FaPhone className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />
                   <input
                     type="tel"
                     required
-                    placeholder="Phone Number"
+                    placeholder={labels?.phonePlaceholder || "Phone Number"}
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all"
                   />
                 </div>
-
-                {/* Travel Date */}
                 <div className="relative">
                   <FaCalendarAlt className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />
                   <input
@@ -400,38 +366,32 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all"
                   />
                 </div>
-
-                {/* Number of Travelers */}
                 <div className="relative">
                   <FaUsers className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 w-3.5 h-3.5" />
                   <input
                     type="number"
                     min="1"
-                    placeholder="Number of Travelers"
+                    placeholder={labels?.guestsPlaceholder || "Number of Travelers"}
                     value={formData.guests}
                     onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all"
                   />
                 </div>
-
-                {/* Message Optional */}
                 <div className="relative">
                   <FaCommentDots className="absolute left-3.5 top-2.5 text-slate-400 w-3.5 h-3.5" />
                   <textarea
                     rows={2}
-                    placeholder="Your Message (Optional)"
+                    placeholder={labels?.messagePlaceholder || "Your Message (Optional)"}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full pl-9 pr-3.5 py-2 bg-[#f8fafc] border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#ff2e63] focus:bg-white transition-all resize-none"
                   />
                 </div>
-
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full py-2.5 sm:py-3 px-6 rounded-full bg-gradient-to-r from-[#ff1d58] via-[#ff3b5c] to-[#ff7244] hover:opacity-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md shadow-[#ff2e63]/25 transition-all cursor-pointer mt-1"
                 >
-                  <span>Send Enquiry</span>
+                  <span>{labels?.sendEnquiry || "Send Enquiry"}</span>
                   <FaArrowRight className="w-3.5 h-3.5" />
                 </button>
               </form>
@@ -439,8 +399,6 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
           </div>
         </ScaleIn>
       </div>
-
-      {/* ================= 4. DOWN ROW: QUICK INFO BAR (FULL WIDTH) ================= */}
       <FadeIn direction="up" className="bg-white rounded-[24px] px-6 sm:px-8 md:px-10 py-6 sm:py-7 border border-slate-200/90 shadow-sm">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 items-center">
           {quickStats.map((stat, idx) => {
@@ -476,11 +434,9 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
           })}
         </div>
       </FadeIn>
-
-      {/* ================= 5. LIGHTBOX GALLERY MODAL ================= */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-[#030c14]/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-6 animate-fadeIn">
-          {/* Modal Header Bar */}
+
           <div className="flex items-center justify-between text-white max-w-7xl w-full mx-auto pb-4 border-b border-white/10">
             <div>
               <h3 className="text-base sm:text-xl font-bold tracking-tight">
@@ -500,8 +456,6 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               <FaTimes className="w-5 h-5" />
             </button>
           </div>
-
-          {/* Modal Main Image Viewer */}
           <div className="relative max-w-5xl w-full h-[55vh] sm:h-[65vh] mx-auto my-auto flex items-center justify-center">
             <Image
               src={galleryImages[modalImageIndex] || pkg.image}
@@ -510,8 +464,6 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               className="object-contain"
               priority
             />
-
-            {/* Modal Left/Right Controls */}
             <button
               type="button"
               onClick={handleModalPrev}
@@ -530,8 +482,6 @@ export default function TourDetailHero({ pkg }: TourDetailHeroProps) {
               <FaChevronRight className="w-5 h-5" />
             </button>
           </div>
-
-          {/* Modal Bottom Thumbnails Strip */}
           <div className="max-w-7xl w-full mx-auto pt-4 border-t border-white/10">
             <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/20">
               {galleryImages.map((imgSrc, idx) => {

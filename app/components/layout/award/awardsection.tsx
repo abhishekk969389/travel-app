@@ -20,15 +20,12 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
 
     return (
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white overflow-hidden">
-            {/* Top Left World Map & Airplane Trail Doodle */}
             <div className="absolute top-2 left-2 sm:left-6 lg:left-12 hidden md:flex items-center gap-3 pointer-events-none select-none opacity-45">
-                {/* World Map Sketch & Flight Path */}
                 <svg
                     className="w-28 sm:w-36 h-20 text-slate-300 overflow-visible"
                     viewBox="0 0 140 80"
                     fill="none"
                 >
-                    {/* Faint map continent contours */}
                     <path
                         d="M 10 25 C 20 20, 35 25, 45 20 C 55 15, 60 25, 70 20"
                         stroke="currentColor"
@@ -41,14 +38,12 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                         strokeWidth="1"
                         strokeDasharray="2 2"
                     />
-                    {/* Dashed trail with looped heart */}
                     <path
                         d="M 8 58 C 20 40, 45 65, 75 35"
                         stroke="currentColor"
                         strokeWidth="1.5"
                         strokeDasharray="3 3"
                     />
-                    {/* Small flying airplane */}
                     <g transform="translate(75, 35) rotate(-35) scale(0.9)">
                         <path
                             d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
@@ -57,8 +52,6 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                         />
                     </g>
                 </svg>
-
-                {/* Handwritten Tagline Doodle */}
                 <div
                     className={`${scriptFont.className} text-xl sm:text-2xl text-slate-400 rotate-[-8deg] leading-tight shrink-0`}
                 >
@@ -75,7 +68,6 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
             </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Top Header */}
                 <FadeIn direction="up">
                     <div className="text-center max-w-2xl mx-auto mb-6">
                         <div className="flex items-center justify-center gap-2.5 mb-2.5">
@@ -96,8 +88,6 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                         </p>
                     </div>
                 </FadeIn>
-
-                {/* Awards Cards Grid - 5 Columns Layout */}
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
                     {data.items.map((item, idx) => {
                         const isPink = idx % 2 === 0;
@@ -110,7 +100,6 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                                 <div
                                     className={`group relative flex flex-col items-center ${themeClasses} rounded-2xl sm:rounded-[24px] p-3 border shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 h-full`}
                                 >
-                                    {/* Photo Frame Container - Taller Image Height */}
                                     <div className="relative w-full aspect-[4/4.8] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900/5 mb-4">
                                         <Image
                                             src={item.image}
@@ -120,21 +109,15 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
                                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
                                     </div>
-
-                                    {/* Year with pink underline bar */}
                                     <div className="flex flex-col items-center mb-2.5">
                                         <span className="text-sm sm:text-[15px] font-semibold text-slate-600 tracking-wider">
                                             {item.year}
                                         </span>
                                         <div className="w-6 h-[2.5px] bg-[#ff2e63] rounded-full mt-1.5" />
                                     </div>
-
-                                    {/* Award Title - Larger Font Size */}
                                     <h3 className="text-base sm:text-lg font-bold text-[#12161f] text-center leading-snug mb-2.5 group-hover:text-[#ff2e63] transition-colors duration-200">
                                         {item.title}
                                     </h3>
-
-                                    {/* Award Description - Larger Font Size */}
                                     <p className="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mt-auto">
                                         {item.description}
                                     </p>

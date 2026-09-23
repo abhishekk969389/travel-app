@@ -77,7 +77,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
 
     return (
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 bg-white overflow-hidden">
-            {/* Background Map Watermark (Like FAQ section) */}
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-[190px] sm:h-[230px] md:h-[300px] pointer-events-none select-none flex items-start justify-start overflow-hidden z-0 [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
@@ -95,9 +94,8 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
             </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
+
                 <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-6">
-                    {/* Badge with Gold Line Accents */}
                     <div className="inline-flex items-center justify-center gap-3 mb-2.5">
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                         <span className="text-xs sm:text-sm font-bold tracking-widest text-[#ff2e63] uppercase">
@@ -105,20 +103,15 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                         </span>
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                     </div>
-
-                    {/* Main Heading */}
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
                         <span>{header.headingPrefix} </span>
                         <span className="text-[#ff2e63]">{header.headingHighlight}</span>
                     </h1>
-
-                    {/* Description */}
                     <p className="text-gray-500 text-xs sm:text-base leading-relaxed max-w-xl mx-auto">
                         {header.description}
                     </p>
                 </FadeIn>
 
-                {/* 5-Columns Grid for Sitemap Categories */}
                 <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 items-stretch">
                     {categories.map((category: SitemapCategoryItem) => {
                         const isYellowTheme = category.theme === "yellow";
@@ -128,7 +121,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                 key={category.id}
                                 className="bg-white rounded-[20px] p-5 sm:p-6 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-start"
                             >
-                                {/* Category Header (Icon + Title) */}
                                 <div className="flex items-center gap-3.5 mb-5 pb-1">
                                     <div
                                         className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 shadow-sm ${isYellowTheme
@@ -142,8 +134,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                         {category.title}
                                     </h2>
                                 </div>
-
-                                {/* Category Links List */}
                                 <ul className="space-y-2.5">
                                     {category.links.map((link: SitemapLinkItem, index: number) => (
                                         <li key={`${category.id}-link-${index}`}>
@@ -161,7 +151,7 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                         );
                     })}
 
-                    {/* 15th Card: Decorative Night Sky & Mountain Graphic Card */}
+                  
                     <ScaleIn className="relative bg-gradient-to-b from-[#062433] via-[#083042] to-[#0A3D54] rounded-[20px] p-6 text-white overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] select-none">
                         {/* Top Stars & Flight Path SVG */}
                         <svg
@@ -170,7 +160,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            {/* Dashed Flight Curve */}
                             <path
                                 d="M 10 90 C 40 40, 110 50, 155 20"
                                 stroke="#FFFFFF"
@@ -179,8 +168,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                 strokeLinecap="round"
                                 opacity="0.75"
                             />
-
-                            {/* White Airplane */}
                             <g transform="translate(155, 18) rotate(15)">
                                 <path
                                     d="M 12 1 C 13 1, 14 1.8, 14 2.8 L 14 9.5 L 25 16.5 L 25 19 L 14 15.5 L 14 23 L 17 25.2 L 17 27.5 L 12 26 L 7 27.5 L 7 25.2 L 10 23 L 10 15.5 L -1 19 L -1 16.5 L 10 9.5 L 10 2.8 C 10 1.8, 11 1, 12 1 Z"
@@ -189,8 +176,6 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                                 />
                             </g>
                         </svg>
-
-                        {/* Diagonal Text Block: Plan, Explore, Discover */}
                         <div className="relative z-20 flex flex-col items-end justify-center pt-10 pr-6 select-none">
                             <div className="flex flex-col items-start -rotate-[22deg] space-y-0.5">
                                 <span className="font-[family-name:var(--font-script)] text-3xl font-medium text-white drop-shadow-md tracking-wide pl-2">
@@ -217,21 +202,16 @@ export default function SitemapSec({ data: propData }: SitemapSecProps = {}) {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            {/* Background Mountain Range */}
                             <path
                                 d="M 0 100 L 0 75 L 25 55 L 45 70 L 75 40 L 105 75 L 140 50 L 175 70 L 200 58 L 200 100 Z"
                                 fill="#00607A"
                                 opacity="0.5"
                             />
-
-                            {/* Foreground Mountain Range & Pine Trees */}
                             <path
                                 d="M 0 100 L 0 82 L 15 72 L 35 88 L 60 62 L 85 85 L 120 68 L 155 88 L 185 75 L 200 82 L 200 100 Z"
                                 fill="#004D63"
                                 opacity="0.9"
                             />
-
-                            {/* Tree Silhouettes Accent */}
                             <path
                                 d="M 5 100 L 5 88 L 8 83 L 11 88 L 11 100 
                                  M 18 100 L 18 85 L 22 78 L 26 85 L 26 100 

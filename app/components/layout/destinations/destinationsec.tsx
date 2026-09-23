@@ -106,10 +106,8 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
   return (
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <FadeIn direction="up">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-            {/* Top Badge with Horizontal Red Lines */}
             <div className="flex items-center justify-center gap-3 mb-2.5">
               <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
               <span className="text-xs sm:text-sm font-bold tracking-widest text-[#ff2e63] uppercase">
@@ -117,19 +115,13 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
               </span>
               <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
             </div>
-
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#12161f] tracking-tight mb-3 sm:mb-4">
               {data.header.titlePrefix}
               <span className="text-[#ff2e63]">{data.header.titleHighlight}</span>
             </h2>
-
-            {/* Description */}
             <p className="text-gray-500 text-xs sm:text-base leading-relaxed max-w-xl mx-auto">
               {data.header.description}
             </p>
-
-            {/* Category Tabs: Domestic & International */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-7">
               {data.tabs.map((tab) => {
                 const isActive = activeTab === tab.id;
@@ -157,8 +149,6 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
             </div>
           </div>
         </FadeIn>
-
-        {/* Destinations Grid: 4 Columns Layout */}
         <StaggerContainer key={activeTab + currentPage} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 items-start">
           {displayedDestinations.map((item) => {
             const isFav = Boolean(favorites[item.id]);
@@ -168,7 +158,6 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                 <div
                   className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
                 >
-                  {/* Photo Frame Container */}
                   <div className="relative w-full h-48 sm:h-52 overflow-hidden bg-slate-100">
                     <Image
                       src={item.image}
@@ -177,8 +166,6 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-
-                    {/* Favorite Heart Button */}
                     <button
                       type="button"
                       onClick={() => toggleFavorite(item.id)}
@@ -192,22 +179,15 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                       )}
                     </button>
                   </div>
-
-                  {/* Card Content Body */}
                   <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between">
                     <div>
-                      {/* Destination Title */}
                       <h3 className="text-lg sm:text-[19px] font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors line-clamp-1">
                         {item.name}
                       </h3>
-
-                      {/* Subtitle / Highlights */}
                       <p className="text-xs sm:text-[13px] text-gray-500 mt-1 font-normal line-clamp-1">
                         {item.subtitle}
                       </p>
                     </div>
-
-                    {/* Footer Row: 1st Tag Left, 2nd Tag Right with Space */}
                     <div className="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100 w-full">
                       {item.tags.map((tag, i) => (
                         <div
@@ -227,8 +207,6 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
             );
           })}
         </StaggerContainer>
-
-        {/* Pagination Controls */}
         {data.pagination && totalPages > 1 && (
           <div className="mt-8">
             <Pagination

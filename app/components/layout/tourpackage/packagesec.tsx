@@ -25,6 +25,7 @@ import type {
     TravelTourPackagesPageData,
     TourPackageCardItem,
     TourPackageFilterGroupItem,
+    TourPackageSortOptionItem,
 } from "@/data/index";
 import Pagination from "@/app/components/ui/pagination";
 import { FadeIn, StaggerContainer, MotionCard } from "@/app/components/ui/animations";
@@ -54,7 +55,7 @@ const renderFacilityIcon = (facility: string, className = "w-3.5 h-3.5") => {
 
 export default function PackageSec({ data: propData }: PackageSecProps = {}) {
     const data: TravelTourPackagesPageData = propData || travelData.tourPackagesPage;
-    const { header, filterSidebar, sortOptions, pagination: initialPagination, packages: allPackages } = data;
+    const { header, filterSidebar, sortOptions, pagination: initialPagination, packages: allPackages, toolbar, emptyState } = data as any;
 
     // Filter & Sort States
     const [selectedTourTypes, setSelectedTourTypes] = useState<string[]>([]);
@@ -199,9 +200,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
     return (
         <section className="relative w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 bg-white">
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
                 <FadeIn direction="up" className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-                    {/* Red Accent Badge */}
                     <div className="inline-flex items-center justify-center gap-3 mb-3">
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                         <span className="text-xs sm:text-sm font-bold tracking-wider text-[#12161f] uppercase">
@@ -209,20 +208,14 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                         </span>
                         <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
                     </div>
-
-                    {/* Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-5xl font-black text-[#101828] tracking-tight leading-tight mb-3">
                         <span>{header.headingPrefix}</span>
                         <span className="text-[#ff2e63]">{header.headingHighlight}</span>
                     </h1>
-
-                    {/* Subtitle */}
                     <p className="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
                         {header.description}
                     </p>
                 </FadeIn>
-
-                {/* Mobile Filter Toggle Button */}
                 <div className="lg:hidden mb-6 flex items-center justify-between gap-4 bg-gray-50 p-4 rounded-2xl border border-gray-200/80">
                     <button
                         type="button"
@@ -230,23 +223,19 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                         className="flex items-center gap-2 text-sm font-bold text-[#101828] px-4 py-2.5 rounded-xl bg-white border border-gray-200 shadow-sm"
                     >
                         <FaSlidersH className="w-4 h-4 text-[#ff2e63]" />
-                        <span>{isMobileFilterOpen ? "Hide Filters" : "Filter Packages"}</span>
+                        <span>{isMobileFilterOpen ? (toolbar?.hideFilterText || "Hide Filters") : (toolbar?.filterButtonText || "Filter Packages")}</span>
                     </button>
 
                     <span className="text-xs font-semibold text-gray-500">
-                        {totalItems} Packages Available
+                        {totalItems} {toolbar?.availableText || "Packages Available"}
                     </span>
                 </div>
-
-                {/* Main Content Layout: Left Sidebar Filter + Right Packages Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* ================= LEFT COLUMN: FILTER SIDEBAR ================= */}
                     <div
                         className={`lg:col-span-3 ${isMobileFilterOpen ? "block" : "hidden lg:block"
                             } lg:sticky lg:top-24 space-y-6`}
                     >
                         <div className="bg-white rounded-[20px] sm:rounded-[24px] border border-gray-200/80 shadow-[0_10px_35px_rgba(0,0,0,0.05)] overflow-hidden">
-                            {/* Filter Top Header Banner */}
                             <div className="bg-[#0B1727] text-white px-5 sm:px-6 py-4 flex items-center justify-between">
                                 <div className="flex items-center gap-2.5">
                                     <FaSlidersH className="w-4 h-4 text-[#ff2e63]" />
@@ -265,14 +254,12 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                 </button>
                             </div>
 
-                            {/* Filter Accordion Groups */}
                             <div className="p-5 sm:p-6 space-y-6 divide-y divide-gray-100">
                                 {filterSidebar.groups.map((group: TourPackageFilterGroupItem, idx: number) => {
                                     const isOpen = openFilterGroups[group.id] ?? true;
 
                                     return (
                                         <div key={group.id} className={idx > 0 ? "pt-5" : ""}>
-                                            {/* Accordion Header */}
                                             <button
                                                 type="button"
                                                 onClick={() => toggleGroup(group.id)}
@@ -286,7 +273,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                 )}
                                             </button>
 
-                                            {/* Accordion Body: Checkbox Options */}
                                             {isOpen && (
                                                 <div className="space-y-2.5 pt-1">
                                                     {group.options.map((option: string) => {
@@ -335,7 +321,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                 })}
                             </div>
 
-                            {/* Apply Filters Bottom Action Button */}
                             <div className="p-5 sm:p-6 pt-0">
                                 <button
                                     type="button"
@@ -349,21 +334,19 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                         </div>
                     </div>
 
-                    {/* ================= RIGHT COLUMN: PACKAGES GRID ================= */}
                     <div className="lg:col-span-9 flex flex-col justify-start">
                         {/* Top Toolbar: Showing Counter & Sort By Dropdown */}
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 mb-2 border-b border-gray-100">
                             <span className="text-xs sm:text-sm font-semibold text-gray-600">
-                                Showing {totalItems > 0 ? startIndex + 1 : 0}–{endIndex} of {totalItems} Packages
+                                {toolbar?.showingText || "Showing"} {totalItems > 0 ? startIndex + 1 : 0}–{endIndex} {toolbar?.ofText || "of"} {totalItems} {toolbar?.packagesUnit || "Packages"}
                             </span>
 
-                            {/* Custom Sort By Dropdown */}
                             <div className="flex items-center gap-2">
                                 <span className="text-xs sm:text-sm font-bold text-slate-700 whitespace-nowrap">
-                                    Sort By:
+                                    {toolbar?.sortByLabel || "Sort By:"}
                                 </span>
                                 <div className="relative" ref={sortDropdownRef}>
-                                    {/* Trigger Button */}
+
                                     <button
                                         type="button"
                                         onClick={() => setIsSortDropdownOpen((prev) => !prev)}
@@ -373,7 +356,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                             }`}
                                     >
                                         <span>
-                                            {sortOptions.find((opt) => opt.value === sortBy)?.label || "Most Popular"}
+                                            {sortOptions.find((opt: TourPackageSortOptionItem) => opt.value === sortBy)?.label || "Most Popular"}
                                         </span>
                                         <FaChevronDown
                                             className={`w-3 h-3 text-[#ff2e63] transition-transform duration-200 ${isSortDropdownOpen ? "rotate-180" : ""
@@ -381,10 +364,9 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                         />
                                     </button>
 
-                                    {/* Dropdown Options Popup */}
                                     {isSortDropdownOpen && (
                                         <div className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-gray-100 py-1.5 z-40 overflow-hidden">
-                                            {sortOptions.map((opt) => {
+                                            {sortOptions.map((opt: TourPackageSortOptionItem) => {
                                                 const isSelected = opt.value === sortBy;
                                                 return (
                                                     <button
@@ -410,7 +392,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                             </div>
                         </div>
 
-                        {/* Packages Grid (3 Columns) */}
                         {currentPackages.length > 0 ? (
                             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
                                 {currentPackages.map((pkg: TourPackageCardItem) => {
@@ -422,7 +403,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                             key={pkg.id}
                                             className="group bg-white rounded-[22px] overflow-hidden border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
                                         >
-                                            {/* Package Image & Top Badges */}
                                             <div className="relative w-full h-[200px] sm:h-[210px] overflow-hidden">
                                                 <Link href={detailHref} className="block relative w-full h-full">
                                                     <Image
@@ -433,18 +413,14 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                         className="object-cover group-hover:scale-108 transition-transform duration-500 ease-out cursor-pointer"
                                                     />
                                                 </Link>
-
-                                                {/* Top Gradient Overlay */}
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
 
-                                                {/* Duration Pill Badge */}
                                                 <div className="absolute top-3.5 left-3.5 z-10">
                                                     <span className="px-3.5 py-1 rounded-full bg-[#0B1727]/90 backdrop-blur-md text-white font-bold text-xs shadow-sm border border-white/15">
                                                         {pkg.duration}
                                                     </span>
                                                 </div>
 
-                                                {/* Wishlist Heart Button */}
                                                 <button
                                                     type="button"
                                                     onClick={(e) => toggleWishlist(pkg.id, e)}
@@ -458,11 +434,8 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                     )}
                                                 </button>
                                             </div>
-
-                                            {/* Package Content Info */}
                                             <div className="p-5 sm:p-5.5 flex-1 flex flex-col justify-between">
                                                 <div>
-                                                    {/* Title & Subtitle */}
                                                     <Link href={detailHref} className="block group/title">
                                                         <h2 className="text-base sm:text-lg font-extrabold text-[#101828] group-hover/title:text-[#ff2e63] group-hover:text-[#ff2e63] transition-colors leading-tight mb-1">
                                                             {pkg.title}
@@ -472,7 +445,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                         {pkg.subtitle}
                                                     </p>
 
-                                                    {/* Facilities Row */}
                                                     <div className="flex items-center gap-3.5 text-xs text-gray-600 font-medium mb-3.5 pb-3.5 border-b border-gray-100">
                                                         {pkg.facilities.slice(0, 3).map((facility: string) => (
                                                             <div key={facility} className="flex items-center gap-1.5 shrink-0">
@@ -486,10 +458,7 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                         ))}
                                                     </div>
                                                 </div>
-
-                                                {/* Bottom Row: Rating, Price & CTA Arrow Button */}
                                                 <div>
-                                                    {/* Reviews Rating */}
                                                     <div className="flex items-center gap-1.5 mb-2.5 text-xs font-bold text-slate-700">
                                                         <FaStar className="w-3.5 h-3.5 text-[#ff2e63]" />
                                                         <span>{pkg.rating}</span>
@@ -497,8 +466,6 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                                                             ({pkg.reviewsCount} Reviews)
                                                         </span>
                                                     </div>
-
-                                                    {/* Price & Red Circle Button */}
                                                     <div className="flex items-center justify-between pt-1">
                                                         <div className="flex items-baseline gap-1">
                                                             <span className="text-xl sm:text-2xl font-black text-[#ff2e63] leading-none">
@@ -527,17 +494,17 @@ export default function PackageSec({ data: propData }: PackageSecProps = {}) {
                             /* Empty State */
                             <div className="bg-gray-50 rounded-2xl p-10 text-center border border-gray-200/80 my-8">
                                 <p className="text-base font-bold text-slate-700 mb-2">
-                                    No packages match your selected filters.
+                                    {emptyState?.title || "No packages match your selected filters."}
                                 </p>
                                 <p className="text-xs sm:text-sm text-gray-500 mb-5">
-                                    Try clearing some filters to see available tour packages.
+                                    {emptyState?.description || "Try clearing some filters to see available tour packages."}
                                 </p>
                                 <button
                                     type="button"
                                     onClick={handleReset}
                                     className="px-5 py-2.5 rounded-xl bg-[#ff2e63] text-white text-xs font-bold shadow-md shadow-[#ff2e63]/20 hover:bg-[#e02454] transition-all cursor-pointer"
                                 >
-                                    Reset All Filters
+                                    {emptyState?.resetButtonText || "Reset All Filters"}
                                 </button>
                             </div>
                         )}

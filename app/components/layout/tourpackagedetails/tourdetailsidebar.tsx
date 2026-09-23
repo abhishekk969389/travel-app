@@ -13,16 +13,19 @@ import {
   FaTimes,
   FaExpand,
 } from "react-icons/fa";
-import type { TourPackageCardItem } from "@/data/index";
+import type { TourPackageCardItem, TourPackageDetailsLabels } from "@/data/index";
+import { site } from "@/data/index";
 import { FadeIn, StaggerContainer, MotionCard, ScaleIn } from "@/app/components/ui/animations";
 
 interface TourDetailSidebarProps {
   pkg?: TourPackageCardItem;
+  labels?: TourPackageDetailsLabels;
 }
 
-export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
+export default function TourDetailSidebar({ pkg, labels: propLabels }: TourDetailSidebarProps) {
   if (!pkg) return null;
 
+  const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
   const details = pkg.details;
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -111,7 +114,7 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
         <div className="flex items-center justify-between">
           <div>
             <h4 className="text-lg font-extrabold text-[#12161f] tracking-tight">
-              Gallery
+              {labels?.galleryTitle || "Gallery"}
             </h4>
             <div className="w-8 h-[2.5px] bg-[#ff2e63] rounded-full mt-1" />
           </div>
@@ -122,7 +125,7 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
               onClick={() => openModal(0)}
               className="text-xs font-bold text-slate-500 hover:text-[#ff2e63] transition-colors mr-1 cursor-pointer"
             >
-              View All
+              {labels?.viewAll || "View All"}
             </button>
             <button
               type="button"
@@ -171,7 +174,7 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
         <div className="flex items-center justify-between">
           <div>
             <h4 className="text-lg font-extrabold text-[#12161f] tracking-tight">
-              Related Tour Packages
+              {labels?.relatedPackagesTitle || "Related Tour Packages"}
             </h4>
             <div className="w-8 h-[2.5px] bg-[#ff2e63] rounded-full mt-1" />
           </div>
@@ -181,7 +184,7 @@ export default function TourDetailSidebar({ pkg }: TourDetailSidebarProps) {
               href="/tourpackage"
               className="text-xs font-bold text-slate-500 hover:text-[#ff2e63] transition-colors mr-1"
             >
-              View All
+              {labels?.viewAll || "View All"}
             </Link>
             <button
               type="button"

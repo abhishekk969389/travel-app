@@ -64,7 +64,6 @@ export default function Banner() {
 
     return (
         <section className="relative w-full h-[480px] sm:h-[520px] lg:h-[580px] overflow-hidden bg-[#070b12]">
-            {/* Sliding Container for Multi-Slide Carousel */}
             <div
                 style={{
                     transform: `translateX(-${virtualIndex * 100}%)`,
@@ -80,7 +79,6 @@ export default function Banner() {
                         key={index}
                         className="relative w-full h-full shrink-0 flex flex-col justify-center overflow-hidden"
                     >
-                        {/* Background Image (Full-bleed per slide) */}
                         <Image
                             src={slide.backgroundImage || "/bannerimg.png"}
                             alt={slide.headingLine1 || "Travel Banner"}
@@ -89,14 +87,10 @@ export default function Banner() {
                             sizes="100vw"
                             className="object-cover object-center"
                         />
-
-                        {/* Mobile Only: Full-bleed Dark Tint for Mobile Text Contrast */}
                         <div
                             aria-hidden="true"
                             className="absolute inset-0 z-10 bg-black/70 pointer-events-none block sm:hidden"
                         />
-
-                        {/* Tablet & Desktop Only: Skewed Red/Orange Gradient Accent Line */}
                         <svg
                             aria-hidden="true"
                             className="hidden sm:block absolute top-0 left-0 z-15 sm:w-[75%] md:w-[65%] lg:w-[58%] xl:w-[54%] h-[34%] sm:h-[36%] lg:h-[38%] pointer-events-none"
@@ -115,8 +109,6 @@ export default function Banner() {
                                 fill={`url(#redOrangeGradient-${index})`}
                             />
                         </svg>
-
-                        {/* Tablet & Desktop Only: Translucent Dark Overlay on Left with Skewed Right Edge */}
                         <div
                             aria-hidden="true"
                             className="hidden sm:block absolute inset-y-0 left-0 z-10 sm:w-[75%] md:w-[65%] lg:w-[58%] xl:w-[54%] pointer-events-none"
@@ -126,36 +118,25 @@ export default function Banner() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-[#05080e]/95 via-[#070c16]/92 to-[#070c16]/75" />
                         </div>
-
-                        {/* Tablet & Desktop Only: Top-Right Corner Skewed Accent */}
                         <div
                             aria-hidden="true"
                             className="hidden sm:block absolute top-0 right-0 z-10 h-full w-12 sm:w-16 md:w-20 pointer-events-none bg-gradient-to-b from-[#ff2e63] via-[#ff6b00] to-[#e0124a]"
                             style={{ clipPath: "polygon(15% 0, 100% 0, 100% 35%)" }}
                         />
-
-                        {/* Slide Content Container */}
                         <div className="relative z-20 mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
                             <div className="max-w-[440px] lg:max-w-[480px] xl:max-w-[520px]">
-                                {/* Subtitle Script Font */}
                                 <span className="block font-[family-name:var(--font-script)] text-3xl sm:text-3xl font-normal text-[#ff6b00] mb-1">
                                     {slide.subtitle}
                                 </span>
-
-                                {/* Main Heading */}
                                 <h1 className="text-[2.65rem] sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-extrabold text-white tracking-tight leading-[1.08]">
                                     <div>{slide.headingLine1}</div>
                                     <div className="bg-gradient-to-r from-[#ff2e63] via-[#ff5a5f] to-[#ff6b00] bg-clip-text text-transparent">
                                         {slide.headingLine2}
                                     </div>
                                 </h1>
-
-                                {/* Description */}
                                 <p className="mt-3.5 sm:mt-4 max-w-[390px] sm:max-w-[420px] text-sm sm:text-sm md:text-base text-white/85 leading-relaxed font-normal drop-shadow-sm">
                                     {slide.description}
                                 </p>
-
-                                {/* CTA Button */}
                                 <Link
                                     href={slide.cta?.href || "/destinations"}
                                     className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-[#c40050] via-[#ff2e63] to-[#ff6b00] text-white font-semibold text-sm sm:text-sm md:text-base px-7 sm:px-7 py-3.5 sm:py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:opacity-95 transition-all duration-300 mt-5 sm:mt-8 w-fit"
@@ -168,8 +149,6 @@ export default function Banner() {
                     </div>
                 ))}
             </div>
-
-            {/* Interactive Slide Dots Indicator (Fixed Overlay Position) */}
             <div className="absolute bottom-6 sm:bottom-8 lg:bottom-10 left-0 right-0 z-30 pointer-events-auto">
                 <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-2.5">
