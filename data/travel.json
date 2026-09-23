@@ -246,7 +246,7 @@
                 "id": "2",
                 "name": "Greece",
                 "subtitle": "Explore Destination",
-                "image": "/location/Greece1.jpg",
+                "image": "/location/greece1.jpg",
                 "accentColor": "#ff6b00",
                 "tilt": "-rotate-1 lg:-rotate-3 lg:-translate-y-1",
                 "href": "/destination/greece"
@@ -255,7 +255,7 @@
                 "id": "3",
                 "name": "Bali",
                 "subtitle": "Explore Destination",
-                "image": "/location/Bali2.jpg",
+                "image": "/location/bali2.jpg",
                 "accentColor": "#ff2e63",
                 "tilt": "rotate-0 lg:-translate-y-3",
                 "href": "/destination/bali"
@@ -722,7 +722,7 @@
                 "duration": "5 Days",
                 "title": "Bali, Indonesia",
                 "subtitle": "Beaches, Temples & Culture",
-                "image": "/location/Bali2.jpg",
+                "image": "/location/bali2.jpg",
                 "rating": 4.8,
                 "reviewsCount": 320,
                 "price": 699,
