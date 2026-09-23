@@ -41,7 +41,7 @@ export type TravelSitemapData = typeof sections.Sitemap.variants.TravelSitemap1;
 export type TravelServicesData = typeof sections.Services.variants.TravelServices1;
 export type TravelTourPackagesPageData = typeof sections.TourPackagesPage.variants.TravelTourPackagesPage1;
 
-// Nested helper types
+
 export type LinkItem = TravelNavbarData["navLinks"][number];
 export type SocialLink = TravelTopbarData["socialLinks"][number];
 export type DestinationItem = TravelDestinationsData["items"][number];
