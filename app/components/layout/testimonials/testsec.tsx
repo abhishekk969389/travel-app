@@ -63,30 +63,35 @@ export default function TestimonialsSection({
             </p>
 
             {/* Decorative Flight Trail with Heart and Plane Icon (Screenshot Match) */}
-            <div className="hidden lg:flex items-center absolute -right-48 xl:-right-64 -top-4 pointer-events-none select-none">
-              <div className="relative w-36 h-28">
+            <div className="hidden lg:flex items-center absolute -right-32 xl:-right-48 -top-16 pointer-events-none select-none">
+              <div className="relative w-64 h-64">
                 <svg
-                  viewBox="0 0 140 100"
+                  viewBox="0 0 240 240"
                   fill="none"
-                  className="w-full h-full text-[#ff2e63]/70"
+                  className="w-full h-full text-[#ff2e63] overflow-visible"
                 >
+                  {/* 
+              Single continuous trail matching the screenshot:
+              Bottom-left swoop -> Loops right -> Forms tilted heart -> Curves up to the plane
+            */}
                   <path
-                    d="M 20 70 C 0 50, 0 15, 35 15 C 55 15, 65 35, 70 45 C 75 35, 85 15, 105 15 C 140 15, 140 50, 100 80 C 85 90, 75 95, 70 98"
+                    d="M 35 185 
+                   C 75 185, 95 170, 115 145 
+                   C 135 110, 118 70, 95 72 
+                   C 82 73, 76 83, 75 92 
+                   C 68 85, 56 83, 49 97 
+                   C 40 115, 60 140, 115 145 
+                   C 135 147, 160 120, 172 65"
                     stroke="currentColor"
-                    strokeWidth="2"
-                    strokeDasharray="4 4"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M 100 80 C 120 70, 130 50, 135 30"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeDasharray="4 4"
+                    strokeWidth="1"
+                    strokeDasharray="5 5"
                     strokeLinecap="round"
                   />
                 </svg>
-                <div className="absolute right-0 top-3 text-[#ff2e63] transform rotate-45 scale-110">
-                  <FaPlane className="w-5 h-5 drop-shadow-sm" />
+
+                {/* Aeroplane at the top-right end pointing up-right */}
+                <div className="absolute left-[67%] top-[12%] text-[#ff2e63] transform -rotate-[50deg] scale-125">
+                  <FaPlane className="w-6 h-6 drop-shadow-sm" />
                 </div>
               </div>
             </div>

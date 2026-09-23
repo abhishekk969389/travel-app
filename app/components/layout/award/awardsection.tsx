@@ -20,6 +20,7 @@ export default function AwardSection({ data: propData }: AwardSectionProps = {})
 
     return (
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white overflow-hidden">
+            
             <div className="absolute top-2 left-2 sm:left-6 lg:left-12 hidden md:flex items-center gap-3 pointer-events-none select-none opacity-45">
                 <svg
                     className="w-28 sm:w-36 h-20 text-slate-300 overflow-visible"

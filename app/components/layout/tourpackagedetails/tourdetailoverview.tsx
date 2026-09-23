@@ -48,49 +48,10 @@ export default function TourDetailOverview({ pkg, labels: propLabels }: TourDeta
   const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
   const details = pkg.details;
 
-  const defaultStats = [
-    { label: "Destination", value: details?.location || pkg.title, icon: "FaMapMarkerAlt" },
-    { label: "Duration", value: details?.durationBadge || pkg.duration || "5 Days 4 Nights", icon: "FaCalendarAlt" },
-    { label: "Tour Type", value: "Leisure / Family", icon: "FaUsers" },
-    { label: "Best Time to Visit", value: "Apr - Oct", icon: "FaTag" },
-  ];
-
-  const quickStats = details?.quickStats || defaultStats;
-
-  const defaultHighlights = [
-    { title: "Visit stunning beaches like Kuta, Seminyak & Nusa Dua", icon: "FaTree" },
-    { title: "Discover lush rice terraces and natural landscapes", icon: "FaMountain" },
-    { title: "Explore iconic temples such as Uluwatu & Tanah Lot", icon: "FaLandmark" },
-    { title: "Experience Balinese culture and local traditions", icon: "FaHandshake" },
-    { title: "Capture breathtaking sunsets and scenic views", icon: "FaCamera" },
-    { title: "Enjoy shopping, local markets and delicious Balinese cuisine", icon: "FaShoppingBag" },
-  ];
-
-  const highlights = details?.highlights || defaultHighlights;
-
-  const defaultWhatsIncluded = [
-    "Return flights (Economy Class)",
-    "4 nights hotel accommodation",
-    "Daily breakfast at hotel",
-    "Airport transfers (pickup & drop)",
-    "Sightseeing tours as per itinerary",
-    "Professional tour guide",
-    "All applicable taxes",
-  ];
-
-  const whatsIncluded = details?.whatsIncluded || defaultWhatsIncluded;
-
-  const defaultWhatsNotIncluded = [
-    "Visa fees (if applicable)",
-    "Travel insurance",
-    "Lunch and dinner (unless specified)",
-    "Personal expenses (shopping, etc.)",
-    "Optional activities and excursions",
-    "Tips and gratuities",
-    "Anything not mentioned in inclusions",
-  ];
-
-  const whatsNotIncluded = details?.whatsNotIncluded || defaultWhatsNotIncluded;
+  const quickStats = details?.quickStats || [];
+  const highlights = details?.highlights || [];
+  const whatsIncluded = details?.whatsIncluded || [];
+  const whatsNotIncluded = details?.whatsNotIncluded || [];
 
   return (
     <div className="space-y-8 sm:space-y-10">
@@ -116,7 +77,7 @@ export default function TourDetailOverview({ pkg, labels: propLabels }: TourDeta
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {highlights.map((item, idx) => (
               <StaggerItem key={idx} className="flex items-start gap-3.5 group">
-                <div className="w-10 h-10 rounded-full bg-[#ffe8ed] group-hover:bg-[#ff2e63] transition-colors duration-300 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+                <div className="w-10 h-10 rounded-full bg-[#ffe8ed] transition-colors duration-300 flex items-center justify-center shrink-0 shadow-xs mt-0.5">
                   {renderHighlightIcon(item.icon)}
                 </div>
                 <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">

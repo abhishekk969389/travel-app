@@ -55,22 +55,7 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
   const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
 
   const details = pkg.details;
-  const defaultImages = [
-    pkg.image || "/whychoose_packages.jpg",
-    "/whychoose_fjord.jpg",
-    "/about2.jpg",
-    "/blog1.jpg",
-    "/blog2.jpg",
-    "/blog3.jpg",
-    "/about1.jpg",
-    "/whychoose_packages.jpg",
-    "/whychoose_fjord.jpg",
-    "/about2.jpg",
-    "/blog1.jpg",
-    "/blog2.jpg",
-  ];
-
-  const galleryImages = details?.galleryImages || defaultImages;
+  const galleryImages = details?.galleryImages || (pkg.image ? [pkg.image] : []);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   // Lightbox Modal State
@@ -129,14 +114,7 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
 
   const location = details?.location || pkg.title;
 
-  const defaultStats = [
-    { label: "Destination", value: location, icon: "FaMapMarkerAlt" },
-    { label: "Duration", value: details?.durationBadge || pkg.duration || "5 Days 4 Nights", icon: "FaCalendarAlt" },
-    { label: "Tour Type", value: "Leisure / Family", icon: "FaUsers" },
-    { label: "Best Time to Visit", value: "Apr - Oct", icon: "FaTag" },
-  ];
-
-  const quickStats = details?.quickStats || defaultStats;
+  const quickStats = details?.quickStats || [];
 
   return (
     <div className="space-y-6 sm:space-y-8">
@@ -259,13 +237,7 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
                 `Experience the magic of ${pkg.title}, ${pkg.subtitle.toLowerCase()}. This ${pkg.duration} tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.`}
             </p>
             <div className="grid grid-cols-5 gap-2 pt-1 mb-2">
-              {(details?.quickInclusions || [
-                { label: "Flights Included", icon: "FaPlane" },
-                { label: "Hotel Stay", icon: "FaHotel" },
-                { label: "Sightseeing Tours", icon: "FaBinoculars" },
-                { label: "Daily Breakfast", icon: "FaUtensils" },
-                { label: "Airport Transfers", icon: "FaCar" },
-              ]).map((item, idx) => (
+              {(details?.quickInclusions || []).map((item, idx) => (
                 <div
                   key={idx}
                   className="flex flex-col items-center text-center gap-1.5 group cursor-pointer"

@@ -39,21 +39,6 @@ export default function Blog({ isPage = false }: BlogProps = {}) {
 
     return (
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30">
-            <div className="absolute top-6 right-8 md:right-16 opacity-30 pointer-events-none hidden sm:block">
-                <div className="relative">
-                    <svg
-                        className="w-48 h-24 text-pink-400 stroke-current fill-none"
-                        viewBox="0 0 200 100"
-                    >
-                        <path
-                            d="M 10 80 Q 70 10 160 30"
-                            strokeDasharray="4 4"
-                            strokeWidth="1.5"
-                        />
-                    </svg>
-                    <FaPlane className="absolute top-4 right-6 text-pink-500 text-lg transform rotate-[25deg]" />
-                </div>
-            </div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 <FadeIn direction="up">

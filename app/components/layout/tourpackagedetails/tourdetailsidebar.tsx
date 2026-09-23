@@ -37,14 +37,7 @@ export default function TourDetailSidebar({ pkg, labels: propLabels }: TourDetai
     );
   };
 
-  const defaultGallery = [
-    "/whychoose_packages.jpg",
-    "/about1.jpg",
-    "/about2.jpg",
-    "/blog1.jpg",
-  ];
-
-  const galleryImages = details?.sidebarGallery || details?.galleryImages || defaultGallery;
+  const galleryImages = details?.sidebarGallery || details?.galleryImages || (pkg.image ? [pkg.image] : []);
 
   const openModal = (index: number) => {
     setModalImageIndex(index);
@@ -59,34 +52,7 @@ export default function TourDetailSidebar({ pkg, labels: propLabels }: TourDetai
     setModalImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
 
-  const defaultRelated = [
-    {
-      id: "pkg-2",
-      title: "Singapore",
-      subtitle: "City of Lights & Modern Marvels",
-      image: "/blog1.jpg",
-      duration: "6 Days",
-      rating: 4.9,
-      reviewsCount: 280,
-      priceFormatted: "$899",
-      priceUnit: "/Person",
-      href: "/tourpackagedetails?id=pkg-2",
-    },
-    {
-      id: "pkg-3",
-      title: "Bangkok, Thailand",
-      subtitle: "Vibrant Culture & Street Life",
-      image: "/blog2.jpg",
-      duration: "7 Days",
-      rating: 4.7,
-      reviewsCount: 190,
-      priceFormatted: "$699",
-      priceUnit: "/Person",
-      href: "/tourpackagedetails?id=pkg-3",
-    },
-  ];
-
-  const relatedPackages = details?.relatedPackages || defaultRelated;
+  const relatedPackages = details?.relatedPackages || [];
 
   return (
     <div className="space-y-8">

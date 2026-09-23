@@ -349,7 +349,7 @@
                 "id": "delhi",
                 "name": "Delhi",
                 "subtitle": "History, Culture & Modern Vibes",
-                "image": "/about1.jpg",
+                "image": "/destination/Delhi.jpg",
                 "tags": [
                   {
                     "label": "Historical Sites",
@@ -366,7 +366,7 @@
                 "id": "himachal",
                 "name": "Himachal Pradesh",
                 "subtitle": "Mountains, Adventure & Serenity",
-                "image": "/whychoose_fjord.jpg",
+                "image": "/destination/himachal.jpg",
                 "tags": [
                   {
                     "label": "Mountains",
@@ -383,7 +383,7 @@
                 "id": "goa",
                 "name": "Goa",
                 "subtitle": "Sun, Sand & Vibrant Nightlife",
-                "image": "/blog2.jpg",
+                "image": "/destination/Goa.jpg",
                 "tags": [
                   {
                     "label": "Beaches",
@@ -400,7 +400,7 @@
                 "id": "kerala",
                 "name": "Kerala",
                 "subtitle": "Backwaters, Beaches & Nature",
-                "image": "/blog3.jpg",
+                "image": "/destination/Kerala.jpg",
                 "tags": [
                   {
                     "label": "Backwaters",
@@ -417,7 +417,7 @@
                 "id": "lakshadweep",
                 "name": "Lakshadweep",
                 "subtitle": "Pristine Beaches & Crystal Waters",
-                "image": "/blog1.jpg",
+                "image": "/destination/Lakshadweep.jpg",
                 "tags": [
                   {
                     "label": "Beaches",
@@ -434,7 +434,7 @@
                 "id": "kashmir",
                 "name": "Jammu & Kashmir",
                 "subtitle": "Heaven on Earth",
-                "image": "/santorini_mission.jpg",
+                "image": "/destination/jammu.jpg",
                 "tags": [
                   {
                     "label": "Lakes",
@@ -451,7 +451,7 @@
                 "id": "uttar-pradesh",
                 "name": "Uttar Pradesh",
                 "subtitle": "Spirituality, Heritage & Culture",
-                "image": "/about2.jpg",
+                "image": "/destination/Uttar.jpg",
                 "tags": [
                   {
                     "label": "Spiritual",
@@ -468,7 +468,7 @@
                 "id": "mumbai",
                 "name": "Mumbai",
                 "subtitle": "City of Dreams",
-                "image": "/whychoose_main.jpg",
+                "image": "/destination/Mumbai.jpg",
                 "tags": [
                   {
                     "label": "City Tours",
@@ -4749,7 +4749,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "FRANCE",
+                  "location": "Paris, France",
+                  "durationBadge": "6 Days / 5 Nights",
+                  "galleryImages": [
+                    "/about1.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Paris, France, city of love & lights. This 6 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Paris, France",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "6 Days 5 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Honeymoon Tour / Couple Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Paris, France is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Paris, France with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Paris",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "5 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Paris",
+                      "description": "Welcome to Paris! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Paris City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Paris."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Paris."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-3",
@@ -4775,7 +4931,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "UAE",
+                  "location": "Dubai, UAE",
+                  "durationBadge": "4 Days / 3 Nights",
+                  "galleryImages": [
+                    "/about2.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Dubai, UAE, modern city, timeless experiences. This 4 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Dubai, UAE",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "4 Days 3 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Luxury Tour / Family Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Dubai, UAE is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Dubai, UAE with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Dubai",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "3 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Dubai",
+                      "description": "Welcome to Dubai! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Dubai City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Dubai."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Dubai."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-4",
@@ -4801,7 +5113,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "MALDIVES",
+                  "location": "Maldives",
+                  "durationBadge": "5 Days / 4 Nights",
+                  "galleryImages": [
+                    "/whychoose_fjord.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Maldives, crystal waters & peaceful escapes. This 5 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Maldives",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "5 Days 4 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Honeymoon Tour / Couple Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Maldives is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Maldives with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Maldives",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "4 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Maldives",
+                      "description": "Welcome to Maldives! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Maldives City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Maldives."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Maldives."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-5",
@@ -4828,7 +5296,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "SWITZERLAND",
+                  "location": "Switzerland",
+                  "durationBadge": "7 Days / 6 Nights",
+                  "galleryImages": [
+                    "/santorini_mission.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Switzerland, alpine beauty & scenic trains. This 7 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Switzerland",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "7 Days 6 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Family Tour / Luxury Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Switzerland is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Switzerland with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Switzerland",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "6 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Switzerland",
+                      "description": "Welcome to Switzerland! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Switzerland City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Switzerland."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Switzerland."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-6",
@@ -4854,7 +5478,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "GREECE",
+                  "location": "Santorini, Greece",
+                  "durationBadge": "5 Days / 4 Nights",
+                  "galleryImages": [
+                    "/whychoose_guide.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Santorini, Greece, white villages & blue views. This 5 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Santorini, Greece",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "5 Days 4 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Honeymoon Tour / Couple Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Santorini, Greece is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Santorini, Greece with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Santorini",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "4 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Santorini",
+                      "description": "Welcome to Santorini! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Santorini City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Santorini."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Santorini."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-7",
@@ -4881,7 +5661,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "THAILAND",
+                  "location": "Bangkok, Thailand",
+                  "durationBadge": "6 Days / 5 Nights",
+                  "galleryImages": [
+                    "/whychoose_main.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Bangkok, Thailand, vibrant culture & street life. This 6 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Bangkok, Thailand",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "6 Days 5 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Budget Tour / Group Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Bangkok, Thailand is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Bangkok, Thailand with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Bangkok",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "5 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Bangkok",
+                      "description": "Welcome to Bangkok! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Bangkok City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Bangkok."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Bangkok."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-8",
@@ -4907,7 +5843,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "USA",
+                  "location": "New York, USA",
+                  "durationBadge": "8 Days / 7 Nights",
+                  "galleryImages": [
+                    "/blog1.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of New York, USA, iconic sights & urban adventures. This 8 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "New York, USA",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "8 Days 7 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Family Tour / Group Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "New York, USA is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of New York, USA with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in New York",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "7 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in New York",
+                      "description": "Welcome to New York! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "New York City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across New York."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around New York."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-9",
@@ -4933,7 +6025,163 @@
                   "Sightseeing"
                 ],
                 "featured": true,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "UK",
+                  "location": "London, UK",
+                  "durationBadge": "5 Days / 4 Nights",
+                  "galleryImages": [
+                    "/blog2.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of London, UK, history, culture & royal vibes. This 5 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "London, UK",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "5 Days 4 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Family Tour / Group Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "London, UK is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of London, UK with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in London",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "4 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in London",
+                      "description": "Welcome to London! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "London City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across London."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around London."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-10",
@@ -4960,7 +6208,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "INDIA",
+                  "location": "Goa, India",
+                  "durationBadge": "4 Days / 3 Nights",
+                  "galleryImages": [
+                    "/Travelphotos.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Goa, India, golden beaches & coastal serenity. This 4 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Goa, India",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "4 Days 3 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Weekend Getaway / Couple Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Goa, India is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Goa, India with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Goa",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "3 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Goa",
+                      "description": "Welcome to Goa! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Goa City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Goa."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Goa."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-11",
@@ -4987,7 +6391,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "INDIA",
+                  "location": "Kerala, India",
+                  "durationBadge": "6 Days / 5 Nights",
+                  "galleryImages": [
+                    "/whychoose_safety.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Kerala, India, god's own country & backwaters. This 6 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Kerala, India",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "6 Days 5 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Family Tour / Honeymoon Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Kerala, India is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Kerala, India with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Kerala",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "5 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Kerala",
+                      "description": "Welcome to Kerala! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Kerala City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Kerala."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Kerala."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-12",
@@ -5014,7 +6574,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "INDIA",
+                  "location": "Himachal Pradesh, India",
+                  "durationBadge": "7 Days / 6 Nights",
+                  "galleryImages": [
+                    "/whychoose_support.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Himachal Pradesh, India, snow peaks & mountain trails. This 7 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Himachal Pradesh, India",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "7 Days 6 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Adventure Tour / Group Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Himachal Pradesh, India is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Himachal Pradesh, India with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Himachal Pradesh",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "6 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Himachal Pradesh",
+                      "description": "Welcome to Himachal Pradesh! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Himachal Pradesh City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Himachal Pradesh."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Himachal Pradesh."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-13",
@@ -5040,7 +6756,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "JAPAN",
+                  "location": "Tokyo & Kyoto, Japan",
+                  "durationBadge": "9 Days / 8 Nights",
+                  "galleryImages": [
+                    "/blog3.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Tokyo & Kyoto, Japan, tradition meets futuristic wonder. This 9 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Tokyo & Kyoto, Japan",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "9 Days 8 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Luxury Tour / Family Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Tokyo & Kyoto, Japan is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Tokyo & Kyoto, Japan with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Tokyo & Kyoto",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "8 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Tokyo & Kyoto",
+                      "description": "Welcome to Tokyo & Kyoto! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Tokyo & Kyoto City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Tokyo & Kyoto."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Tokyo & Kyoto."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-14",
@@ -5066,7 +6938,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "SOUTH AFRICA",
+                  "location": "Cape Town, South Africa",
+                  "durationBadge": "8 Days / 7 Nights",
+                  "galleryImages": [
+                    "/achievement.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Cape Town, South Africa, wild safaris & table mountain views. This 8 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Cape Town, South Africa",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "8 Days 7 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Wildlife Tour / Adventure Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Cape Town, South Africa is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Cape Town, South Africa with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Cape Town",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "7 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Cape Town",
+                      "description": "Welcome to Cape Town! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Cape Town City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Cape Town."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Cape Town."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-15",
@@ -5092,7 +7120,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "INDIA",
+                  "location": "Varanasi & Rishikesh, India",
+                  "durationBadge": "5 Days / 4 Nights",
+                  "galleryImages": [
+                    "/whychooseus.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Varanasi & Rishikesh, India, spiritual ghats & holy ganges. This 5 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Varanasi & Rishikesh, India",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "5 Days 4 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Pilgrimage Tour / Budget Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Varanasi & Rishikesh, India is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Varanasi & Rishikesh, India with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Varanasi & Rishikesh",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "4 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Varanasi & Rishikesh",
+                      "description": "Welcome to Varanasi & Rishikesh! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Varanasi & Rishikesh City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Varanasi & Rishikesh."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Varanasi & Rishikesh."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-16",
@@ -5118,7 +7302,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "ITALY",
+                  "location": "Rome & Amalfi, Italy",
+                  "durationBadge": "7 Days / 6 Nights",
+                  "galleryImages": [
+                    "/founder.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Rome & Amalfi, Italy, ancient history & cliffside coasts. This 7 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Rome & Amalfi, Italy",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "7 Days 6 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Honeymoon Tour / Couple Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Rome & Amalfi, Italy is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Rome & Amalfi, Italy with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Rome & Amalfi",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "6 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Rome & Amalfi",
+                      "description": "Welcome to Rome & Amalfi! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Rome & Amalfi City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Rome & Amalfi."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Rome & Amalfi."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-17",
@@ -5145,7 +7485,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "INDIA",
+                  "location": "Rajasthan Heritage, India",
+                  "durationBadge": "6 Days / 5 Nights",
+                  "galleryImages": [
+                    "/contact-bg.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Rajasthan Heritage, India, royal palaces & desert forts. This 6 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Rajasthan Heritage, India",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "6 Days 5 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Family Tour / Group Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Rajasthan Heritage, India is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Rajasthan Heritage, India with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Rajasthan Heritage",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "5 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Rajasthan Heritage",
+                      "description": "Welcome to Rajasthan Heritage! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Rajasthan Heritage City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Rajasthan Heritage."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Rajasthan Heritage."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               },
               {
                 "id": "pkg-18",
@@ -5172,7 +7668,163 @@
                   "Sightseeing"
                 ],
                 "featured": false,
-                "href": "/tourpackage"
+                "href": "/tourpackage",
+                "details": {
+                  "countryBadge": "AUSTRALIA",
+                  "location": "Sydney & Cairns, Australia",
+                  "durationBadge": "10 Days / 9 Nights",
+                  "galleryImages": [
+                    "/subbanner.jpg",
+                    "/whychoose_fjord.jpg",
+                    "/about2.jpg",
+                    "/blog1.jpg",
+                    "/blog2.jpg",
+                    "/blog3.jpg"
+                  ],
+                  "description": "Experience the magic of Sydney & Cairns, Australia, harbour bridge & great barrier reef. This 10 Days tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.",
+                  "quickInclusions": [
+                    {
+                      "label": "Flights Included",
+                      "icon": "FaPlane"
+                    },
+                    {
+                      "label": "Hotel Stay",
+                      "icon": "FaHotel"
+                    },
+                    {
+                      "label": "Sightseeing Tours",
+                      "icon": "FaBinoculars"
+                    },
+                    {
+                      "label": "Daily Breakfast",
+                      "icon": "FaUtensils"
+                    },
+                    {
+                      "label": "Airport Transfers",
+                      "icon": "FaCar"
+                    }
+                  ],
+                  "quickStats": [
+                    {
+                      "label": "Destination",
+                      "value": "Sydney & Cairns, Australia",
+                      "icon": "FaMapMarkerAlt"
+                    },
+                    {
+                      "label": "Duration",
+                      "value": "10 Days 9 Nights",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "label": "Tour Type",
+                      "value": "Adventure Tour / Family Tour",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "label": "Best Time to Visit",
+                      "value": "Oct - Apr",
+                      "icon": "FaTag"
+                    }
+                  ],
+                  "overview": "Sydney & Cairns, Australia is a dream destination that offers something for every traveler — from pristine landscapes to ancient heritage and vibrant local culture. Whether you're seeking adventure, spiritual experiences, or simply a relaxing getaway, this tour package takes you to the best of Sydney & Cairns, Australia with comfortable stays, guided tours, and unforgettable experiences.",
+                  "highlights": [
+                    {
+                      "title": "Explore top attractions & landmarks in Sydney & Cairns",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "title": "Discover rich local history and cultural heritage",
+                      "icon": "FaLandmark"
+                    },
+                    {
+                      "title": "Experience scenic landscapes and iconic viewpoints",
+                      "icon": "FaMountain"
+                    },
+                    {
+                      "title": "Enjoy guided city sightseeing and local markets",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "title": "Capture breathtaking photos and unforgettable memories",
+                      "icon": "FaCamera"
+                    },
+                    {
+                      "title": "Taste authentic local culinary specialties",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    "Return flights (Economy Class)",
+                    "9 nights hotel accommodation",
+                    "Daily breakfast at hotel",
+                    "Airport transfers (pickup & drop)",
+                    "Guided sightseeing tours as per itinerary",
+                    "Professional English-speaking tour guide",
+                    "All applicable taxes & fees"
+                  ],
+                  "whatsNotIncluded": [
+                    "Visa fees (if applicable)",
+                    "Travel insurance",
+                    "Lunch and dinner (unless specified)",
+                    "Personal expenses (shopping, souvenirs)",
+                    "Optional activities and entry tickets",
+                    "Tips and gratuities",
+                    "Anything not mentioned in inclusions"
+                  ],
+                  "itinerary": [
+                    {
+                      "day": "Day 1",
+                      "title": "Arrival in Sydney & Cairns",
+                      "description": "Welcome to Sydney & Cairns! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure."
+                    },
+                    {
+                      "day": "Day 2",
+                      "title": "Sydney & Cairns City Highlights & Iconic Sightseeing",
+                      "description": "After breakfast, enjoy a full-day guided tour visiting famous landmarks, historic sites, and key attractions across Sydney & Cairns."
+                    },
+                    {
+                      "day": "Day 3",
+                      "title": "Cultural Experience & Scenic Excursions",
+                      "description": "Explore local culture, traditional markets, scenic views, and experience popular recreational activities around Sydney & Cairns."
+                    },
+                    {
+                      "day": "Day 4",
+                      "title": "Leisure Day & Shopping",
+                      "description": "Spend the day exploring at your own pace, enjoying spa treatments, shopping for local souvenirs, or taking optional excursions."
+                    },
+                    {
+                      "day": "Day 5",
+                      "title": "Departure",
+                      "description": "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories."
+                    }
+                  ],
+                  "relatedPackages": [
+                    {
+                      "id": "pkg-1",
+                      "title": "Bali, Indonesia",
+                      "subtitle": "Beaches, Temples & Culture",
+                      "image": "/location/bali.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.8,
+                      "reviewsCount": 320,
+                      "priceFormatted": "$699",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-1"
+                    },
+                    {
+                      "id": "pkg-3",
+                      "title": "Dubai, UAE",
+                      "subtitle": "Desert Safari & Skyline",
+                      "image": "/location/Dubai.jpg",
+                      "duration": "5 Days",
+                      "rating": 4.9,
+                      "reviewsCount": 290,
+                      "priceFormatted": "$799",
+                      "priceUnit": "/Person",
+                      "href": "/tourpackagedetails?id=pkg-3"
+                    }
+                  ]
+                }
               }
             ]
           }

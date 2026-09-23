@@ -16,42 +16,7 @@ export default function TourDetailItinerary({ pkg, labels: propLabels }: TourDet
 
   const labels = propLabels || (site.tourPackagesPage as any).detailLabels;
   const details = pkg.details;
-  const destName = pkg.title.split(",")[0].trim();
-
-  const defaultItinerary: TourPackageItineraryItem[] = [
-    {
-      day: "Day 1",
-      title: `Arrival in ${destName}`,
-      description:
-        `Welcome to ${destName}! Our representative will pick you up from the airport and transfer you to the hotel. Check in and spend the rest of the day at leisure.`,
-    },
-    {
-      day: "Day 2",
-      title: "Uluwatu Temple & Kecak Dance",
-      description:
-        "After breakfast, visit the iconic Uluwatu Temple, enjoy stunning cliff views and witness the famous Kecak Dance performance at sunset.",
-    },
-    {
-      day: "Day 3",
-      title: "Nusa Penida Island Tour",
-      description:
-        "Explore the breathtaking beauty of Nusa Penida, including Kelingking Beach, Angel's Billabong, Broken Beach, and Crystal Bay.",
-    },
-    {
-      day: "Day 4",
-      title: "Tanah Lot & Local Sightseeing",
-      description:
-        "Visit the famous Tanah Lot Temple, explore local traditional markets, and enjoy Balinese culture, spa treatments, and cuisine.",
-    },
-    {
-      day: "Day 5",
-      title: "Departure",
-      description:
-        "After breakfast, check out from the hotel and transfer to the airport for your onward journey with wonderful memories.",
-    },
-  ];
-
-  const itinerary = details?.itinerary || defaultItinerary;
+  const itinerary = details?.itinerary || [];
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleDay = (idx: number) => {
