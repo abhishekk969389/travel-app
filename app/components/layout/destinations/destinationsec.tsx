@@ -166,18 +166,6 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <button
-                      type="button"
-                      onClick={() => toggleFavorite(item.id)}
-                      aria-label={`Save ${item.name} to wishlist`}
-                      className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-xs bg-black/25 hover:bg-black/40 text-white transition-all duration-200 cursor-pointer"
-                    >
-                      {isFav ? (
-                        <FaHeart className="w-4 h-4 text-[#ff2e63]" />
-                      ) : (
-                        <FaRegHeart className="w-4 h-4 text-white hover:text-[#ff2e63] transition-colors" />
-                      )}
-                    </button>
                   </div>
                   <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between">
                     <div>
@@ -188,7 +176,7 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                         {item.subtitle}
                       </p>
                     </div>
-                    <div className="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100 w-full">
+                    {/* <div className="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100 w-full">
                       {item.tags.map((tag, i) => (
                         <div
                           key={tag.label || i}
@@ -200,7 +188,7 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                           <span>{tag.label}</span>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </StaggerItem>

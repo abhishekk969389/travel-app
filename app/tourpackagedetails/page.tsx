@@ -1,7 +1,6 @@
 import SubBanner from "@/app/components/ui/subbanner";
 import TourDetailHero from "@/app/components/layout/tourpackagedetails/tourdetailhero";
 import TourDetailOverview from "@/app/components/layout/tourpackagedetails/tourdetailoverview";
-import TourDetailItinerary from "@/app/components/layout/tourpackagedetails/tourdetailitinerary";
 import TourDetailSidebar from "@/app/components/layout/tourpackagedetails/tourdetailsidebar";
 import Achievement from "@/app/components/ui/achievement";
 import { site as travelData, createSlug } from "@/data/index";
@@ -41,7 +40,6 @@ export default async function TourPackageDetailsPage({ searchParams }: TourPacka
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-8">
             <TourDetailOverview pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
-            <TourDetailItinerary pkg={pkg} labels={(tourPackagesData as any).detailLabels} />
           </div>
           <div className="lg:col-span-4">
             <TourDetailSidebar pkg={pkg} labels={(tourPackagesData as any).detailLabels} />

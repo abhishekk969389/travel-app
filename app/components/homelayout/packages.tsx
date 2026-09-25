@@ -117,92 +117,25 @@ export default function Packages() {
                                             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/10 pointer-events-none" />
-
-                                        <div className="absolute top-3.5 left-3.5 bg-[#0f172a]/80 backdrop-blur-md text-white font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md z-10 flex items-center gap-1.5">
-                                            <span>{pkg.duration}</span>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => toggleFavorite(pkg.id)}
-                                            aria-label="Add to wishlist"
-                                            className={`absolute top-3.5 right-3.5 w-9 h-9 rounded-full backdrop-blur-md flex items-center justify-center transition-all duration-200 z-10 ${isFav
-                                                ? "bg-white text-[#ff2e63] shadow-md scale-110"
-                                                : "bg-white/30 text-white hover:bg-white hover:text-[#ff2e63]"
-                                                }`}
-                                        >
-                                            <svg className="w-5 h-5" fill={isFav ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                            </svg>
-                                        </button>
                                     </div>
-                                    <div className="p-5 flex flex-col flex-1 justify-between">
+                                    <div className="p-5 flex-1 flex items-center justify-between gap-3">
                                         <div>
-                                            <h3 className="text-xl font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors duration-200 mb-0.5 tracking-tight">
+                                            <h3 className="text-xl font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors duration-200 mb-0.5 tracking-tight line-clamp-1">
                                                 {pkg.title}
                                             </h3>
-                                            <p className="text-xs font-semibold text-slate-400 mb-4">
+                                            <p className="text-xs font-semibold text-slate-400 line-clamp-1">
                                                 {pkg.subtitle}
                                             </p>
-                                            {pkg.includes && pkg.includes.length > 0 && (
-                                                <div className="flex items-center justify-between text-xs font-medium text-slate-500 bg-slate-50 rounded-xl px-3 py-2 mb-5 border border-slate-100">
-                                                    {pkg.includes.map((inc: string, idx: number) => {
-                                                        let IconPath = (
-                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                                        );
-                                                        const lower = inc.toLowerCase();
-                                                        if (lower.includes("flight") || lower.includes("plane")) {
-                                                            IconPath = <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />;
-                                                        } else if (lower.includes("hotel") || lower.includes("stay")) {
-                                                            IconPath = <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4" />;
-                                                        } else if (lower.includes("sight") || lower.includes("tour")) {
-                                                            IconPath = (
-                                                                <>
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                                </>
-                                                            );
-                                                        }
-
-                                                        return (
-                                                            <React.Fragment key={idx}>
-                                                                {idx > 0 && <span className="w-[1px] h-3 bg-slate-200" />}
-                                                                <div className="flex items-center gap-1.5">
-                                                                    <svg className="w-3.5 h-3.5 text-[#ff2e63]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                                        {IconPath}
-                                                                    </svg>
-                                                                    <span>{inc}</span>
-                                                                </div>
-                                                            </React.Fragment>
-                                                        );
-                                                    })}
-                                                </div>
-                                            )}
                                         </div>
-                                        <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                                            <div>
-                                                <div className="flex items-center gap-1 text-xs text-slate-500 mb-0.5">
-                                                    <svg className="w-4 h-4 text-[#ff2e63] fill-current" viewBox="0 0 20 20">
-                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                    </svg>
-                                                    <span className="font-bold text-[#12161f] text-sm">{pkg.rating}</span>
-                                                    <span className="text-slate-400 font-normal">({pkg.reviewsCount} Reviews)</span>
-                                                </div>
-                                                <div className="flex items-baseline">
-                                                    <span className="text-2xl font-black text-[#ff2e63]">${pkg.price}</span>
-                                                    <span className="text-xs font-bold text-slate-400 ml-1">{pkg.priceUnit}</span>
-                                                </div>
-                                            </div>
-                                            <Link
-                                                href={pkg.href}
-                                                aria-label={`View package details for ${pkg.title}`}
-                                                className="w-10 h-10 rounded-full bg-[#ff2e63] hover:bg-[#ff1e56] text-white flex items-center justify-center shadow-md shadow-[#ff2e63]/25 group-hover:scale-110 transition-all duration-300 shrink-0"
-                                            >
-                                                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                </svg>
-                                            </Link>
-                                        </div>
-
+                                        <Link
+                                            href={pkg.href}
+                                            aria-label={`View package details for ${pkg.title}`}
+                                            className="w-10 h-10 rounded-full bg-[#ff2e63] hover:bg-[#ff1e56] text-white flex items-center justify-center shadow-md shadow-[#ff2e63]/25 group-hover:scale-110 transition-all duration-300 shrink-0"
+                                        >
+                                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </Link>
                                     </div>
                                 </div>
                             </StaggerItem>

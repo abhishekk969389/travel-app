@@ -81,13 +81,6 @@ export default function ServiceDetailHero({ data }: ServiceDetailHeroProps) {
               <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-7 max-w-lg font-normal">
                 {data.description}
               </p>
-
-              <div className="mb-7">
-                <button className="bg-gradient-to-r from-[#ff0055] via-[#ff3b00] to-[#ff7b00] hover:brightness-110 text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 text-xs sm:text-sm tracking-wide">
-                  <span>{data.buttonText || 'Get Best Flight Deals'}</span>
-                  <FaIcons.FaArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
             </div>
 
             <div className="relative z-10 pt-5 border-t border-white/10 grid grid-cols-3 gap-3">

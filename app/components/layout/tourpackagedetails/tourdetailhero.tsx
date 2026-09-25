@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import {
-  FaPlane,
-  FaHotel,
-  FaBinoculars,
-  FaUtensils,
-  FaCar,
-  FaStar,
   FaMapMarkerAlt,
   FaChevronLeft,
   FaChevronRight,
@@ -32,22 +26,7 @@ interface TourDetailHeroProps {
   labels?: TourPackageDetailsLabels;
 }
 
-const renderInclusionIcon = (iconName: string) => {
-  switch (iconName) {
-    case "FaPlane":
-      return <FaPlane className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-    case "FaHotel":
-      return <FaHotel className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-    case "FaBinoculars":
-      return <FaBinoculars className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-    case "FaUtensils":
-      return <FaUtensils className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-    case "FaCar":
-      return <FaCar className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-    default:
-      return <FaPlane className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff2e63]" />;
-  }
-};
+
 
 export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHeroProps) {
   if (!pkg) return null;
@@ -111,8 +90,6 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
     (pkg.title.includes(",")
       ? pkg.title.split(",")[1].trim().toUpperCase()
       : pkg.title.toUpperCase());
-
-  const location = details?.location || pkg.title;
 
   const quickStats = details?.quickStats || [];
 
@@ -178,11 +155,10 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
                         setActiveImageIndex(idx);
                       }
                     }}
-                    className={`relative h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
-                      isActive
+                    className={`relative h-12 sm:h-14 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${isActive
                         ? "border-[#ff2e63] shadow-md scale-105"
                         : "border-white/80 hover:border-white opacity-90 hover:opacity-100"
-                    }`}
+                      }`}
                   >
                     <Image
                       src={imgSrc}
@@ -194,7 +170,7 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
                     {isLast && (
                       <div className="absolute inset-0 bg-[#071524]/90 backdrop-blur-xs flex flex-col items-center justify-center text-white border-2 border-white/90 rounded-lg shadow-inner">
                         <span className="font-black text-xs sm:text-sm tracking-tight drop-shadow-xs">
-                          +12
+                          +
                         </span>
                         <span className="font-bold text-[10px] text-white/90 tracking-wide">
                           {labels?.moreText || "More"}
@@ -218,67 +194,17 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
             <h1 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[34px] font-extrabold text-[#091724] tracking-tight leading-tight">
               {pkg.title}
             </h1>
-            <p className="text-sm sm:text-sm md:text-base font-semibold text-slate-500 mb-2">
+            <p className="text-sm sm:text-sm md:text-[18px] font-semibold text-slate-500 mb-2">
               {pkg.subtitle}
             </p>
-            <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-700 mb-2.5">
-              <div className="flex items-center gap-1.5">
-                <FaStar className="text-[#ff2e63] w-5 h-5" />
-                <span className=" text-slate-800 text-sm sm:text-sm ">{pkg.rating}</span>
-                <span className=" text-slate-800 text-sm sm:text-sm ">({pkg.reviewsCount} Reviews)</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-slate-600">
-                <FaMapMarkerAlt className="text-[#ff2e63] w-5 h-5" />
-                <span className=" text-slate-800 text-sm sm:text-sm">{location}</span>
-              </div>
-            </div>
-            <p className="text-sm sm:text-sm md:text-md text-slate-600 leading-relaxed mb-3">
-              {details?.description ||
-                `Experience the magic of ${pkg.title}, ${pkg.subtitle.toLowerCase()}. This ${pkg.duration} tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.`}
-            </p>
-            <div className="grid grid-cols-5 gap-2 pt-1 mb-2">
-              {(details?.quickInclusions || []).map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center text-center gap-1.5 group cursor-pointer"
-                >
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#ffe8ed] group-hover:bg-[#ffffff] transition-colors duration-300 flex items-center justify-center shadow-xs">
-                    {renderInclusionIcon(item.icon)}
-                  </div>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-slate-700 group-hover:text-[#ff2e63] transition-colors leading-tight">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
+            <div className="space-y-4 mb-4">
+              <p className="text-sm sm:text-sm md:text-base text-slate-600 leading-relaxed">
+                {details?.description ||
+                  `Experience the magic of ${pkg.title}, ${pkg.subtitle.toLowerCase()}. This ${pkg.duration} tour package is designed to give you the perfect blend of relaxation, adventure, and cultural exploration.`}
+              </p>
             </div>
           </div>
-          <div className="bg-white rounded-2xl p-4 sm:p-4.5 border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0 mt-4 lg:mt-0">
-            <div>
-              <span className="block text-sm font-semibold text-slate-400">
-                {labels?.startingFrom || "Starting From"}
-              </span>
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl sm:text-3xl font-black text-[#ff2e63] leading-none">
-                  {pkg.priceFormatted}
-                </span>
-                <span className="text-sm font-semibold text-slate-400">
-                  {pkg.priceUnit || "/Person"}
-                </span>
-              </div>
-            </div>
 
-            <button
-              type="button"
-              onClick={() => {
-                const formEl = document.getElementById("enquiry-form");
-                formEl?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="w-full sm:w-auto py-2.5 sm:py-3 px-6 rounded-full bg-gradient-to-r from-[#ff1d58] via-[#ff3b5c] to-[#ff7244] hover:opacity-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-[#ff2e63]/25 transition-all cursor-pointer"
-            >
-              <span>{labels?.bookNow || "Book Now"}</span>
-              <FaArrowRight className="w-3 h-3" />
-            </button>
-          </div>
         </FadeIn>
         <ScaleIn className="lg:col-span-4 h-auto lg:h-[460px]" id="enquiry-form">
           <div className="bg-white rounded-[24px] p-4.5 sm:p-5.5 border border-slate-100 shadow-md flex flex-col justify-between h-full">
@@ -379,13 +305,12 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
             return (
               <div
                 key={idx}
-                className={`flex items-center gap-4 ${
-                  idx === 0
+                className={`flex items-center gap-4 ${idx === 0
                     ? "lg:pr-8"
                     : isLast
-                    ? "lg:pl-8"
-                    : "lg:px-8"
-                } ${!isLast ? "lg:border-r lg:border-slate-200" : ""}`}
+                      ? "lg:pl-8"
+                      : "lg:px-8"
+                  } ${!isLast ? "lg:border-r lg:border-slate-200" : ""}`}
               >
                 <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#ffe8ed] flex items-center justify-center shrink-0 shadow-xs">
                   {idx === 0 && <FaMapMarkerAlt className="w-6 h-6 text-[#ff2e63]" />}
@@ -464,11 +389,10 @@ export default function TourDetailHero({ pkg, labels: propLabels }: TourDetailHe
                     key={idx}
                     type="button"
                     onClick={() => setModalImageIndex(idx)}
-                    className={`relative w-20 sm:w-24 h-14 sm:h-16 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
-                      isActive
+                    className={`relative w-20 sm:w-24 h-14 sm:h-16 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${isActive
                         ? "border-[#ff2e63] scale-105 shadow-md"
                         : "border-white/20 opacity-60 hover:opacity-100"
-                    }`}
+                      }`}
                   >
                     <Image
                       src={imgSrc}
