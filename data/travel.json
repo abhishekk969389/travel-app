@@ -360,7 +360,8 @@
                     "icon": "FaUserFriends"
                   }
                 ],
-                "href": "/destination/delhi"
+                "href": "/destination/delhi",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Delhi. This destination offers a perfect blend of history, culture & modern vibes, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime ."
               },
               {
                 "id": "himachal",
@@ -377,7 +378,8 @@
                     "icon": "FaHiking"
                   }
                 ],
-                "href": "/destination/himachal"
+                "href": "/destination/himachal",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Himachal Pradesh. This destination offers a perfect blend of mountains, adventure & serenity, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "goa",
@@ -394,7 +396,8 @@
                     "icon": "FaGlassCheers"
                   }
                 ],
-                "href": "/destination/goa"
+                "href": "/destination/goa",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Goa. This destination offers a perfect blend of sun, sand & vibrant nightlife, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "kerala",
@@ -411,7 +414,8 @@
                     "icon": "FaMountain"
                   }
                 ],
-                "href": "/destination/kerala"
+                "href": "/destination/kerala",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Kerala. This destination offers a perfect blend of backwaters, beaches & nature, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "lakshadweep",
@@ -428,7 +432,8 @@
                     "icon": "FaSwimmer"
                   }
                 ],
-                "href": "/destination/lakshadweep"
+                "href": "/destination/lakshadweep",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Lakshadweep. This destination offers a perfect blend of pristine beaches & crystal waters, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "kashmir",
@@ -445,7 +450,8 @@
                     "icon": "FaSnowflake"
                   }
                 ],
-                "href": "/destination/kashmir"
+                "href": "/destination/kashmir",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Jammu & Kashmir. This destination offers a perfect blend of heaven on earth, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "uttar-pradesh",
@@ -462,7 +468,8 @@
                     "icon": "FaLandmark"
                   }
                 ],
-                "href": "/destination/uttar-pradesh"
+                "href": "/destination/uttar-pradesh",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Uttar Pradesh. This destination offers a perfect blend of spirituality, heritage & culture, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "mumbai",
@@ -479,7 +486,8 @@
                     "icon": "FaShoppingBag"
                   }
                 ],
-                "href": "/destination/mumbai"
+                "href": "/destination/mumbai",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Mumbai. This destination offers a perfect blend of city of dreams, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "rajasthan",
@@ -496,7 +504,8 @@
                     "icon": "FaCampground"
                   }
                 ],
-                "href": "/destination/rajasthan"
+                "href": "/destination/rajasthan",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Rajasthan. This destination offers a perfect blend of royal palaces & golden deserts, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "andaman",
@@ -513,7 +522,8 @@
                     "icon": "FaUmbrellaBeach"
                   }
                 ],
-                "href": "/destination/andaman"
+                "href": "/destination/andaman",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Andaman Islands. This destination offers a perfect blend of turquoise seas & coral reefs, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               }
             ],
             "internationalDestinations": [
@@ -532,7 +542,8 @@
                     "icon": "FaSwimmer"
                   }
                 ],
-                "href": "/destination/maldives"
+                "href": "/destination/maldives",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Maldives. This destination offers a perfect blend of tropical paradise & coral reefs, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "bali",
@@ -549,7 +560,8 @@
                     "icon": "FaUmbrellaBeach"
                   }
                 ],
-                "href": "/destination/bali"
+                "href": "/destination/bali",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Bali, Indonesia. This destination offers a perfect blend of island of gods & serene beaches, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "switzerland",
@@ -566,7 +578,8 @@
                     "icon": "FaTrain"
                   }
                 ],
-                "href": "/destination/switzerland"
+                "href": "/destination/switzerland",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Switzerland. This destination offers a perfect blend of alpine wonders & scenic glaciers, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "dubai",
@@ -583,7 +596,8 @@
                     "icon": "FaShoppingBag"
                   }
                 ],
-                "href": "/destination/dubai"
+                "href": "/destination/dubai",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Dubai, UAE. This destination offers a perfect blend of futuristic skyline & desert safari, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "paris",
@@ -600,7 +614,8 @@
                     "icon": "FaCity"
                   }
                 ],
-                "href": "/destination/paris"
+                "href": "/destination/paris",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Paris, France. This destination offers a perfect blend of the city of lights & romance, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "greece",
@@ -617,7 +632,8 @@
                     "icon": "FaLandmark"
                   }
                 ],
-                "href": "/destination/greece"
+                "href": "/destination/greece",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Santorini, Greece. This destination offers a perfect blend of sun-drenched islands & sunsets, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "tokyo",
@@ -634,7 +650,8 @@
                     "icon": "FaCity"
                   }
                 ],
-                "href": "/destination/tokyo"
+                "href": "/destination/tokyo",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Tokyo, Japan. This destination offers a perfect blend of neon lights & ancient shrines, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "egypt",
@@ -651,7 +668,8 @@
                     "icon": "FaShip"
                   }
                 ],
-                "href": "/destination/egypt"
+                "href": "/destination/egypt",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Cairo, Egypt. This destination offers a perfect blend of pyramids, history & nile river, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "singapore",
@@ -668,7 +686,8 @@
                     "icon": "FaLandmark"
                   }
                 ],
-                "href": "/destination/singapore"
+                "href": "/destination/singapore",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of Singapore. This destination offers a perfect blend of modern marvels & gardens by the bay, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               },
               {
                 "id": "london",
@@ -685,7 +704,8 @@
                     "icon": "FaCity"
                   }
                 ],
-                "href": "/destination/london"
+                "href": "/destination/london",
+                "description": "Experience the vibrant culture, rich history, and stunning landscapes of London, UK. This destination offers a perfect blend of big ben, royal heritage & culture, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime."
               }
             ],
             "pagination": {
@@ -696,6 +716,10 @@
                 1,
                 2
               ]
+            },
+            "detailLabels": {
+              "badge": "Destination",
+              "highlightsTitle": "Highlights"
             }
           }
         }
@@ -2282,6 +2306,24 @@
                 {
                   "name": "Services Detail",
                   "href": "/servicedetails"
+                }
+              ]
+            },
+            "destinationdetails": {
+              "title": "Destination Detail",
+              "backgroundImage": "/subbanner.jpg",
+              "breadcrumbs": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                },
+                {
+                  "name": "Destinations",
+                  "href": "/destinations"
+                },
+                {
+                  "name": "Destination Detail",
+                  "href": "#"
                 }
               ]
             }

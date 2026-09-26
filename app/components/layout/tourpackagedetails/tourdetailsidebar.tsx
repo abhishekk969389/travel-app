@@ -135,121 +135,7 @@ export default function TourDetailSidebar({ pkg, labels: propLabels }: TourDetai
         </div>
       </FadeIn>
 
-      {/* 3. Related Tour Packages Widget */}
-      <FadeIn direction="up" className="bg-white rounded-[24px] p-6 border border-slate-100 shadow-sm space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="text-lg font-extrabold text-[#12161f] tracking-tight">
-              {labels?.relatedPackagesTitle || "Related Tour Packages"}
-            </h4>
-            <div className="w-8 h-[2.5px] bg-[#ff2e63] rounded-full mt-1" />
-          </div>
 
-          <div className="flex items-center gap-2">
-            <Link
-              href="/tourpackage"
-              className="text-xs font-bold text-slate-500 hover:text-[#ff2e63] transition-colors mr-1"
-            >
-              {labels?.viewAll || "View All"}
-            </Link>
-            <button
-              type="button"
-              className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-colors"
-            >
-              <FaChevronLeft className="w-3 h-3" />
-            </button>
-            <button
-              type="button"
-              className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition-colors"
-            >
-              <FaChevronRight className="w-3 h-3" />
-            </button>
-          </div>
-        </div>
-
-        {/* 2 Related Package Cards Side-by-Side */}
-        <StaggerContainer className="grid grid-cols-2 gap-2.5 sm:gap-3">
-          {relatedPackages.map((relPkg) => {
-            const isWishlisted = wishlist.includes(relPkg.id);
-
-            return (
-              <MotionCard
-                key={relPkg.id}
-                className="bg-white rounded-2xl overflow-hidden border-none shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between"
-              >
-                {/* Image */}
-                <div className="relative w-full h-28 sm:h-32 overflow-hidden bg-slate-100">
-                  <Image
-                    src={relPkg.image}
-                    alt={relPkg.title}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 20vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Duration Pill */}
-                  <div className="absolute top-2 left-2 z-10">
-                    <span className="px-2 py-0.5 rounded-full bg-[#0b1724]/85 backdrop-blur-md text-white font-bold text-[9px] sm:text-[10px]">
-                      {relPkg.duration}
-                    </span>
-                  </div>
-                  {/* Wishlist Heart */}
-                  <button
-                    type="button"
-                    onClick={() => toggleWishlist(relPkg.id)}
-                    className="absolute top-2 right-2 z-10 w-6 h-6 rounded-full bg-black/30 backdrop-blur-md hover:bg-black/50 text-white flex items-center justify-center transition-all cursor-pointer"
-                  >
-                    {isWishlisted ? (
-                      <FaHeart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#ff2e63]" />
-                    ) : (
-                      <FaRegHeart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
-                    )}
-                  </button>
-                </div>
-
-                {/* Content */}
-                <div className="p-2.5 sm:p-3 flex flex-col justify-between flex-1">
-                  <div>
-                    <h5 className="text-xs sm:text-sm font-extrabold text-slate-900 group-hover:text-[#ff2e63] transition-colors leading-snug truncate">
-                      {relPkg.title}
-                    </h5>
-                    <p className="text-[10px] sm:text-[11px] text-slate-500 mb-1.5 truncate">
-                      {relPkg.subtitle}
-                    </p>
-
-                    {/* Rating */}
-                    <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-slate-600 font-bold mb-2">
-                      <FaStar className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#ff2e63]" />
-                      <span>{relPkg.rating}</span>
-                      <span className="text-slate-400 font-normal">
-                        ({relPkg.reviewsCount})
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Price & Arrow Link Button */}
-                  <div className="flex items-center justify-between pt-2 border-t border-slate-100">
-                    <div className="flex items-baseline gap-0.5 min-w-0">
-                      <span className="text-xs sm:text-sm font-black text-[#ff2e63] truncate">
-                        {relPkg.priceFormatted}
-                      </span>
-                      <span className="text-[9px] sm:text-[10px] text-slate-400 font-semibold truncate">
-                        {relPkg.priceUnit}
-                      </span>
-                    </div>
-
-                    <Link
-                      href={relPkg.href || "/tourpackagedetails"}
-                      className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#ff2e63] hover:bg-[#e02454] text-white flex items-center justify-center shadow-xs transition-transform hover:scale-105 shrink-0 ml-1"
-                    >
-                      <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                    </Link>
-                  </div>
-                </div>
-              </MotionCard>
-            );
-          })}
-        </StaggerContainer>
-      </FadeIn>
 
       {/* Lightbox Gallery Modal Popup */}
       {isModalOpen && (
@@ -316,11 +202,10 @@ export default function TourDetailSidebar({ pkg, labels: propLabels }: TourDetai
                     key={idx}
                     type="button"
                     onClick={() => setModalImageIndex(idx)}
-                    className={`relative w-20 sm:w-24 h-14 sm:h-16 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
-                      isActive
+                    className={`relative w-20 sm:w-24 h-14 sm:h-16 rounded-xl overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${isActive
                         ? "border-[#ff2e63] scale-105 shadow-md"
                         : "border-white/20 opacity-60 hover:opacity-100"
-                    }`}
+                      }`}
                   >
                     <Image
                       src={imgSrc}

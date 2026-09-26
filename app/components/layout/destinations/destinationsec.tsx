@@ -107,7 +107,7 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-white">
       <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <div className="text-center max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-2.5">
               <span className="h-[2px] w-6 sm:w-8 rounded-full bg-[#ff2e63]" />
               <span className="text-xs sm:text-sm font-bold tracking-widest text-[#ff2e63] uppercase">
@@ -167,28 +167,23 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-4 sm:p-4.5 flex flex-col flex-1 justify-between">
-                    <div>
-                      <h3 className="text-lg sm:text-[19px] font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors line-clamp-1">
-                        {item.name}
-                      </h3>
-                      <p className="text-xs sm:text-[13px] text-gray-500 mt-1 font-normal line-clamp-1">
-                        {item.subtitle}
-                      </p>
+                  <div className="p-4 sm:p-4.5 flex flex-col flex-1">
+                    <div className="flex justify-between items-center gap-3">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-[19px] font-bold text-[#12161f] group-hover:text-[#ff2e63] transition-colors line-clamp-1">
+                          {item.name}
+                        </h3>
+                        <p className="text-xs sm:text-[13px] text-gray-500 mt-0.5 font-normal line-clamp-1">
+                          {item.subtitle}
+                        </p>
+                      </div>
+                      <Link 
+                        href={`/destinationdetails/${item.id}`}
+                        className="shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-[#ff2e63] text-white shadow-lg shadow-[#ff2e63]/40 hover:shadow-xl hover:shadow-[#ff2e63]/50 hover:-translate-y-1 transition-all duration-300"
+                      >
+                        <FaArrowRight className="sm:w-4 sm:h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
+                      </Link>
                     </div>
-                    {/* <div className="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-gray-100 w-full">
-                      {item.tags.map((tag, i) => (
-                        <div
-                          key={tag.label || i}
-                          className={`flex items-center gap-1.5 text-xs sm:text-[12.5px] lg:text-[13px] font-semibold text-slate-800 whitespace-nowrap shrink-0 ${
-                            i === 1 ? 'ml-auto' : ''
-                          }`}
-                        >
-                          {getTagIcon(tag.icon)}
-                          <span>{tag.label}</span>
-                        </div>
-                      ))}
-                    </div> */}
                   </div>
                 </div>
               </StaggerItem>
