@@ -156,7 +156,7 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
             return (
               <StaggerItem key={item.id} className="h-full">
                 <div
-                  className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
+                  className="group relative bg-white rounded-2xl mt-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
                 >
                   <div className="relative w-full h-48 sm:h-52 overflow-hidden bg-slate-100">
                     <Image
