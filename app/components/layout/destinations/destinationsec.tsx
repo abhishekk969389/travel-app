@@ -149,14 +149,14 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
             </div>
           </div>
         </FadeIn>
-        <StaggerContainer key={activeTab + currentPage} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 items-start">
+        <StaggerContainer key={activeTab + currentPage} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
           {displayedDestinations.map((item) => {
             const isFav = Boolean(favorites[item.id]);
 
             return (
               <StaggerItem key={item.id} className="h-full">
                 <div
-                  className="group relative bg-white rounded-2xl mt-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
+                  className="group relative bg-white rounded-2xl mt-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
                 >
                   <div className="relative w-full h-48 sm:h-52 overflow-hidden bg-slate-100">
                     <Image
@@ -191,7 +191,7 @@ export default function DestinationSec({ data: propData }: DestinationSecProps =
           })}
         </StaggerContainer>
         {data.pagination && totalPages > 1 && (
-          <div className="mt-8">
+          <div className="mt-16">
             <Pagination
               data={{
                 ...data.pagination,
