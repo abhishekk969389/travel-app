@@ -4,7 +4,7 @@ import type { DestinationCardItem } from "@/data/index";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface DestinationDetailsSecProps {
-  destination: DestinationCardItem & { description?: string };
+  destination: DestinationCardItem & { description?: string; longDescription?: string };
   labels?: { badge?: string; highlightsTitle?: string };
 }
 
@@ -59,6 +59,7 @@ export default function DestinationDetailsSec({ destination, labels }: Destinati
               {destination.description || `Experience the vibrant culture, rich history, and stunning landscapes of ${destination.name}. This destination offers a perfect blend of ${destination.subtitle.toLowerCase()}, making it an ideal spot for travelers seeking an unforgettable journey. Explore unique attractions, savor local flavors, and create memories that will last a lifetime.`}
             </p>
 
+
             {destination.tags && destination.tags.length > 0 && (
               <div className="pt-4 border-t border-slate-100">
                 <h3 className="text-lg font-bold text-[#12161f] mb-4">
@@ -79,6 +80,14 @@ export default function DestinationDetailsSec({ destination, labels }: Destinati
             )}
           </FadeIn>
         </div>
+
+        {destination.longDescription && (
+          <FadeIn direction="up" className="mt-10 sm:mt-12 w-full">
+            <p className="text-slate-600 leading-relaxed text-sm sm:text-sm md:text-base">
+              {destination.longDescription}
+            </p>
+          </FadeIn>
+        )}
       </div>
     </section>
   );
